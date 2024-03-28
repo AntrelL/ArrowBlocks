@@ -107,8 +107,10 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
+-define:DOTWEEN
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll"
@@ -299,6 +301,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp-firstpass.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.InputSystem.ForUI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.TextMeshPro.ref.dll"
@@ -311,9 +314,14 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Project/Game/Scripts/Main/Blocks/ArrowBlock.cs"
 "Assets/Project/Game/Scripts/Main/Blocks/VirtualBlockGrid.cs"
+"Assets/Project/Game/Scripts/Main/Game.cs"
 "Assets/Project/Game/Scripts/Main/Player/Player.cs"
 "Assets/Project/Game/Scripts/Main/Player/PlayerCamera.cs"
 "Assets/Project/Game/Scripts/Main/Player/PlayerInput.cs"
+"Assets/Project/Game/Scripts/Menu/IndicatingIcon.cs"
+"Assets/Project/Game/Scripts/Menu/IProgressBarInfo.cs"
+"Assets/Project/Game/Scripts/Menu/ProgressBar.cs"
+"Assets/Project/Game/Scripts/Menu/ProgressBarIndicator.cs"
 "Assets/Project/Game/Scripts/Menu/Screen.cs"
 "Assets/Project/Game/Scripts/Menu/VersionText.cs"
 -langversion:9.0

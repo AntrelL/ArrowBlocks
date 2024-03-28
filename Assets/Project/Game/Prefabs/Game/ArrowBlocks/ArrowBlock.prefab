@@ -252,6 +252,7 @@ MonoBehaviour:
   _flightTimeIntoVoid: 5
   _trail: {fileID: 8267286701273791404}
   _minTrailDistance: 0.1
+  _pushAnimationDistance: 1
 --- !u!65 &139885884287771362
 BoxCollider:
   m_ObjectHideFlags: 0

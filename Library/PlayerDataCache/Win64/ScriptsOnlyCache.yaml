@@ -2,10 +2,16 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ArrowBlock
+    - Game
+    - IndicatingIcon
     - Player
     - PlayerCamera
+    - ProgressBar
+    - ProgressBarIndicator
     - Screen
     - VirtualBlockGrid
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -44,6 +50,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   serializedClasses:
+    DOTween:
+    - DG.Tweening.Core.DOTweenSettings/ModulesSetup
+    - DG.Tweening.Core.DOTweenSettings/SafeModeOptions
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
     - UnityEngine.InputSystem.InputActionMap
@@ -81,7 +90,13 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: Game
+    methodName: RestartFromMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Game
+    methodName: Restart
   sceneClasses:
     Assets/Project/Game/Scenes/Test.unity:
     - Class: 1
@@ -110,6 +125,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
+    - Class: 96
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -117,7 +134,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1550}
     - Class: 114
-      Script: {instanceID: 1552}
+      Script: {instanceID: 1596}
     - Class: 114
       Script: {instanceID: 2220}
     - Class: 114
@@ -127,31 +144,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3888}
+      Script: {instanceID: 3740}
     - Class: 114
-      Script: {instanceID: 4058}
+      Script: {instanceID: 3890}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4060}
     - Class: 114
-      Script: {instanceID: 4604}
+      Script: {instanceID: 4330}
     - Class: 114
-      Script: {instanceID: 5364}
+      Script: {instanceID: 4550}
     - Class: 114
-      Script: {instanceID: 5960}
+      Script: {instanceID: 4608}
     - Class: 114
-      Script: {instanceID: 6064}
+      Script: {instanceID: 5160}
     - Class: 114
-      Script: {instanceID: 6126}
+      Script: {instanceID: 5224}
     - Class: 114
-      Script: {instanceID: 6874}
+      Script: {instanceID: 5372}
     - Class: 114
-      Script: {instanceID: 7300}
+      Script: {instanceID: 5704}
     - Class: 114
-      Script: {instanceID: 7626}
+      Script: {instanceID: 5970}
     - Class: 114
-      Script: {instanceID: 8326}
+      Script: {instanceID: 6074}
     - Class: 114
-      Script: {instanceID: 24228}
+      Script: {instanceID: 6136}
+    - Class: 114
+      Script: {instanceID: 6886}
+    - Class: 114
+      Script: {instanceID: 7312}
+    - Class: 114
+      Script: {instanceID: 7640}
+    - Class: 114
+      Script: {instanceID: 8338}
+    - Class: 114
+      Script: {instanceID: 24504}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,16 +212,16 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 16c8cbd24a32f9d6625615e0e9098073
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 16c8cbd24a32f9d6625615e0e9098073
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: 6f2331a347cdef798b8d617132d4c491
@@ -515,6 +542,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 4b1d322ed10a8f73f8dfeb4bb6ced205
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ProgressBarIndicator
+  - hash:
+      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -653,6 +686,12 @@ ScriptsOnlyBuild:
     className: OnScreenStick
   - hash:
       serializedVersion: 2
+      Hash: 21e52d2b4a8ff6e1dbf2adb9abd13262
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: IndicatingIcon
+  - hash:
+      serializedVersion: 2
       Hash: fcc569162a8d9bd9df34e8c9dee84212
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -743,6 +782,12 @@ ScriptsOnlyBuild:
     className: BaseInputOverride
   - hash:
       serializedVersion: 2
+      Hash: 810a420644eee3a3337029180c2262ce
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: VirtualBlockGrid
+  - hash:
+      serializedVersion: 2
       Hash: 6237f92becd6162fa105361ab9ce2a00
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -753,6 +798,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStayMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 6debca41fc91401c22db9ecb999dfa86
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ProgressBar
   - hash:
       serializedVersion: 2
       Hash: fa7c62595553866a25a1f687b1914fd2
@@ -825,6 +876,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 96695f01598edbdbc5791c6cf943ff8e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Game
   - hash:
       serializedVersion: 2
       Hash: 654cebef8aa88cb6cd0504505364d614
@@ -1055,7 +1112,7 @@ ScriptsOnlyBuild:
     className: InputSettings
   - hash:
       serializedVersion: 2
-      Hash: 2eedc3372bb63dd36d9f42b7845d72e2
+      Hash: c21db313dad88e14d3050ea63dac2133
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerCamera
@@ -1163,7 +1220,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: bb036b7abb634cc264e1bd676e30a200
+      Hash: efed2e7bb39024d51b26457d5408233a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ArrowBlock
@@ -1205,10 +1262,16 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 05b6fd4ba544471b3a5d398352f9faec
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: VirtualBlockGrid
+      Hash: 29a38ed64d6189238642fda2875101f8
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: cef9798948fddcca081b6c6392822bc2
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   platform: 19
   scenePathNames:
   - Assets/Project/Game/Scenes/Test.unity

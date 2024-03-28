@@ -146,7 +146,9 @@
         138,
         139,
         140,
-        141
+        141,
+        142,
+        143
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -300,7 +302,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 15685,
+      "PayloadLength": 15881,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
@@ -395,6 +397,7 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
+        "E:/Data/Programming/Projects/ArrowBlocks/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp-firstpass.dll",
         "E:/Data/Programming/Projects/ArrowBlocks/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
         "E:/Data/Programming/Projects/ArrowBlocks/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
         "E:/Data/Programming/Projects/ArrowBlocks/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll",
@@ -405,6 +408,7 @@
         "E:/Data/Programming/Projects/ArrowBlocks/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
         "E:/Data/Programming/Projects/ArrowBlocks/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
         "E:/Data/Programming/Projects/ArrowBlocks/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
+        "E:/Data/Programming/Projects/ArrowBlocks/Assets/Plugins/Demigiant/DOTween/DOTween.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ComponentModel.Composition.dll",
@@ -1306,6 +1310,18 @@
       "DebugActionIndex": 83
     },
     {
+      "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Assembly-CSharp-firstpass.dll",
+      "DisplayName": "Copying Assembly-CSharp-firstpass.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "E:/Data/Programming/Projects/ArrowBlocks/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp-firstpass.dll"
+      ],
+      "Outputs": [
+        "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Assembly-CSharp-firstpass.dll"
+      ],
+      "DebugActionIndex": 84
+    },
+    {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Assembly-CSharp.dll",
       "DisplayName": "Copying Assembly-CSharp.dll",
       "ActionType": "CopyFiles",
@@ -1315,7 +1331,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Assembly-CSharp.dll"
       ],
-      "DebugActionIndex": 84
+      "DebugActionIndex": 85
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.Timeline.dll",
@@ -1327,7 +1343,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.Timeline.dll"
       ],
-      "DebugActionIndex": 85
+      "DebugActionIndex": 86
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.InputSystem.dll",
@@ -1339,7 +1355,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.InputSystem.dll"
       ],
-      "DebugActionIndex": 86
+      "DebugActionIndex": 87
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.InputSystem.ForUI.dll",
@@ -1351,7 +1367,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.InputSystem.ForUI.dll"
       ],
-      "DebugActionIndex": 87
+      "DebugActionIndex": 88
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/UnityEngine.UI.dll",
@@ -1363,7 +1379,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/UnityEngine.UI.dll"
       ],
-      "DebugActionIndex": 88
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.TextMeshPro.dll",
@@ -1375,7 +1391,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.TextMeshPro.dll"
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.Core.dll",
@@ -1387,7 +1403,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.Core.dll"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.State.dll",
@@ -1399,7 +1415,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.State.dll"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.Flow.dll",
@@ -1411,7 +1427,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.Flow.dll"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
@@ -1423,7 +1439,19 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 94
+    },
+    {
+      "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/DOTween.dll",
+      "DisplayName": "Copying DOTween.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "E:/Data/Programming/Projects/ArrowBlocks/Assets/Plugins/Demigiant/DOTween/DOTween.dll"
+      ],
+      "Outputs": [
+        "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/DOTween.dll"
+      ],
+      "DebugActionIndex": 95
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/netstandard.dll",
@@ -1435,7 +1463,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/netstandard.dll"
       ],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Mono.Security.dll",
@@ -1447,7 +1475,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/Mono.Security.dll"
       ],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 97
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.ComponentModel.Composition.dll",
@@ -1459,7 +1487,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.ComponentModel.Composition.dll"
       ],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 98
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Configuration.dll",
@@ -1471,7 +1499,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Configuration.dll"
       ],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Core.dll",
@@ -1483,7 +1511,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Core.dll"
       ],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 100
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Data.DataSetExtensions.dll",
@@ -1495,7 +1523,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Data.DataSetExtensions.dll"
       ],
-      "DebugActionIndex": 99
+      "DebugActionIndex": 101
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Data.dll",
@@ -1507,7 +1535,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Data.dll"
       ],
-      "DebugActionIndex": 100
+      "DebugActionIndex": 102
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Drawing.dll",
@@ -1519,7 +1547,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Drawing.dll"
       ],
-      "DebugActionIndex": 101
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.EnterpriseServices.dll",
@@ -1531,7 +1559,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.EnterpriseServices.dll"
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 104
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.IO.Compression.FileSystem.dll",
@@ -1543,7 +1571,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.IO.Compression.FileSystem.dll"
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 105
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.IO.Compression.dll",
@@ -1555,7 +1583,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.IO.Compression.dll"
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 106
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Net.Http.dll",
@@ -1567,7 +1595,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Net.Http.dll"
       ],
-      "DebugActionIndex": 105
+      "DebugActionIndex": 107
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Numerics.dll",
@@ -1579,7 +1607,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Numerics.dll"
       ],
-      "DebugActionIndex": 106
+      "DebugActionIndex": 108
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Runtime.Serialization.dll",
@@ -1591,7 +1619,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Runtime.Serialization.dll"
       ],
-      "DebugActionIndex": 107
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Security.dll",
@@ -1603,7 +1631,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Security.dll"
       ],
-      "DebugActionIndex": 108
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.ServiceModel.Internals.dll",
@@ -1615,7 +1643,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.ServiceModel.Internals.dll"
       ],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Transactions.dll",
@@ -1627,7 +1655,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Transactions.dll"
       ],
-      "DebugActionIndex": 110
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Xml.Linq.dll",
@@ -1639,7 +1667,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Xml.Linq.dll"
       ],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Xml.dll",
@@ -1651,7 +1679,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.Xml.dll"
       ],
-      "DebugActionIndex": 112
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.dll",
@@ -1663,7 +1691,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/System.dll"
       ],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/mscorlib.dll",
@@ -1675,20 +1703,20 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Managed/mscorlib.dll"
       ],
-      "DebugActionIndex": 114
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 15857,
+      "PayloadOffset": 16053,
       "PayloadLength": 26,
       "PayloadDebugContentSnippet": "DefaultCompany\nArrowBlocks",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info"
       ],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/app.info",
@@ -1701,9 +1729,9 @@
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/app.info"
       ],
       "ToBuildDependencies": [
-        115
+        117
       ],
-      "DebugActionIndex": 116
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Resources/unity default resources",
@@ -1715,7 +1743,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks_Data/Resources/unity default resources"
       ],
-      "DebugActionIndex": 117
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks.exe",
@@ -1727,7 +1755,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks.exe"
       ],
-      "DebugActionIndex": 118
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -1739,7 +1767,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -1751,7 +1779,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
-      "DebugActionIndex": 120
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -1763,7 +1791,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -1775,7 +1803,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 122
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -1787,7 +1815,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -1799,7 +1827,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -1811,7 +1839,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -1823,7 +1851,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -1835,7 +1863,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -1847,7 +1875,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -1859,7 +1887,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -1871,7 +1899,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -1883,7 +1911,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -1895,7 +1923,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 132
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -1907,7 +1935,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -1919,7 +1947,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -1931,7 +1959,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -1943,7 +1971,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/config",
@@ -1955,7 +1983,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/config"
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -1967,7 +1995,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/UnityCrashHandler64.exe",
@@ -1979,7 +2007,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/UnityCrashHandler64.exe"
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "CopyFiles E:/Data/Programming/BuiltProjects/ArrowBlocks/UnityPlayer.dll",
@@ -1991,7 +2019,7 @@
       "Outputs": [
         "E:/Data/Programming/BuiltProjects/ArrowBlocks/UnityPlayer.dll"
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "Player",
@@ -2111,8 +2139,8 @@
         112,
         113,
         114,
+        115,
         116,
-        117,
         118,
         119,
         120,
@@ -2135,10 +2163,12 @@
         137,
         138,
         139,
-        140
+        140,
+        141,
+        142
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 141
+      "DebugActionIndex": 143
     }
   ],
   "FileSignatures": [
@@ -2339,7 +2369,7 @@
   "EmitDataForBeeWhy": 0,
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 141
+          "Player": 143
         }
 ,  "DefaultNodes": [
     0

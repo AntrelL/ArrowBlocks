@@ -7,6 +7,8 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
 {
     [SerializeField] private Vector3 _cellSize;
     [SerializeField] private ProgressBar _progressBar;
+    [SerializeField] private Transform _centerPoint;
+    [SerializeField] private PlayerCamera _playerCamera;
 
     [HideInInspector] [SerializeField] private List<ArrowBlock> _blocks;
     [HideInInspector] [SerializeField] private List<ArrowBlock> _blocksOffGrid;
@@ -20,6 +22,7 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
     {
         SetBlocksFromChild();
         SetBlocksOffGrid();
+        SetCenterPointPosition();
     }
 
     private void OnEnable()
@@ -59,6 +62,7 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
 
         _releasedBlocks = 0;
         UpdateProgressBar(_releasedBlocks);
+        SetCenterPointPosition();
     }
 
     public void OnBlockReleased()
@@ -67,6 +71,13 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
 
         if (_releasedBlocks == _blocks.Count)
             AllBlocksReleased?.Invoke();
+
+        SetCenterPointPosition();
+    }
+
+    public void OnBlockTouchedOther()
+    {
+        SetCenterPointPosition();
     }
 
     public void RemoveBlock(ArrowBlock block)
@@ -77,6 +88,39 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
     public Vector3 GetCoordinatesOfNeighboringCell(Vector3 cellPosition, Vector3 directionToCell)
     {
         return cellPosition + Vector3.Scale(-directionToCell, _cellSize);
+    }
+
+    public void SetCenterPointPosition()
+    {
+        if (_blocks.Count - _releasedBlocks == 0)
+            return;
+
+        Vector3 maxPositionValues = _centerPoint.position;
+        Vector3 minPositionValues = maxPositionValues;
+        int accountedBlocksQuantity = 0;
+
+        foreach (var block in _blocks)
+        {
+            if (block.IsReleased)
+                continue;
+
+            if (accountedBlocksQuantity++ == 0)
+            {
+                maxPositionValues = minPositionValues = block.transform.position;
+            }
+            else
+            {
+                maxPositionValues = Vector3.Max(block.transform.position, maxPositionValues);
+                minPositionValues = Vector3.Min(block.transform.position, minPositionValues);
+            }
+        }
+
+        if (accountedBlocksQuantity == 1)
+            _centerPoint.position = maxPositionValues;
+        else
+            _centerPoint.position = (maxPositionValues + minPositionValues) / 2f;
+
+        _playerCamera.OffsetDistance = Vector3.Distance(maxPositionValues, minPositionValues);
     }
 
     public void SetBlocksFromChild()
