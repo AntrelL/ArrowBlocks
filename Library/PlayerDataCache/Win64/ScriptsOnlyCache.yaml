@@ -4,14 +4,28 @@ ScriptsOnlyBuild:
     - ArrowBlock
     - Game
     - IndicatingIcon
+    - LevelIndicator
+    - LevelLoader
+    - LevelSceneEntry
+    - LevelText
+    - LevelsVisualizer
+    - MenuSceneEntry
+    - MoneyVisualizer
     - Player
     - PlayerCamera
     - ProgressBar
     - ProgressBarIndicator
+    - Root
+    - SceneSwitcher
     - Screen
+    - TimeText
+    - Timer
+    - VersionText
     - VirtualBlockGrid
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
+    IJunior.ArrowBlocks.Plugins.dll:
+    - IJunior.TypedScenes.TypedProcessor
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -28,6 +42,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
@@ -48,7 +63,15 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
+    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     DOTween:
     - DG.Tweening.Core.DOTweenSettings/ModulesSetup
@@ -69,6 +92,11 @@ ScriptsOnlyBuild:
     - TMPro.TMP_GlyphAdjustmentRecord
     - TMPro.TMP_GlyphPairAdjustmentRecord
     - TMPro.TMP_GlyphValueRecord
+    - TMPro.TMP_InputField/OnChangeEvent
+    - TMPro.TMP_InputField/SelectionEvent
+    - TMPro.TMP_InputField/SubmitEvent
+    - TMPro.TMP_InputField/TextSelectionEvent
+    - TMPro.TMP_InputField/TouchScreenKeyboardEvent
     - TMPro.TMP_Sprite
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
@@ -78,6 +106,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
     - UnityEngine.Events.PersistentListenerMode
+    - UnityEngine.RectOffset
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -89,16 +118,170 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelLoader
+    methodName: LoadLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: Screen
+    methodName: Change
+  - assembly: Assembly-CSharp
+    fullTypeName: Screen
+    methodName: Change
+  - assembly: Assembly-CSharp
+    fullTypeName: LevelLoader
+    methodName: LoadLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: Screen
+    methodName: Change
+  - assembly: Assembly-CSharp
+    fullTypeName: Screen
+    methodName: Change
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadLeaderboardMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Game
+    methodName: Restart
   - assembly: Assembly-CSharp
     fullTypeName: Game
     methodName: RestartFromMenu
   - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadNextLevel
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadLeaderboardMenu
+  - assembly: Assembly-CSharp
     fullTypeName: Game
     methodName: Restart
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: Game
+    methodName: RestartFromMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneSwitcher
+    methodName: LoadNextLevel
   sceneClasses:
-    Assets/Project/Game/Scenes/Test.unity:
+    Assets/Project/Game/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1552}
+    - Class: 114
+      Script: {instanceID: 1554}
+    - Class: 114
+      Script: {instanceID: 1600}
+    - Class: 114
+      Script: {instanceID: 2236}
+    - Class: 114
+      Script: {instanceID: 2706}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3590}
+    - Class: 114
+      Script: {instanceID: 3902}
+    - Class: 114
+      Script: {instanceID: 4068}
+    - Class: 114
+      Script: {instanceID: 4072}
+    - Class: 114
+      Script: {instanceID: 4332}
+    - Class: 114
+      Script: {instanceID: 4348}
+    - Class: 114
+      Script: {instanceID: 4626}
+    - Class: 114
+      Script: {instanceID: 5030}
+    - Class: 114
+      Script: {instanceID: 5186}
+    - Class: 114
+      Script: {instanceID: 5308}
+    - Class: 114
+      Script: {instanceID: 5390}
+    - Class: 114
+      Script: {instanceID: 5996}
+    - Class: 114
+      Script: {instanceID: 6100}
+    - Class: 114
+      Script: {instanceID: 6162}
+    - Class: 114
+      Script: {instanceID: 6524}
+    - Class: 114
+      Script: {instanceID: 6912}
+    - Class: 114
+      Script: {instanceID: 6974}
+    - Class: 114
+      Script: {instanceID: 7342}
+    - Class: 114
+      Script: {instanceID: 7670}
+    - Class: 114
+      Script: {instanceID: 7692}
+    - Class: 114
+      Script: {instanceID: 8558}
+    - Class: 114
+      Script: {instanceID: 32776}
+    - Class: 114
+      Script: {instanceID: 32788}
+    - Class: 114
+      Script: {instanceID: 110586}
+    - Class: 114
+      Script: {instanceID: 145070}
+    - Class: 114
+      Script: {instanceID: 145082}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    Assets/Project/Game/Scenes/TestLevel.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -117,8 +300,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -132,53 +313,59 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 1554}
     - Class: 114
-      Script: {instanceID: 1596}
+      Script: {instanceID: 1600}
     - Class: 114
-      Script: {instanceID: 2220}
+      Script: {instanceID: 2224}
     - Class: 114
-      Script: {instanceID: 2232}
+      Script: {instanceID: 2706}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2914}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 3752}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 3902}
     - Class: 114
-      Script: {instanceID: 3890}
+      Script: {instanceID: 4072}
     - Class: 114
-      Script: {instanceID: 4060}
+      Script: {instanceID: 4568}
     - Class: 114
-      Script: {instanceID: 4330}
+      Script: {instanceID: 5178}
     - Class: 114
-      Script: {instanceID: 4550}
+      Script: {instanceID: 5242}
     - Class: 114
-      Script: {instanceID: 4608}
+      Script: {instanceID: 5390}
     - Class: 114
-      Script: {instanceID: 5160}
+      Script: {instanceID: 5722}
     - Class: 114
-      Script: {instanceID: 5224}
+      Script: {instanceID: 5996}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 6100}
     - Class: 114
-      Script: {instanceID: 5704}
+      Script: {instanceID: 6162}
     - Class: 114
-      Script: {instanceID: 5970}
+      Script: {instanceID: 6912}
     - Class: 114
-      Script: {instanceID: 6074}
+      Script: {instanceID: 7338}
     - Class: 114
-      Script: {instanceID: 6136}
+      Script: {instanceID: 7670}
     - Class: 114
-      Script: {instanceID: 6886}
+      Script: {instanceID: 8372}
     - Class: 114
-      Script: {instanceID: 7312}
+      Script: {instanceID: 8558}
     - Class: 114
-      Script: {instanceID: 7640}
+      Script: {instanceID: 31182}
     - Class: 114
-      Script: {instanceID: 8338}
+      Script: {instanceID: 32174}
     - Class: 114
-      Script: {instanceID: 24504}
+      Script: {instanceID: 118902}
+    - Class: 114
+      Script: {instanceID: 225152}
+    - Class: 114
+      Script: {instanceID: 225172}
+    - Class: 114
+      Script: {instanceID: 271568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,6 +383,113 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    Assets/Project/Game/Scenes/TestLevel2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 96
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1554}
+    - Class: 114
+      Script: {instanceID: 1600}
+    - Class: 114
+      Script: {instanceID: 2224}
+    - Class: 114
+      Script: {instanceID: 2706}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 3752}
+    - Class: 114
+      Script: {instanceID: 3902}
+    - Class: 114
+      Script: {instanceID: 4072}
+    - Class: 114
+      Script: {instanceID: 4568}
+    - Class: 114
+      Script: {instanceID: 5178}
+    - Class: 114
+      Script: {instanceID: 5242}
+    - Class: 114
+      Script: {instanceID: 5390}
+    - Class: 114
+      Script: {instanceID: 5722}
+    - Class: 114
+      Script: {instanceID: 5996}
+    - Class: 114
+      Script: {instanceID: 6100}
+    - Class: 114
+      Script: {instanceID: 6162}
+    - Class: 114
+      Script: {instanceID: 6912}
+    - Class: 114
+      Script: {instanceID: 7338}
+    - Class: 114
+      Script: {instanceID: 7670}
+    - Class: 114
+      Script: {instanceID: 8372}
+    - Class: 114
+      Script: {instanceID: 8558}
+    - Class: 114
+      Script: {instanceID: 31182}
+    - Class: 114
+      Script: {instanceID: 32174}
+    - Class: 114
+      Script: {instanceID: 118902}
+    - Class: 114
+      Script: {instanceID: 225152}
+    - Class: 114
+      Script: {instanceID: 225172}
+    - Class: 114
+      Script: {instanceID: 271568}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -510,6 +804,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 29a38ed64d6189238642fda2875101f8
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: cef9798948fddcca081b6c6392822bc2
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -878,7 +1184,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: 96695f01598edbdbc5791c6cf943ff8e
+      Hash: 96f0595ce49d53a6b1dd84d5d6d34519
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Game
@@ -1262,17 +1568,109 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 29a38ed64d6189238642fda2875101f8
-    assemblyName: DOTween.dll
-    namespaceName: DG.Tweening.Core
-    className: DOTweenComponent
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Plugins
+    namespaceName: 
+    className: IntHandler
   - hash:
       serializedVersion: 2
-      Hash: cef9798948fddcca081b6c6392822bc2
-    assemblyName: DOTween.dll
-    namespaceName: DG.Tweening.Core
-    className: DOTweenSettings
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Plugins
+    namespaceName: IJunior.TypedScenes
+    className: TypedProcessor
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Plugins
+    namespaceName: 
+    className: MultiHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Plugins
+    namespaceName: 
+    className: StringHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Plugins
+    namespaceName: 
+    className: CustomClassHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Plugins
+    namespaceName: IJunior.TypedScenes
+    className: LoadingProcessor
+  - hash:
+      serializedVersion: 2
+      Hash: 9b43f94683ee23fe2055b55eae0723a8
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SceneSwitcher
+  - hash:
+      serializedVersion: 2
+      Hash: faf562eeafd6d885ab2dae474fc07f19
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelSceneEntry
+  - hash:
+      serializedVersion: 2
+      Hash: ccbdd32a10348380616a7457aba64951
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 251b2cbc3cfd756d7942d2dff210fc70
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuSceneEntry
+  - hash:
+      serializedVersion: 2
+      Hash: 504eafcbe0de7e44330a636b5df34e21
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Root
+  - hash:
+      serializedVersion: 2
+      Hash: ee84fe860d9ca648adcc9325006c6ce3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MoneyVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelsVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 490ec2ee2e15c2384acc39ab6da9cdff
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelIndicator
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Timer
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TimeText
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LevelText
   platform: 19
   scenePathNames:
-  - Assets/Project/Game/Scenes/Test.unity
+  - Assets/Project/Game/Scenes/Menu.unity
+  - Assets/Project/Game/Scenes/TestLevel.unity
+  - Assets/Project/Game/Scenes/TestLevel2.unity
   playerPath: E:/Data/Programming/BuiltProjects/ArrowBlocks/ArrowBlocks.exe

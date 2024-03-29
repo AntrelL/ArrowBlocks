@@ -3,36 +3,80 @@
   "WorkspaceRootPath": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\blocks\\virtualblockgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\blocks\\virtualblockgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\project\\game\\scripts\\main\\blocks\\arrowblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\blocks\\arrowblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\player\\playercamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\player\\playercamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\menu\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\menu\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\menu\\indicatingicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\project\\game\\scripts\\menu\\indicatingicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\menu\\indicatingicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\project\\game\\scripts\\menu\\progressbarindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\menu\\progressbarindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\project\\game\\scripts\\menu\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\menu\\progressbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\root.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\root.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\menu\\progressbarindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\menu\\progressbarindicator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\project\\game\\scripts\\menu\\leveltext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\menu\\leveltext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\menu\\timetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\menu\\timetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\project\\game\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\player\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\player\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\blocks\\virtualblockgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\blocks\\virtualblockgrid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\blocks\\arrowblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\blocks\\arrowblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\scenecontrol\\sceneswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\scenecontrol\\sceneswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\levelsvisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\levelsvisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\scenecontrol\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\scenecontrol\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\scenecontrol\\scenedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\scenecontrol\\scenedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\levelloaderportable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\levelloaderportable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\scenecontrol\\levelsceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\scenecontrol\\levelsceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\project\\game\\scripts\\main\\scenecontrol\\menusceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\project\\game\\scripts\\main\\scenecontrol\\menusceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,113 +86,247 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProgressBarIndicator.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T17:59:02.233Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Game.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
-              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wCoAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-27T10:09:33.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProgressBarIndicator.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
-              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBarIndicator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T16:56:47.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "IndicatingIcon.cs",
               "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\IndicatingIcon.cs",
               "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Menu\\IndicatingIcon.cs",
               "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\IndicatingIcon.cs",
               "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Menu\\IndicatingIcon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T16:16:04.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProgressBar.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
-              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAmwF0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T13:38:20.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VirtualBlockGrid.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
-              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAmwE0AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T11:48:56.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ArrowBlock.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
-              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwC4AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T11:49:00.852Z",
+              "WhenOpened": "2024-03-29T18:25:12.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PlayerCamera.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerCamera.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerCamera.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerCamera.cs",
-              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerCamera.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAABeAAAA",
+              "Title": "ProgressBar.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Menu\\ProgressBar.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAmwFUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T11:00:49.828Z",
+              "WhenOpened": "2024-03-29T17:58:02.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LevelText.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\LevelText.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Menu\\LevelText.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\LevelText.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Menu\\LevelText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T17:44:11.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Player.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Player\\Player.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Player\\Player.cs",
-              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Player\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Title": "TimeText.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\TimeText.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Menu\\TimeText.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Menu\\TimeText.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Menu\\TimeText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T11:00:46.806Z"
+              "WhenOpened": "2024-03-29T16:59:53.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Timer.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Timer.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Timer.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Timer.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Timer.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wBIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:52:51.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ArrowBlock.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\ArrowBlock.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAwwEIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:47:05.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VirtualBlockGrid.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Blocks\\VirtualBlockGrid.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAuwFkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:46:51.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LevelLoaderPortable.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\LevelLoaderPortable.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\LevelLoaderPortable.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\LevelLoaderPortable.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\LevelLoaderPortable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:26:21.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LevelsVisualizer.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\LevelsVisualizer.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\LevelsVisualizer.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\LevelsVisualizer.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\LevelsVisualizer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T14:23:19.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Level.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Level.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Level.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Level.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Level.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wB4AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T13:59:41.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Game.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Game.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAIwEsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T13:48:16.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayerData.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerData.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerData.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerData.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\Player\\PlayerData.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwA8AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T13:29:30.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Root.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Root.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Root.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Root.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Root.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T13:23:57.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MenuSceneEntry.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\MenuSceneEntry.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\MenuSceneEntry.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\MenuSceneEntry.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\MenuSceneEntry.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T11:30:21.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SceneSwitcher.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneSwitcher.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneSwitcher.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneSwitcher.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneSwitcher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T11:32:01.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LevelSceneEntry.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelSceneEntry.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelSceneEntry.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelSceneEntry.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelSceneEntry.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T11:17:25.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LevelLoader.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelLoader.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelLoader.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\LevelLoader.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAUwA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T11:25:11.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SceneData.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneData.cs",
+              "RelativeDocumentMoniker": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneData.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneData.cs",
+              "RelativeToolTip": "Assets\\Project\\Game\\Scripts\\Main\\SceneControl\\SceneData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T11:21:21.5Z"
             }
           ]
         }

@@ -14,7 +14,9 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
     [HideInInspector] [SerializeField] private List<ArrowBlock> _blocksOffGrid;
 
     private int _releasedBlocks;
+    private bool _isFirstBlockActivated = false;
 
+    public event Action FirstBlockActivated;
     public event Action<float> ValueChanged;
     public event Action AllBlocksReleased;
 
@@ -61,6 +63,7 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
         }
 
         _releasedBlocks = 0;
+        _isFirstBlockActivated = false;
         UpdateProgressBar(_releasedBlocks);
         SetCenterPointPosition();
     }
@@ -78,6 +81,14 @@ public class VirtualBlockGrid : MonoBehaviour, IProgressBarInfo
     public void OnBlockTouchedOther()
     {
         SetCenterPointPosition();
+    }
+
+    public void OnBlockActivated()
+    {
+        if (_isFirstBlockActivated == false)
+            FirstBlockActivated?.Invoke();
+
+        _isFirstBlockActivated = true;
     }
 
     public void RemoveBlock(ArrowBlock block)

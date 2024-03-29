@@ -23,7 +23,7 @@ public class ArrowBlock : MonoBehaviour
 
     public bool IsReleased { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
         _transform = transform;
         _basePosition = _targetPosition = _transform.position;
@@ -63,6 +63,8 @@ public class ArrowBlock : MonoBehaviour
     {
         if (_isMoving || _isAnimated || IsReleased)
             return;
+
+        _virtualBlockGrid.OnBlockActivated();
 
         if (Physics.Raycast(_transform.position, _transform.forward, out RaycastHit hit) == false)
         {

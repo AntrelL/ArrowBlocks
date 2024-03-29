@@ -9,7 +9,7 @@ public class IndicatingIcon : MonoBehaviour
     private Sprite _normalIcon;
     private Image _image;
 
-    private void Start()
+    private void Awake()
     {
         _image = GetComponent<Image>();
         _normalIcon = _image.sprite;
