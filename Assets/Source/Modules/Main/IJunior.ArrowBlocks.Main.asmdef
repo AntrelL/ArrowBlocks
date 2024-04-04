@@ -1,0 +1,18 @@
+{
+    "name": "IJunior.ArrowBlocks.Main",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7a596a79a19530b459ab8979a94b4e16",
+        "GUID:150cfa96b154fa148929c9608eb909ff",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
