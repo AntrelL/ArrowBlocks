@@ -14,6 +14,7 @@ namespace IJunior.ArrowBlocks
             _levelActivators = new UnityAction[]
             {
                 () => LevelTemplate.Load(playerData),
+                () => Level2.Load(playerData)
             };
 
             if (playerData.LevelsData.Count != _levelActivators.Length)
