@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\game\\scripts\\level\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\modules\\ui\\text\\timetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|solutionrelative:assets\\source\\modules\\ui\\text\\timetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\level\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\level\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TimeText.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T21:02:46.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LevelLoader.cs",
               "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Level\\LevelLoader.cs",
@@ -30,8 +47,7 @@
               "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Level\\LevelLoader.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T13:35:47.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-05T13:35:47.181Z"
             }
           ]
         }

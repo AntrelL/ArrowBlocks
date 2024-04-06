@@ -14,13 +14,10 @@ namespace IJunior.UI
 
         private void SetTime(float time)
         {
-            int indentationToFractionalPart = 2;
-            int wholePart = (int)Math.Truncate(time);
+            TimeSpan timeSpan = TimeSpan.FromSeconds(time);
+            string textTime = timeSpan.Minutes + ":" + timeSpan.ToString(@"ss\.ff");
 
-            float fractionalPart = (float)Math.Round(time - wholePart, indentationToFractionalPart);
-            string fractionalPartText = fractionalPart.ToString().Substring(indentationToFractionalPart);
-
-            Text = PrefixText + $"{wholePart}:{fractionalPartText}s";
+            Text = PrefixText + textTime;
         }
     }
 }
