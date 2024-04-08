@@ -59,12 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelSceneSwitcher.cs" />
-    <Compile Include="Assets\Scenes\Typed\AllSky_Overcast4_Low.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelLoader.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelCompositeRoot.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuScreenId.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\Level.cs" />
-    <Compile Include="Assets\Source\Game\Scripts\Level\LevelFlowControl.cs" />
     <Compile Include="Assets\Scenes\Typed\Level2.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuCompositeRoot.cs" />
     <Compile Include="Assets\Scenes\Typed\Menu.cs" />

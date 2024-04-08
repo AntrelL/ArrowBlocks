@@ -79,6 +79,7 @@
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\VirtualBlockGrid.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\IPlayerCameraTarget.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelButton.cs" />
+    <Compile Include="Assets\Source\Modules\Main\AuxiliaryTools\Rotator.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerData.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelState.cs" />
   </ItemGroup>

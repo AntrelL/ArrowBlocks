@@ -1,4 +1,5 @@
 using IJunior.ArrowBlocks.Main;
+using IJunior.CompositeRoot;
 using IJunior.TypedScenes;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ using UnityEngine;
 using IJunior.UI;
 
 using Screen = IJunior.UI.Screen;
+using System.Collections.Generic;
 
 namespace IJunior.ArrowBlocks
 {
@@ -20,6 +22,12 @@ namespace IJunior.ArrowBlocks
         [Header("User Interface")]
         [SerializeField] private LevelButtonsStorage _levelButtonsStorage;
         [SerializeField] private VersionText _versionText;
+        [Space]
+        [Header("Animators")]
+        [SerializeField] private Rotator _cameraRotator;
+        [Space]
+        [Header("Menu Control")]
+        [SerializeField] private FlowControl _menuFlowControl;
 
         private PlayerData _playerData;
         private LevelLoader _levelLoader;
@@ -29,6 +37,8 @@ namespace IJunior.ArrowBlocks
 
         private void Awake()
         {
+            var rootUpdatebleElements = new List<IRootUpdateble>();
+
             InitializeScreens();
             _levelButtons = _levelButtonsStorage.Initialize();
 
@@ -44,8 +54,12 @@ namespace IJunior.ArrowBlocks
             _levelActivators = new UnityAction[_levelButtons.Length];
 
             _levelButtonsStorage.UpdateLevelButtons(_playerData.LevelsData);
-
             _versionText.Initialize();
+
+            _cameraRotator.Initialize();
+            rootUpdatebleElements.Add(_cameraRotator);
+
+            _menuFlowControl.Initialize(rootUpdatebleElements, new List<IRootFixedUpdateble>());
         }
 
         private void OnEnable()
@@ -63,6 +77,12 @@ namespace IJunior.ArrowBlocks
             {
                 _levelButtons[i].onClick.RemoveListener(_levelActivators[i]);
             }
+        }
+
+        private void Start()
+        {
+            Time.timeScale = 1;
+            _menuFlowControl.Run();
         }
 
         public void OnSceneLoaded((PlayerData PlayerData, MenuScreenId MenuScreenId) sceneTransitionData)

@@ -35,7 +35,7 @@ namespace IJunior.ArrowBlocks
         [Space]
         [Header("Level Control")]
         [SerializeField] private Level _level;
-        [SerializeField] private LevelFlowControl _levelFlowControl;
+        [SerializeField] private FlowControl _levelFlowControl;
         [SerializeField] private LevelSceneSwitcher _levelSceneSwitcher;
 
         private PlayerInput _playerInput;

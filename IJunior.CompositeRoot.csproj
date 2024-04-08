@@ -62,6 +62,7 @@
     <Compile Include="Assets\Source\Modules\CompositeRoot\UtilityMethodInterfaces\IStartable.cs" />
     <Compile Include="Assets\Source\Modules\CompositeRoot\UtilityMethodInterfaces\IRootFixedUpdateble.cs" />
     <Compile Include="Assets\Source\Modules\CompositeRoot\UtilityMethodInterfaces\IRootUpdateble.cs" />
+    <Compile Include="Assets\Source\Modules\CompositeRoot\FlowControl.cs" />
     <Compile Include="Assets\Source\Modules\CompositeRoot\UtilityMethodInterfaces\IActivatable.cs" />
   </ItemGroup>
   <ItemGroup>

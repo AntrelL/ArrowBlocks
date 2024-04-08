@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\modules\\ui\\text\\timetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|solutionrelative:assets\\source\\modules\\ui\\text\\timetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94B74912-76C5-11B9-2E29-2CBF84036268}|IJunior.CompositeRoot.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\compositeroot\\flowcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94B74912-76C5-11B9-2E29-2CBF84036268}|IJunior.CompositeRoot.csproj|solutionrelative:assets\\source\\modules\\compositeroot\\flowcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\menu\\menucompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\menu\\menucompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\modules\\main\\auxiliarytools\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\auxiliarytools\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\level\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,20 +38,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TimeText.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
-              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
-              "RelativeToolTip": "Assets\\Source\\Modules\\UI\\Text\\TimeText.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "DocumentIndex": 3,
+              "Title": "Rotator.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\AuxiliaryTools\\Rotator.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\AuxiliaryTools\\Rotator.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\AuxiliaryTools\\Rotator.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\AuxiliaryTools\\Rotator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T21:02:46.705Z",
+              "WhenOpened": "2024-04-08T11:22:35.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LevelCompositeRoot.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAowDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T11:11:18.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MenuCompositeRoot.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwFMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T11:11:11.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FlowControl.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\CompositeRoot\\FlowControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\CompositeRoot\\FlowControl.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\CompositeRoot\\FlowControl.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\CompositeRoot\\FlowControl.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T11:09:37.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LevelLoader.cs",
               "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Level\\LevelLoader.cs",
