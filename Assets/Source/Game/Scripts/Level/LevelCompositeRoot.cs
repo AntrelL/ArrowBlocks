@@ -13,8 +13,8 @@ namespace IJunior.ArrowBlocks
     internal class LevelCompositeRoot : MonoBehaviour, ISceneLoadHandler<PlayerData>
     {
         [Header("Screens")]
-        [SerializeField] private Screen _main;
-        [SerializeField] private Screen _victory;
+        [SerializeField] private Screen _mainScreen;
+        [SerializeField] private Screen _victoryScreen;
         [Space]
         [Header("Player Elements")]
         [SerializeField] private Player _player;
@@ -29,9 +29,17 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private DigitalText _levelNumberText;
         [SerializeField] private TimeText _passingTimeText;
         [SerializeField] private LinkedDigitalText _playerMoneyText;
+        [SerializeField] private LinkedDigitalText _availableBombsCount;
+        [SerializeField] private ColorIndicatingIcon _availableBombsCountBackground;
         [SerializeField] private Button _nextLevelButton;
+        [SerializeField] private Button _throwBombButton;
         [SerializeField] private ProgressBar _levelProgressBar;
         [SerializeField] private ProgressBar _victoryLevelProgressBar;
+        [Space]
+        [Header("Bomb Thrower")]
+        [SerializeField] private BombThrower _bombThrower;
+        [SerializeField] private BombSeller _bombSeller;
+        [SerializeField] private Bomb _bombTemplate;
         [Space]
         [Header("Level Control")]
         [SerializeField] private Level _level;
@@ -43,6 +51,7 @@ namespace IJunior.ArrowBlocks
         private LevelLoader _levelLoader;
         private PlayerData _playerData;
         private PlayerMoneyView _playerMoneyView;
+        private AvailableBombsCountView _availableBombsCountView;
         private BlockConstructionProgressView _blockConstructionProgressView;
 
         private void Awake()
@@ -72,17 +81,21 @@ namespace IJunior.ArrowBlocks
             _playerMoneyView = new PlayerMoneyView(_playerData);
             _playerMoneyText.Initialize(_playerMoneyView);
 
-            _level.InitializeBaseInfo(_blockConstruction, _passingTimeText, timer);
-            _level.InitializePlayerInfo(_playerInput, _playerData);
-            _level.InitializeScreensInfo(_main, _victory);
-
-            _levelLoader = new LevelLoader(_playerData);
-            _levelSceneSwitcher.Initialize(_levelLoader, _playerData, _level.Number);
+            InitializeLevelControl(timer);
 
             _levelNumberText.Initialize();
             _levelNumberText.Value = _level.Number;
 
             _nextLevelButton.gameObject.SetActive(_level.Number < _playerData.LevelsData.Count);
+
+            _availableBombsCountBackground.Initialize();
+
+            _bombSeller.Initialize(_playerData);
+            _bombThrower.Initialize(_bombTemplate, _bombSeller,
+                _throwBombButton, _availableBombsCountBackground, _playerCamera, _blockConstruction);
+
+            _availableBombsCountView = new AvailableBombsCountView(_bombSeller);
+            _availableBombsCount.Initialize(_availableBombsCountView);
 
             _levelFlowControl.Initialize(rootUpdatebleElements, rootFixedUpdatebleElements);
         }
@@ -101,7 +114,10 @@ namespace IJunior.ArrowBlocks
             _blockConstructionProgressView.OnActivate();
             _levelProgressBar.Connect(_blockConstructionProgressView);
 
-            _playerMoneyText.OnActivate();
+            _availableBombsCountView.OnActivate();
+            _availableBombsCount.OnActivate();
+            _bombThrower.OnActivate();
+
             _level.OnActivate();
         }
 
@@ -119,7 +135,10 @@ namespace IJunior.ArrowBlocks
             _blockConstructionProgressView.OnDeactivate();
             _levelProgressBar.Disconnect();
 
-            _playerMoneyText.OnDeactivate();
+            _availableBombsCountView.OnDeactivate();
+            _availableBombsCount.OnDeactivate();
+            _bombThrower.OnDeactivate();
+
             _level.OnDeactivate();
         }
 
@@ -137,8 +156,8 @@ namespace IJunior.ArrowBlocks
 
         private void InitializeScreens()
         {
-            _main.Initialize();
-            _victory.Initialize();
+            _mainScreen.Initialize();
+            _victoryScreen.Initialize();
         }
 
         private void InitializePlayerElements(PlayerInput playerInput,
@@ -166,6 +185,16 @@ namespace IJunior.ArrowBlocks
             _blockConstructionProgressView = new BlockConstructionProgressView(_blockConstruction);
 
             return blockMovers;
+        }
+
+        private void InitializeLevelControl(Timer timer)
+        {
+            _level.InitializeBaseInfo(_blockConstruction, _passingTimeText, _bombThrower, timer);
+            _level.InitializePlayerInfo(_playerInput, _playerData);
+            _level.InitializeScreensInfo(_mainScreen, _victoryScreen);
+
+            _levelLoader = new LevelLoader(_playerData);
+            _levelSceneSwitcher.Initialize(_levelLoader, _playerData, _level.Number);
         }
     }
 }

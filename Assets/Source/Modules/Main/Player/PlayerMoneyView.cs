@@ -8,12 +8,12 @@ namespace IJunior.ArrowBlocks.Main
     {
         private PlayerData _playerData;
 
-        public event Action<float> ValueChanged;
-
         public PlayerMoneyView(PlayerData playerData)
         {
             _playerData = playerData;
         }
+
+        public event Action<float> ValueChanged;
 
         public float Value => _playerData.Money;
 

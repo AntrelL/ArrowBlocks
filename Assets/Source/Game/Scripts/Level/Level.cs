@@ -21,14 +21,16 @@ namespace IJunior.ArrowBlocks
         private Screen _victoryScreen;
         private Timer _timer;
         private TimeText _passingTimeText;
+        private BombThrower _bombThrower;
 
         public int Number => _number;
 
         public void InitializeBaseInfo(BlockConstruction blockConstruction,
-            TimeText passingTimeText, Timer timer)
+            TimeText passingTimeText, BombThrower bombThrower, Timer timer)
         {
             _blockConstruction = blockConstruction;
             _passingTimeText = passingTimeText;
+            _bombThrower = bombThrower;
             _timer = timer;
 
             Time.timeScale = 1;
@@ -82,6 +84,7 @@ namespace IJunior.ArrowBlocks
 
             _blockConstruction.ResetAllBlocks();
             _timer.ResetValue();
+            _bombThrower.ResetValues();
         }
 
         public void RestartFromMenu()

@@ -60,13 +60,15 @@
   <ItemGroup>
     <Compile Include="Assets\Source\Modules\UI\Text\TimeText.cs" />
     <Compile Include="Assets\Source\Modules\UI\Text\LinkedDigitalText.cs" />
-    <Compile Include="Assets\Source\Modules\UI\IndicatingIcon.cs" />
+    <Compile Include="Assets\Source\Modules\UI\Icon\IndicatingIcon.cs" />
     <Compile Include="Assets\Source\Modules\UI\ProgressBar\IProgressBarInfo.cs" />
+    <Compile Include="Assets\Source\Modules\UI\Icon\Icon.cs" />
     <Compile Include="Assets\Source\Modules\UI\Text\VersionText.cs" />
     <Compile Include="Assets\Source\Modules\UI\ProgressBar\ProgressBarIndicator.cs" />
     <Compile Include="Assets\Source\Modules\UI\Text\TextInfo.cs" />
     <Compile Include="Assets\Source\Modules\UI\ProgressBar\ProgressBar.cs" />
     <Compile Include="Assets\Source\Modules\UI\Text\ILinkedDigitalTextSource.cs" />
+    <Compile Include="Assets\Source\Modules\UI\Icon\ColorIndicatingIcon.cs" />
     <Compile Include="Assets\Source\Modules\UI\Screen.cs" />
     <Compile Include="Assets\Source\Modules\UI\Text\DigitalText.cs" />
   </ItemGroup>

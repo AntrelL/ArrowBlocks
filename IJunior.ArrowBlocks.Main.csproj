@@ -58,6 +58,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Source\Modules\Main\BombThrower\AvailableBombsCountView.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionCalculations.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelButtonsStorage.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockMover.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerMoneyView.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCameraBooster.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\IReadOnlyLevelData.cs" />
+    <Compile Include="Assets\Source\Modules\Main\BombThrower\BombSeller.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlock.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCamera.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Player.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionProgressView.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerInput.cs" />
     <Compile Include="Assets\Source\Modules\Main\AuxiliaryTools\Extensions\Vector3Extensions.cs" />
+    <Compile Include="Assets\Source\Modules\Main\BombThrower\BombThrower.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstruction.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\VirtualBlockGrid.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\IPlayerCameraTarget.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="Assets\Source\Modules\Main\AuxiliaryTools\Rotator.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerData.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelState.cs" />
+    <Compile Include="Assets\Source\Modules\Main\BombThrower\Bomb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Source\Modules\Main\IJunior.ArrowBlocks.Main.asmdef" />

@@ -2847,7 +2847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2001386548149768147, guid: d1401dd8492d32d4e93b8a9e3ed48f02, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 16.5
+      value: 16.499939
       objectReference: {fileID: 0}
     - target: {fileID: 2001386548149768147, guid: d1401dd8492d32d4e93b8a9e3ed48f02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4160,7 +4160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.12, y: 0.512}
   m_AnchorMax: {x: 0.88000005, y: 0.96}
-  m_AnchoredPosition: {x: -0.000061035156, y: 156.5}
+  m_AnchoredPosition: {x: -0.00012207031, y: 156.5}
   m_SizeDelta: {x: 8.456055, y: -305.8757}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2050817248
@@ -4210,7 +4210,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 147
+  m_fontSize: 147.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

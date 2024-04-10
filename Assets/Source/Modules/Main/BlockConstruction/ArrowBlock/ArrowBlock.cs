@@ -64,22 +64,17 @@ namespace IJunior.ArrowBlocks.Main
 
             if (Physics.Raycast(Transform.position, Transform.forward, out RaycastHit hit) == false)
             {
-                _mover.MoveTo(Transform.forward, _flightTimeIntoVoid);
-
-                IsReleased = true;
-                Released?.Invoke(this);
-                _submitRemovalRequester = StartCoroutine(SubmitRemovalRequest(_flightTimeIntoVoid));
+                StartMovingToVoid();
             }
             else
             {
                 if (hit.collider.gameObject.TryGetComponent(out ArrowBlock arrowBlock) == false)
                     throw new Exception("Arrow block detected an unknown object.");
 
-                Vector3 targetPosition = _blockConstruction.Calculations.GetNeighboringCellPosition(
-                    arrowBlock.transform.position, Transform.forward);
-
-                _mover.MoveTo(targetPosition);
-                _obstructingBlock = arrowBlock;
+                if (arrowBlock.IsReleased)
+                    StartMovingToVoid();
+                else
+                    StartMovingToTargetPosition(arrowBlock);
             }
 
             _effector.TryActivateTrail(_mover.TargetPosition);
@@ -96,10 +91,46 @@ namespace IJunior.ArrowBlocks.Main
                 StopCoroutine(_submitRemovalRequester);
         }
 
+        public void FastRelease()
+        {
+            Activated?.Invoke();
+
+            Release();
+            Destroy();
+        }
+
+        private void Release()
+        {
+            IsReleased = true;
+            Released?.Invoke(this);
+        }
+
+        private void Destroy()
+        {       
+            _blockConstruction.RemoveBlock(this);
+        }
+
+        private void StartMovingToVoid()
+        {
+            _mover.MoveTo(Transform.forward, _flightTimeIntoVoid);
+            Release();
+
+            _submitRemovalRequester = StartCoroutine(SubmitRemovalRequest(_flightTimeIntoVoid));
+        }
+
+        private void StartMovingToTargetPosition(ArrowBlock obstructingArrowBlock)
+        {
+            Vector3 targetPosition = _blockConstruction.Calculations.GetNeighboringCellPosition(
+                obstructingArrowBlock.transform.position, Transform.forward);
+
+            _mover.MoveTo(targetPosition);
+            _obstructingBlock = obstructingArrowBlock;
+        }
+
         private IEnumerator SubmitRemovalRequest(float delay)
         {
             yield return new WaitForSeconds(delay);
-            _blockConstruction.RemoveBlock(this);
+            Destroy();
         }
 
         private void OnTargetPositionReached()

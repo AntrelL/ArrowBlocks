@@ -29,6 +29,11 @@ namespace IJunior.ArrowBlocks.Main
         private float _offsetDistance;
         private Vector3 _targetPosition;
 
+        public event Action<float> VerticalAngleToTargetChanged;
+
+        public Vector3 Position => _transform.position;
+        public float CurrentVerticalAngle => _currentVerticalAngle;
+
         public void Initialize(PlayerInput input, IPlayerCameraTarget target, PlayerCameraBooster booster)
         {
             _transform = transform;
@@ -111,6 +116,9 @@ namespace IJunior.ArrowBlocks.Main
 
             _transform.RotateAround(targetPosition, Vector3.up, shift.x);
             _transform.LookAt(targetPosition);
+
+            if (shift != Vector2.zero)
+                VerticalAngleToTargetChanged?.Invoke(_currentVerticalAngle);
         }
     }
 }

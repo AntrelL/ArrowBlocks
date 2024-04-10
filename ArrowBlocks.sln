@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJunior.ArrowBlocks.Main", "IJunior.ArrowBlocks.Main.csproj", "{56A80868-7504-1F4A-AA51-B32848A6A92D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{D063546F-99C2-D40B-22FD-9F044C13B84A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJunior.ArrowBlocks.Plugins", "IJunior.ArrowBlocks.Plugins.csproj", "{3721004B-32B8-53A2-0E38-CE6B83A31802}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJunior.ArrowBlocks.Main", "IJunior.ArrowBlocks.Main.csproj", "{56A80868-7504-1F4A-AA51-B32848A6A92D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJunior.UI", "IJunior.UI.csproj", "{57251260-7B0B-45E7-0896-38C5FD0E4CF1}"
 EndProject
@@ -19,6 +19,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D063546F-99C2-D40B-22FD-9F044C13B84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D063546F-99C2-D40B-22FD-9F044C13B84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D063546F-99C2-D40B-22FD-9F044C13B84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,10 +31,6 @@ Global
 		{3721004B-32B8-53A2-0E38-CE6B83A31802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3721004B-32B8-53A2-0E38-CE6B83A31802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3721004B-32B8-53A2-0E38-CE6B83A31802}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56A80868-7504-1F4A-AA51-B32848A6A92D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{57251260-7B0B-45E7-0896-38C5FD0E4CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57251260-7B0B-45E7-0896-38C5FD0E4CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57251260-7B0B-45E7-0896-38C5FD0E4CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
