@@ -1,13 +1,17 @@
+#pragma warning disable
+
+using System.Collections.Generic;
 using IJunior.ArrowBlocks.Main;
 using IJunior.CompositeRoot;
 using IJunior.TypedScenes;
 using UnityEngine.Events;
+using System.Collections;
+using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 using IJunior.UI;
 
 using Screen = IJunior.UI.Screen;
-using System.Collections.Generic;
 
 namespace IJunior.ArrowBlocks
 {
@@ -79,10 +83,16 @@ namespace IJunior.ArrowBlocks
             }
         }
 
-        private void Start()
+        private IEnumerator Start()
         {
             Time.timeScale = 1;
             _menuFlowControl.Run();
+
+#if !UNITY_WEBGL || UNITY_EDITOR
+            yield break;
+#endif
+
+            yield return YandexGamesSdk.Initialize();
         }
 
         public void OnSceneLoaded((PlayerData PlayerData, MenuScreenId MenuScreenId) sceneTransitionData)

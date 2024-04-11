@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638475708896796529
-    m_Hash: 2068508706
+      ticks: 638484354179315828
+    m_Hash: 4047649424
   m_LockFileStatus:
     m_FilePath: E:/Data/Programming/Projects/ArrowBlocks/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638475708897376538
-    m_Hash: 1786257873
+      ticks: 638484354180535828
+    m_Hash: 4027620077
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,58 @@ m_LocalPackages:
 m_ProjectPath: E:/Data/Programming/Projects/ArrowBlocks/Packages
 m_EditorVersion: 2022.3.7f1 (b16b3b16c7a0)
 m_ResolvedPackages:
+- packageId: com.agava.yandexgames@https://github.com/forcepusher/com.agava.yandexgames.git#16.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 16.0.0
+  source: 5
+  resolvedPath: E:\Data\Programming\Projects\ArrowBlocks\Library\PackageCache\com.agava.yandexgames@faf20595c0
+  assetPath: Packages/com.agava.yandexgames
+  name: com.agava.yandexgames
+  displayName: Yandex Games
+  author:
+    name: github.com/forcepusher
+    email: 
+    url: 
+  category: 
+  type: library
+  description: Yandex Games Unity SDK for the WebGL platform.
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.collab-proxy@2.3.1
   testable: 0
   isDirectDependency: 1
