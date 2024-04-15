@@ -19,6 +19,8 @@ namespace IJunior.ArrowBlocks.Main
             SetBlocksFromChildElements();
             SetBlocksOffGrid();
 
+            TryFindMatchedBlocks();
+
             if (_blocksOffGrid.Count > 0)
                 throw new Exception("There are blocks outside the grid.");
         }
@@ -46,6 +48,18 @@ namespace IJunior.ArrowBlocks.Main
 
                 if (position.DivideByModulus(_cellSize) != Vector3.zero)
                     _blocksOffGrid.Add(block);    
+            }
+        }
+
+        public void TryFindMatchedBlocks()
+        {
+            for (int i = 0; i < _blocks.Count; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if (_blocks[i].transform.position == _blocks[j].transform.position)
+                        Debug.LogError($"{_blocks[i]} matched with {_blocks[j]}");
+                }
             }
         }
 

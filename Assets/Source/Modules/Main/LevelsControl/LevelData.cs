@@ -8,6 +8,8 @@ namespace IJunior.ArrowBlocks.Main
 
         public LevelData() : this(LevelState.Blocked, float.MaxValue) { }
 
+        public LevelData(CleanLevelData cleanLevelData) : this(cleanLevelData.State, cleanLevelData.RecordTime) { }
+
         public LevelData(LevelState levelState, float recordTime)
         {
             State = levelState;
@@ -42,6 +44,16 @@ namespace IJunior.ArrowBlocks.Main
         {
             State = LevelState.Passed;
             RecordTime = Math.Min(time, RecordTime);
+        }
+
+        public CleanLevelData ConvertToCleanData()
+        {
+            CleanLevelData cleanLevelData = new CleanLevelData();
+
+            cleanLevelData.State = State;
+            cleanLevelData.RecordTime = RecordTime;
+
+            return cleanLevelData;
         }
     }
 }

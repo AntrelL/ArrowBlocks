@@ -2,6 +2,7 @@ using IJunior.CompositeRoot;
 using DG.Tweening;
 using UnityEngine;
 using System;
+using System.Linq;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -9,9 +10,11 @@ namespace IJunior.ArrowBlocks.Main
     {
         [SerializeField] private float _pushAnimationDistance;
         [SerializeField] private float _pushAnimationSpeed;
+        [SerializeField] private float _maxSensingDistance;
 
         private Transform _transform;
 
+        public Vector3 Position => _transform.position;
         public bool IsAnimated { get; private set; }
 
         public void Initialize(Transform transform)
@@ -21,19 +24,28 @@ namespace IJunior.ArrowBlocks.Main
 
         public void PerformChainPushAnimation(Vector3 direction)
         {          
-            PlayPushAnimation(direction);
-
             RaycastHit[] hits = Physics.RaycastAll(_transform.position, direction);
 
-            if (hits.Length == 0)
+            Vector3 previousBlockPosition = _transform.position;
+            int numberOfDecimalPlaces = 4;
+
+            ArrowBlockAnimator[] arrowBlockAnimators = ConvertToOrderedArrowBlockAnimators(hits, previousBlockPosition);
+
+            if (arrowBlockAnimators.All(animator => animator.IsAnimated == false) == false)
                 return;
 
-            foreach (var hit in hits)
+            PlayPushAnimation(direction);
+
+            foreach (var arrowBlockAnimator in arrowBlockAnimators)
             {
-                if (hit.collider.gameObject.TryGetComponent(out ArrowBlockAnimator arrowBlockAnimator) == false)
-                    throw new Exception("Arrow block detected an unknown object.");
+                float distanceBetweenBlocks = Vector3.Distance(arrowBlockAnimator.Position, previousBlockPosition);
+                distanceBetweenBlocks = (float)Math.Round(distanceBetweenBlocks, numberOfDecimalPlaces);
+
+                if (distanceBetweenBlocks > _maxSensingDistance)
+                    break;
 
                 arrowBlockAnimator.PlayPushAnimation(direction);
+                previousBlockPosition = arrowBlockAnimator.Position;
             }
         }
 
@@ -49,6 +61,25 @@ namespace IJunior.ArrowBlocks.Main
 
             _transform.DOMove(shiftPosition, time);
             _transform.DOMove(basePosition, time).SetDelay(time).OnComplete(() => IsAnimated = false);
+        }
+
+        private ArrowBlockAnimator[] ConvertToOrderedArrowBlockAnimators(RaycastHit[] hits, Vector3 previousBlockPosition)
+        {
+            var arrowBlockAnimators = new ArrowBlockAnimator[hits.Length];
+
+            for (int i = 0; i < hits.Length; i++)
+            {
+                if (hits[i].collider.gameObject.TryGetComponent(out ArrowBlockAnimator arrowBlockAnimator) == false)
+                    throw new Exception("Arrow block detected an unknown object.");
+
+                arrowBlockAnimators[i] = arrowBlockAnimator;
+            }
+
+            arrowBlockAnimators = arrowBlockAnimators
+                .OrderBy(block => (block.Position - previousBlockPosition).sqrMagnitude)
+                .ToArray();
+
+            return arrowBlockAnimators;
         }
     }
 }

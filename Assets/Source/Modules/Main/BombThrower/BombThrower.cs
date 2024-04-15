@@ -19,6 +19,7 @@ namespace IJunior.ArrowBlocks.Main
         private PlayerCamera _playerCamera;
         private BlockConstruction _blockConstruction;
         private BombSeller _bombSeller;
+        private BombThrowerCalculations _calculations;
         private Bomb _bomb;
 
         private bool _isBombThrown = false;
@@ -33,18 +34,27 @@ namespace IJunior.ArrowBlocks.Main
             }
         }
 
-        public void Initialize(Bomb bombTemplate, BombSeller bombSeller, Button throwBombButton, 
-            ColorIndicatingIcon availableBombsCountBackground, PlayerCamera playerCamera, BlockConstruction blockConstruction)
+        public void InitializeBase(Bomb bombTemplate, BombSeller bombSeller, BombThrowerCalculations calculations)
         {
             _bombSeller = bombSeller;
-            _throwBombButton = throwBombButton;
-            _availableBombsCountBackground = availableBombsCountBackground;
-            _playerCamera = playerCamera;
-            _blockConstruction = blockConstruction;
+            _calculations = calculations;
+
             _transform = transform;
 
             _bomb = Instantiate(bombTemplate, _transform);
             _bomb.Initialize();
+        }
+
+        public void InitializeUI(Button throwBombButton, ColorIndicatingIcon availableBombsCountBackground)
+        {
+            _throwBombButton = throwBombButton;
+            _availableBombsCountBackground = availableBombsCountBackground;
+        }
+
+        public void FinalInitialize(PlayerCamera playerCamera, BlockConstruction blockConstruction)
+        {
+            _playerCamera = playerCamera;
+            _blockConstruction = blockConstruction;
 
             ResetValues();
         }
@@ -74,7 +84,7 @@ namespace IJunior.ArrowBlocks.Main
             Vector3 directionToTarget = _blockConstruction.CenterPointPosition - _playerCamera.Position;
             Vector3 startPosition = _playerCamera.Position + directionToTarget.normalized * _offsetDistance;
 
-            Vector3 startVelocity = CalculateThrowStartVelocity(startPosition,
+            Vector3 startVelocity = _calculations.CalculateThrowStartVelocity(startPosition,
                 _blockConstruction.CenterPointPosition, _throwAngle);
 
             _bombSeller.PayForBomb();
@@ -99,33 +109,6 @@ namespace IJunior.ArrowBlocks.Main
                 _availableBombsCountBackground.Activate();
             else
                 _availableBombsCountBackground.Deactivate();
-        }
-
-        private Vector3 CalculateThrowStartVelocity(Vector3 startPosition, Vector3 endPosition, float throwAngle)
-        {
-            Vector3 directionToTarget = endPosition - startPosition;
-
-            Vector3 horizontalDirectionToTarget = new Vector3(directionToTarget.x, 0f, directionToTarget.z);
-            Vector3 finalDirection = horizontalDirectionToTarget.normalized;
-
-            Vector3 rotationAxis = Vector3.Cross(startPosition, Vector3.up);
-            finalDirection = Quaternion.AngleAxis(-throwAngle, rotationAxis) * finalDirection;
-            finalDirection.Normalize();
-
-            float g = Physics.gravity.y;
-
-            float x = horizontalDirectionToTarget.magnitude;
-            float y = directionToTarget.y;
-
-            float degreeToRadianConversionFactor = Mathf.PI / 180;
-            float angleInRadians = throwAngle * degreeToRadianConversionFactor;
-
-            float speedSquared = (g * x * x) / (2 * (y - Mathf.Tan(angleInRadians) * x)
-                * Mathf.Pow(Mathf.Cos(angleInRadians), 2));
-
-            float speed = Mathf.Sqrt(Mathf.Abs(speedSquared));
-
-            return finalDirection * speed;
         }
     }
 }

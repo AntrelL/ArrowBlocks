@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\game\\scripts\\menu\\menucompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\menu\\menucompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\menu\\menucompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\modules\\ui\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|solutionrelative:assets\\source\\modules\\ui\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{167F28ED-376E-2BF7-912F-6E2933ED212A}|Agava.YandexGames.Samples.Playtesting.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\samples\\yandex games\\16.0.0\\playtesting sample\\playtestingcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{167F28ED-376E-2BF7-912F-6E2933ED212A}|Agava.YandexGames.Samples.Playtesting.csproj|solutionrelative:assets\\samples\\yandex games\\16.0.0\\playtesting sample\\playtestingcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\modules\\main\\player\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\player\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\player\\cleanplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\player\\cleanplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\levelscontrol\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\levelscontrol\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\levelscontrol\\cleanleveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\levelscontrol\\cleanleveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +42,86 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Screen.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Screen.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\UI\\Screen.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Screen.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\UI\\Screen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T21:03:59.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlaytestingCanvas.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
+              "RelativeDocumentMoniker": "Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
+              "RelativeToolTip": "Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T20:29:56.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LevelData.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\LevelsControl\\LevelData.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\LevelsControl\\LevelData.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\LevelsControl\\LevelData.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\LevelsControl\\LevelData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T18:35:32.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CleanLevelData.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T18:34:50.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CleanPlayerData.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T18:29:38.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerData.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwAYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T17:53:23.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -36,22 +131,9 @@
               "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
               "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
               "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAXAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAQwDYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-11T13:07:12.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PlaytestingCanvas.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
-              "RelativeDocumentMoniker": "Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
-              "RelativeToolTip": "Assets\\Samples\\Yandex Games\\16.0.0\\Playtesting Sample\\PlaytestingCanvas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T12:56:02.434Z",
               "EditorCaption": ""
             },
             {
@@ -62,7 +144,7 @@
               "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
               "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
               "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAswMwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T08:06:54.948Z",
               "EditorCaption": ""

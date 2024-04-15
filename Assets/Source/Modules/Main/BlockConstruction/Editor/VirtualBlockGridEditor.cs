@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using static PlasticPipe.PlasticProtocol.Messages.Serialization.ItemHandlerMessagesSerialization;
 
 namespace IJunior.ArrowBlocks.Main.Editor
 {
@@ -28,7 +29,7 @@ namespace IJunior.ArrowBlocks.Main.Editor
                 return;
 
             _virtualBlockGrid.SetBlocksFromChildElements();
-            _virtualBlockGrid.SetBlocksOffGrid();
+            CheckBlocksPositions();
         }
 
         public override void OnInspectorGUI()
@@ -45,7 +46,7 @@ namespace IJunior.ArrowBlocks.Main.Editor
 
             GUILayout.BeginHorizontal();
             if (GUILayout.Button("Check Blocks Positions", WidthSetting))
-                _virtualBlockGrid.SetBlocksOffGrid();
+                CheckBlocksPositions();
 
             if (_blocksOffGrid.arraySize > 0)
             {
@@ -61,6 +62,12 @@ namespace IJunior.ArrowBlocks.Main.Editor
         {
             int numberOfCorrectBlocks = _blocks.arraySize - _blocksOffGrid.arraySize;
             return $"Correct Blocks: {numberOfCorrectBlocks}/{_blocks.arraySize}";
+        }
+
+        private void CheckBlocksPositions()
+        {
+            _virtualBlockGrid.SetBlocksOffGrid();
+            _virtualBlockGrid.TryFindMatchedBlocks();
         }
     }
 }

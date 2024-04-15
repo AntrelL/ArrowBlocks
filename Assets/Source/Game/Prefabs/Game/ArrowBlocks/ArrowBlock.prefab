@@ -290,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pushAnimationDistance: 1
   _pushAnimationSpeed: 15
+  _maxSensingDistance: 2
 --- !u!114 &5219291493087343200
 MonoBehaviour:
   m_ObjectHideFlags: 0

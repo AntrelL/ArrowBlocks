@@ -2847,7 +2847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2001386548149768147, guid: d1401dd8492d32d4e93b8a9e3ed48f02, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 16.499878
+      value: 16.499512
       objectReference: {fileID: 0}
     - target: {fileID: 2001386548149768147, guid: d1401dd8492d32d4e93b8a9e3ed48f02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4210,7 +4210,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 147.05
+  m_fontSize: 146.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

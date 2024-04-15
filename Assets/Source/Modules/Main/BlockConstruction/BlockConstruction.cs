@@ -36,7 +36,7 @@ namespace IJunior.ArrowBlocks.Main
             {
                 block.Released += OnBlockReleased;
                 block.Activated += OnBlockActivated;
-                block.TouchedOther += OnBlockTouchedOther;
+                block.ChangedPosition += OnBlockChangedPosition;
             }
         }
 
@@ -46,7 +46,7 @@ namespace IJunior.ArrowBlocks.Main
             {
                 block.Released -= OnBlockReleased;
                 block.Activated -= OnBlockActivated;
-                block.TouchedOther -= OnBlockTouchedOther;
+                block.ChangedPosition -= OnBlockChangedPosition;
             }
         }
 
@@ -87,7 +87,7 @@ namespace IJunior.ArrowBlocks.Main
             _isFirstBlockActivated = true;
         }
 
-        public void OnBlockTouchedOther()
+        public void OnBlockChangedPosition()
         {
             SetCenterPointPosition();
         }

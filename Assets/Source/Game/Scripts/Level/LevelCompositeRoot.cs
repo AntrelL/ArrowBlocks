@@ -90,9 +90,7 @@ namespace IJunior.ArrowBlocks
 
             _availableBombsCountBackground.Initialize();
 
-            _bombSeller.Initialize(_playerData);
-            _bombThrower.Initialize(_bombTemplate, _bombSeller,
-                _throwBombButton, _availableBombsCountBackground, _playerCamera, _blockConstruction);
+            InitializeBombThrower();
 
             _availableBombsCountView = new AvailableBombsCountView(_bombSeller);
             _availableBombsCount.Initialize(_availableBombsCountView);
@@ -185,6 +183,15 @@ namespace IJunior.ArrowBlocks
             _blockConstructionProgressView = new BlockConstructionProgressView(_blockConstruction);
 
             return blockMovers;
+        }
+
+        private void InitializeBombThrower()
+        {
+            _bombSeller.Initialize(_playerData);
+
+            _bombThrower.InitializeBase(_bombTemplate, _bombSeller, new BombThrowerCalculations());
+            _bombThrower.InitializeUI(_throwBombButton, _availableBombsCountBackground);
+            _bombThrower.FinalInitialize(_playerCamera, _blockConstruction);
         }
 
         private void InitializeLevelControl(Timer timer)

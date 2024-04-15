@@ -142,9 +142,6 @@ ScriptsOnlyBuild:
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
   - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.Level
-    methodName: RestartFromMenu
-  - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLevelsMenu
   - assembly: Assembly-CSharp
@@ -153,6 +150,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLevelsMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.Level
+    methodName: RestartFromMenu
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadNextLevel
@@ -160,17 +160,17 @@ ScriptsOnlyBuild:
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLeaderboardMenu
   - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: Restart
   - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: RestartFromMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadNextLevel
@@ -212,79 +212,79 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1552}
-    - Class: 114
       Script: {instanceID: 1554}
     - Class: 114
-      Script: {instanceID: 1572}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1574}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 1882}
+      Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 2500}
+      Script: {instanceID: 1886}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2506}
     - Class: 114
-      Script: {instanceID: 2664}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2670}
     - Class: 114
-      Script: {instanceID: 2888}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2896}
     - Class: 114
-      Script: {instanceID: 3282}
+      Script: {instanceID: 2974}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 3288}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 3988}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 4310}
+      Script: {instanceID: 3996}
     - Class: 114
-      Script: {instanceID: 4720}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 4912}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 5068}
+      Script: {instanceID: 4920}
     - Class: 114
-      Script: {instanceID: 5166}
+      Script: {instanceID: 5076}
     - Class: 114
-      Script: {instanceID: 5198}
+      Script: {instanceID: 5174}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5206}
     - Class: 114
-      Script: {instanceID: 5334}
+      Script: {instanceID: 5264}
     - Class: 114
-      Script: {instanceID: 5520}
+      Script: {instanceID: 5344}
     - Class: 114
-      Script: {instanceID: 5880}
+      Script: {instanceID: 5530}
     - Class: 114
-      Script: {instanceID: 6138}
+      Script: {instanceID: 5890}
     - Class: 114
-      Script: {instanceID: 6244}
+      Script: {instanceID: 6148}
     - Class: 114
-      Script: {instanceID: 6310}
+      Script: {instanceID: 6254}
     - Class: 114
-      Script: {instanceID: 6550}
+      Script: {instanceID: 6320}
     - Class: 114
-      Script: {instanceID: 7080}
+      Script: {instanceID: 6562}
     - Class: 114
-      Script: {instanceID: 7802}
+      Script: {instanceID: 7092}
     - Class: 114
-      Script: {instanceID: 7858}
+      Script: {instanceID: 7822}
     - Class: 114
-      Script: {instanceID: 8226}
+      Script: {instanceID: 7878}
     - Class: 114
-      Script: {instanceID: 8330}
+      Script: {instanceID: 8250}
     - Class: 114
-      Script: {instanceID: 8468}
+      Script: {instanceID: 8354}
+    - Class: 114
+      Script: {instanceID: 8492}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -345,79 +345,79 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1552}
-    - Class: 114
       Script: {instanceID: 1554}
     - Class: 114
-      Script: {instanceID: 1572}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1574}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 1882}
+      Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 2500}
+      Script: {instanceID: 1886}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2506}
     - Class: 114
-      Script: {instanceID: 2664}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2670}
     - Class: 114
-      Script: {instanceID: 2888}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2896}
     - Class: 114
-      Script: {instanceID: 3282}
+      Script: {instanceID: 2974}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 3288}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3336}
     - Class: 114
-      Script: {instanceID: 3988}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 4310}
+      Script: {instanceID: 3996}
     - Class: 114
-      Script: {instanceID: 4720}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 4912}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 5068}
+      Script: {instanceID: 4920}
     - Class: 114
-      Script: {instanceID: 5166}
+      Script: {instanceID: 5076}
     - Class: 114
-      Script: {instanceID: 5198}
+      Script: {instanceID: 5174}
     - Class: 114
-      Script: {instanceID: 5254}
+      Script: {instanceID: 5206}
     - Class: 114
-      Script: {instanceID: 5334}
+      Script: {instanceID: 5264}
     - Class: 114
-      Script: {instanceID: 5520}
+      Script: {instanceID: 5344}
     - Class: 114
-      Script: {instanceID: 5880}
+      Script: {instanceID: 5530}
     - Class: 114
-      Script: {instanceID: 6138}
+      Script: {instanceID: 5890}
     - Class: 114
-      Script: {instanceID: 6244}
+      Script: {instanceID: 6148}
     - Class: 114
-      Script: {instanceID: 6310}
+      Script: {instanceID: 6254}
     - Class: 114
-      Script: {instanceID: 6550}
+      Script: {instanceID: 6320}
     - Class: 114
-      Script: {instanceID: 7080}
+      Script: {instanceID: 6562}
     - Class: 114
-      Script: {instanceID: 7802}
+      Script: {instanceID: 7092}
     - Class: 114
-      Script: {instanceID: 7858}
+      Script: {instanceID: 7822}
     - Class: 114
-      Script: {instanceID: 8226}
+      Script: {instanceID: 7878}
     - Class: 114
-      Script: {instanceID: 8330}
+      Script: {instanceID: 8250}
     - Class: 114
-      Script: {instanceID: 8468}
+      Script: {instanceID: 8354}
+    - Class: 114
+      Script: {instanceID: 8492}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -466,63 +466,63 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1552}
-    - Class: 114
       Script: {instanceID: 1554}
     - Class: 114
       Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 1672}
+      Script: {instanceID: 1606}
     - Class: 114
-      Script: {instanceID: 2244}
+      Script: {instanceID: 1674}
     - Class: 114
-      Script: {instanceID: 2254}
+      Script: {instanceID: 2250}
     - Class: 114
-      Script: {instanceID: 2664}
+      Script: {instanceID: 2260}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2670}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 3668}
+      Script: {instanceID: 2974}
     - Class: 114
-      Script: {instanceID: 3828}
+      Script: {instanceID: 3676}
     - Class: 114
-      Script: {instanceID: 3988}
+      Script: {instanceID: 3836}
     - Class: 114
-      Script: {instanceID: 4436}
+      Script: {instanceID: 3996}
     - Class: 114
-      Script: {instanceID: 4452}
+      Script: {instanceID: 4444}
     - Class: 114
-      Script: {instanceID: 4720}
+      Script: {instanceID: 4460}
     - Class: 114
-      Script: {instanceID: 4734}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 5152}
+      Script: {instanceID: 4742}
     - Class: 114
-      Script: {instanceID: 5166}
+      Script: {instanceID: 5160}
     - Class: 114
-      Script: {instanceID: 5312}
+      Script: {instanceID: 5174}
     - Class: 114
-      Script: {instanceID: 5434}
+      Script: {instanceID: 5322}
     - Class: 114
-      Script: {instanceID: 5520}
+      Script: {instanceID: 5444}
     - Class: 114
-      Script: {instanceID: 6138}
+      Script: {instanceID: 5530}
     - Class: 114
-      Script: {instanceID: 6244}
+      Script: {instanceID: 6148}
     - Class: 114
-      Script: {instanceID: 6310}
+      Script: {instanceID: 6254}
     - Class: 114
-      Script: {instanceID: 7080}
+      Script: {instanceID: 6320}
     - Class: 114
-      Script: {instanceID: 7848}
+      Script: {instanceID: 7092}
     - Class: 114
-      Script: {instanceID: 7858}
+      Script: {instanceID: 7868}
     - Class: 114
-      Script: {instanceID: 8598}
+      Script: {instanceID: 7878}
+    - Class: 114
+      Script: {instanceID: 8622}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -592,6 +592,12 @@ ScriptsOnlyBuild:
     className: Rotator
   - hash:
       serializedVersion: 2
+      Hash: f8d5f1b9e1bfdf3ccc107b8e84cad1e3
+    assemblyName: Agava.YandexGames.Samples.Playtesting
+    namespaceName: Agava.YandexGames.Samples
+    className: PurchasedProductPanel
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -650,6 +656,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: bcdedb1b3a567eb05111be4716618ce1
+    assemblyName: Agava.YandexGames.Samples.Playtesting
+    namespaceName: Agava.YandexGames.Samples
+    className: WebEventSystem
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1054,7 +1066,7 @@ ScriptsOnlyBuild:
     className: TrackedDeviceRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 2a731f61430beec7fa7d70317e840505
+      Hash: 078f58077412e861a3ff03f56d3b5926
     assemblyName: IJunior.ArrowBlocks.Main
     namespaceName: IJunior.ArrowBlocks.Main
     className: ArrowBlockAnimator
@@ -1240,6 +1252,12 @@ ScriptsOnlyBuild:
     className: UnityOnEndDragMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 5926d168ac2a9f50e07ae0dce7f15c23
+    assemblyName: Agava.YandexGames.Samples.Playtesting
+    namespaceName: Agava.YandexGames.Samples
+    className: ProductPanel
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1360,7 +1378,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: e080cdcc838add843ebca98f26785306
+      Hash: bbde3a5681ac083e5c47d38ffbe402af
     assemblyName: IJunior.ArrowBlocks.Main
     namespaceName: IJunior.ArrowBlocks.Main
     className: PlayerCamera
@@ -1606,6 +1624,12 @@ ScriptsOnlyBuild:
     className: InputSettings
   - hash:
       serializedVersion: 2
+      Hash: 178a17a8c16f289edd527b5c7c283298
+    assemblyName: Agava.YandexGames.Samples.Playtesting
+    namespaceName: Agava.YandexGames.Samples
+    className: PlaytestingCanvas
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1622,6 +1646,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a94b162b6e69bf4912631d6d18ad077e
+    assemblyName: Agava.YandexGames.Samples.Playtesting
+    namespaceName: Agava.YandexGames.Samples
+    className: ProductCatalogPanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1658,6 +1688,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: bd268e8698936a1ad2250392c5d31464
+    assemblyName: Agava.YandexGames.Samples.Playtesting
+    namespaceName: Agava.YandexGames.Samples
+    className: PurchasedProductListPanel
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -1778,42 +1814,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: a94b162b6e69bf4912631d6d18ad077e
-    assemblyName: Agava.YandexGames.Samples.Playtesting
-    namespaceName: Agava.YandexGames.Samples
-    className: ProductCatalogPanel
-  - hash:
-      serializedVersion: 2
-      Hash: f8d5f1b9e1bfdf3ccc107b8e84cad1e3
-    assemblyName: Agava.YandexGames.Samples.Playtesting
-    namespaceName: Agava.YandexGames.Samples
-    className: PurchasedProductPanel
-  - hash:
-      serializedVersion: 2
-      Hash: bd268e8698936a1ad2250392c5d31464
-    assemblyName: Agava.YandexGames.Samples.Playtesting
-    namespaceName: Agava.YandexGames.Samples
-    className: PurchasedProductListPanel
-  - hash:
-      serializedVersion: 2
-      Hash: 5926d168ac2a9f50e07ae0dce7f15c23
-    assemblyName: Agava.YandexGames.Samples.Playtesting
-    namespaceName: Agava.YandexGames.Samples
-    className: ProductPanel
-  - hash:
-      serializedVersion: 2
-      Hash: bcdedb1b3a567eb05111be4716618ce1
-    assemblyName: Agava.YandexGames.Samples.Playtesting
-    namespaceName: Agava.YandexGames.Samples
-    className: WebEventSystem
-  - hash:
-      serializedVersion: 2
-      Hash: 178a17a8c16f289edd527b5c7c283298
-    assemblyName: Agava.YandexGames.Samples.Playtesting
-    namespaceName: Agava.YandexGames.Samples
-    className: PlaytestingCanvas
   platform: 20
   scenePathNames:
   - Assets/Source/Game/Scenes/Menu.unity

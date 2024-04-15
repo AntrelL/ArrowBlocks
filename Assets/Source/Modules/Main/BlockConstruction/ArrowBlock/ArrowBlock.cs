@@ -22,15 +22,17 @@ namespace IJunior.ArrowBlocks.Main
 
         public event Action<ArrowBlock> Released;
         public event Action Activated;
-        public event Action TouchedOther;
+        public event Action ChangedPosition;
 
         public bool IsReleased { get; private set; }
         public Transform Transform { get; private set; }
+        public Vector3 CellPosition { get; private set; }
 
         public ArrowBlockMover Initialize(BlockConstruction blockConstruction)
         {
             _blockConstruction = blockConstruction;
             Transform = transform;
+            CellPosition = Transform.position;
 
             _effector = GetComponent<ArrowBlockEffector>();
             _animator = GetComponent<ArrowBlockAnimator>();
@@ -85,6 +87,7 @@ namespace IJunior.ArrowBlocks.Main
             _mover.ResetValues();
             _effector.ClearTrail();
 
+            CellPosition = Transform.position;
             IsReleased = false;
 
             if (_submitRemovalRequester != null)
@@ -121,7 +124,7 @@ namespace IJunior.ArrowBlocks.Main
         private void StartMovingToTargetPosition(ArrowBlock obstructingArrowBlock)
         {
             Vector3 targetPosition = _blockConstruction.Calculations.GetNeighboringCellPosition(
-                obstructingArrowBlock.transform.position, Transform.forward);
+                obstructingArrowBlock.CellPosition, Transform.forward);
 
             _mover.MoveTo(targetPosition);
             _obstructingBlock = obstructingArrowBlock;
@@ -135,9 +138,14 @@ namespace IJunior.ArrowBlocks.Main
 
         private void OnTargetPositionReached()
         {
+            if (Transform.position != CellPosition)
+            {
+                CellPosition = Transform.position;
+                ChangedPosition?.Invoke();
+            }
+
             if (_obstructingBlock != null)
             {
-                TouchedOther?.Invoke();
                 _animator.PerformChainPushAnimation(Transform.forward);
                 _obstructingBlock = null;
             }

@@ -8,7 +8,7 @@ namespace IJunior.ArrowBlocks.Main
     [RequireComponent(typeof(Camera))]
     public class PlayerCamera : Script, IRootUpdateble, IActivatable
     {
-        [SerializeField][Range(0, 100)] private float _sensitivity;
+        [SerializeField][Range(0, 10)] private float _sensitivity;
         [SerializeField][Range(0, 90)] private float _limitVerticalAngle;
         [Space]
         [Header("Speeds")]
@@ -17,6 +17,8 @@ namespace IJunior.ArrowBlocks.Main
         [Space]
         [Header("Offset Distance")]
         [SerializeField][Range(0, 100)] private float _additionalOffsetDistance;
+        [SerializeField][Range(0, 10)] private float _portraitResponseFactor;
+        [SerializeField][Range(0, 10)] private float _portraitOffsetDistanceFactor;
         [SerializeField][Range(0, 100)] private float _minOffsetDistance;
 
         private PlayerInput _input;
@@ -28,6 +30,9 @@ namespace IJunior.ArrowBlocks.Main
         private float _currentVerticalAngle;
         private float _offsetDistance;
         private Vector3 _targetPosition;
+
+        private Vector2Int _screenSizeSaved;
+        private float _throughLineLength;
 
         public event Action<float> VerticalAngleToTargetChanged;
 
@@ -50,6 +55,7 @@ namespace IJunior.ArrowBlocks.Main
             _transform.LookAt(_targetPosition);
 
             _offsetDistance = Vector3.Distance(_transform.position, _targetPosition);
+            SaveScreenSize();
         }
 
         public void OnActivate()
@@ -64,6 +70,9 @@ namespace IJunior.ArrowBlocks.Main
 
         public void RootUpdate()
         {
+            if (Screen.width != _screenSizeSaved.x || Screen.height != _screenSizeSaved.y)
+                OnThroughLineLengthChanged(_throughLineLength);
+
             Vector3 newTargetPosition = _target.CenterPointPosition;
             _currentVerticalAngle = _calculations.CalculateCurrentVerticalAngle(newTargetPosition, _transform);
 
@@ -96,10 +105,16 @@ namespace IJunior.ArrowBlocks.Main
 
         private void OnThroughLineLengthChanged(float length)
         {
+            _throughLineLength = length;
+
             if (length < 0)
                 throw new Exception("Length cannot be negative.");
 
+            if (Screen.height / (float)Screen.width > _portraitResponseFactor)
+                length *= _portraitOffsetDistanceFactor;
+
             _offsetDistance = Mathf.Max(length + _additionalOffsetDistance, _minOffsetDistance);
+            SaveScreenSize();
         }
 
         private void MoveAroundTarget(Vector2 shift, Vector3 targetPosition)
@@ -120,5 +135,7 @@ namespace IJunior.ArrowBlocks.Main
             if (shift != Vector2.zero)
                 VerticalAngleToTargetChanged?.Invoke(_currentVerticalAngle);
         }
+
+        private void SaveScreenSize() => _screenSizeSaved = new Vector2Int(Screen.width, Screen.height);
     }
 }
