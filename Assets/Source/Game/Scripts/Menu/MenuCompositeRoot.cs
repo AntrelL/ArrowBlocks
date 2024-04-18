@@ -39,27 +39,13 @@ namespace IJunior.ArrowBlocks
         private UnityAction[] _levelActivators;
         private Button[] _levelButtons;
 
-        private void OnDisable()
-        {
-            for (int i = 0; i < _levelButtons.Length; i++)
-            {
-                _levelButtons[i].onClick.RemoveListener(_levelActivators[i]);
-            }
-        }
+        private void OnDisable() => UnsubscribeEvents();
 
         private IEnumerator Start()
         {
-#if UNITY_WEBGL && !UNITY_EDITOR
-            yield return YandexGamesSdk.Initialize();
-#endif
+            yield return Initialize();
 
-            Initialize();
-
-            for (int i = 0; i < _levelButtons.Length; i++)
-            {
-                _levelActivators[i] = _levelLoader.GetLevelActivator(i + 1);
-                _levelButtons[i].onClick.AddListener(_levelActivators[i]);
-            }
+            SubscribeEvents();
 
             Time.timeScale = 1;
             _menuFlowControl.Run();
@@ -73,8 +59,10 @@ namespace IJunior.ArrowBlocks
             _screenIdToSwitch = sceneTransitionData.MenuScreenId;
         }
 
-        private void Initialize()
+        private IEnumerator Initialize()
         {
+            yield return InitializeYandexGamesSdk();
+
             var rootUpdatebleElements = new List<IRootUpdateble>();
 
             InitializeScreens();
@@ -82,7 +70,8 @@ namespace IJunior.ArrowBlocks
 
             if (_playerData == null)
             {
-                _playerData = PlayerData.GetFromCloud(_levelButtons.Length);
+                _playerData = new PlayerData(_levelButtons.Length);
+                yield return _playerData.TryGetFromCloud();
             }
 
             if (_screenIdToSwitch != MenuScreenId.None)
@@ -98,6 +87,25 @@ namespace IJunior.ArrowBlocks
             rootUpdatebleElements.Add(_cameraRotator);
 
             _menuFlowControl.Initialize(rootUpdatebleElements, new List<IRootFixedUpdateble>());
+
+            yield return null;
+        }
+
+        private void SubscribeEvents()
+        {
+            for (int i = 0; i < _levelButtons.Length; i++)
+            {
+                _levelActivators[i] = _levelLoader.GetLevelActivator(i + 1);
+                _levelButtons[i].onClick.AddListener(_levelActivators[i]);
+            }
+        }
+
+        private void UnsubscribeEvents()
+        {
+            for (int i = 0; i < _levelButtons.Length; i++)
+            {
+                _levelButtons[i].onClick.RemoveListener(_levelActivators[i]);
+            }
         }
 
         private void InitializeScreens()
@@ -105,6 +113,15 @@ namespace IJunior.ArrowBlocks
             _main.Initialize();
             _levels.Initialize();
             _leaderboard.Initialize();
+        }
+
+        private IEnumerator InitializeYandexGamesSdk()
+        {
+#if !UNITY_WEBGL || UNITY_EDITOR
+            yield break;
+#endif
+
+            yield return YandexGamesSdk.Initialize();
         }
 
         private void SwitchScreenById(MenuScreenId screenId)

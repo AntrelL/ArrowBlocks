@@ -50,9 +50,9 @@ namespace IJunior.ArrowBlocks
         private List<ArrowBlock> _arrowBlocks;
         private LevelLoader _levelLoader;
         private PlayerData _playerData;
-        private PlayerMoneyView _playerMoneyView;
-        private AvailableBombsCountView _availableBombsCountView;
-        private BlockConstructionProgressView _blockConstructionProgressView;
+        private PlayerMoneyPresenter _playerMoneyPresenter;
+        private AvailableBombsCountPresenter _availableBombsCountPresenter;
+        private BlockConstructionProgressPresenter _blockConstructionProgressPresenter;
 
         private void Awake()
         {
@@ -78,8 +78,8 @@ namespace IJunior.ArrowBlocks
 
             _passingTimeText.Initialize();
 
-            _playerMoneyView = new PlayerMoneyView(_playerData);
-            _playerMoneyText.Initialize(_playerMoneyView);
+            _playerMoneyPresenter = new PlayerMoneyPresenter(_playerData);
+            _playerMoneyText.Initialize(_playerMoneyPresenter);
 
             InitializeLevelControl(timer);
 
@@ -92,8 +92,8 @@ namespace IJunior.ArrowBlocks
 
             InitializeBombThrower();
 
-            _availableBombsCountView = new AvailableBombsCountView(_bombSeller);
-            _availableBombsCount.Initialize(_availableBombsCountView);
+            _availableBombsCountPresenter = new AvailableBombsCountPresenter(_bombSeller);
+            _availableBombsCount.Initialize(_availableBombsCountPresenter);
 
             _levelFlowControl.Initialize(rootUpdatebleElements, rootFixedUpdatebleElements);
         }
@@ -106,13 +106,13 @@ namespace IJunior.ArrowBlocks
             foreach (var block in _arrowBlocks)
                 block.OnActivate();
 
-            _playerMoneyView.OnActivate();
+            _playerMoneyPresenter.OnActivate();
             _playerMoneyText.OnActivate();
 
-            _blockConstructionProgressView.OnActivate();
-            _levelProgressBar.Connect(_blockConstructionProgressView);
+            _blockConstructionProgressPresenter.OnActivate();
+            _levelProgressBar.Connect(_blockConstructionProgressPresenter);
 
-            _availableBombsCountView.OnActivate();
+            _availableBombsCountPresenter.OnActivate();
             _availableBombsCount.OnActivate();
             _bombThrower.OnActivate();
 
@@ -127,13 +127,13 @@ namespace IJunior.ArrowBlocks
             foreach (var block in _arrowBlocks)
                 block.OnDeactivate();
 
-            _playerMoneyView.OnDeactivate();
+            _playerMoneyPresenter.OnDeactivate();
             _playerMoneyText.OnDeactivate();
 
-            _blockConstructionProgressView.OnDeactivate();
+            _blockConstructionProgressPresenter.OnDeactivate();
             _levelProgressBar.Disconnect();
 
-            _availableBombsCountView.OnDeactivate();
+            _availableBombsCountPresenter.OnDeactivate();
             _availableBombsCount.OnDeactivate();
             _bombThrower.OnDeactivate();
 
@@ -180,7 +180,7 @@ namespace IJunior.ArrowBlocks
 
             var _calculations = new BlockConstructionCalculations(_virtualBlockGrid.CellSize);
             _blockConstruction.Initialize(_calculations, _arrowBlocks);
-            _blockConstructionProgressView = new BlockConstructionProgressView(_blockConstruction);
+            _blockConstructionProgressPresenter = new BlockConstructionProgressPresenter(_blockConstruction);
 
             return blockMovers;
         }

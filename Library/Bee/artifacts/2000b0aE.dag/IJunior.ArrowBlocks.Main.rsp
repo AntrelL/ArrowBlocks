@@ -338,9 +338,9 @@
 "Assets/Source/Modules/Main/BlockConstruction/ArrowBlock/ArrowBlockMover.cs"
 "Assets/Source/Modules/Main/BlockConstruction/BlockConstruction.cs"
 "Assets/Source/Modules/Main/BlockConstruction/BlockConstructionCalculations.cs"
-"Assets/Source/Modules/Main/BlockConstruction/BlockConstructionProgressView.cs"
+"Assets/Source/Modules/Main/BlockConstruction/BlockConstructionProgressPresenter.cs"
 "Assets/Source/Modules/Main/BlockConstruction/VirtualBlockGrid.cs"
-"Assets/Source/Modules/Main/BombThrower/AvailableBombsCountView.cs"
+"Assets/Source/Modules/Main/BombThrower/AvailableBombsCountPresenter.cs"
 "Assets/Source/Modules/Main/BombThrower/Bomb.cs"
 "Assets/Source/Modules/Main/BombThrower/BombSeller.cs"
 "Assets/Source/Modules/Main/BombThrower/BombThrower.cs"
@@ -359,7 +359,7 @@
 "Assets/Source/Modules/Main/Player/Player.cs"
 "Assets/Source/Modules/Main/Player/PlayerData.cs"
 "Assets/Source/Modules/Main/Player/PlayerInput.cs"
-"Assets/Source/Modules/Main/Player/PlayerMoneyView.cs"
+"Assets/Source/Modules/Main/Player/PlayerMoneyPresenter.cs"
 -langversion:9.0
 
 /deterministic

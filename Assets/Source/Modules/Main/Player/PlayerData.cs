@@ -1,8 +1,10 @@
 #pragma warning disable
 
 using System.Collections.Generic;
+using System.Collections;
 using Agava.YandexGames;
 using Newtonsoft.Json;
+using UnityEngine;
 using System.Linq;
 using System;
 
@@ -11,27 +13,14 @@ namespace IJunior.ArrowBlocks.Main
     public class PlayerData
     {
         private const int DefaultMoney = 250;
+        private const int CloudPollingLatency = 1;
 
         private int _money;
         private LevelData[] _levelsData;
 
-        public PlayerData(CleanPlayerData cleanPlayerData)
-        {
-            _money = cleanPlayerData.Money;
-            _levelsData = cleanPlayerData.LevelsData.Select(levelData => new LevelData(levelData)).ToArray();
-        }
+        public PlayerData(int levelsQuantity) : this(DefaultMoney, levelsQuantity) { }
 
-        public PlayerData(CleanPlayerData cleanPlayerData, int numberOfLevels) : this(cleanPlayerData)
-        {
-            Array.Resize(ref _levelsData, numberOfLevels);
-
-            for (int i = _levelsData.Length; i < numberOfLevels; i++)
-            {
-                _levelsData[i] = new LevelData();
-            }
-        }
-
-        public PlayerData(int money, int levelsQuantity)
+        private PlayerData(int money, int levelsQuantity)
         {
             _money = money;
             _levelsData = new LevelData[levelsQuantity];
@@ -63,24 +52,44 @@ namespace IJunior.ArrowBlocks.Main
             }
         }
 
-        public static PlayerData GetFromCloud(int numberOfLevels)
+        public IEnumerator TryGetFromCloud()
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
-            return new PlayerData(DefaultMoney, numberOfLevels);
+            yield break;
 #endif
 
+            bool isTringToGetData = true;
             string jsonCleanPlayerData = null;
-            PlayerAccount.GetCloudSaveData((string jsonString) => jsonCleanPlayerData = jsonString);
 
-            if (jsonCleanPlayerData == null)
-                return new PlayerData(DefaultMoney, numberOfLevels);
+            PlayerAccount.GetCloudSaveData(
+                (string jsonString) =>
+                {
+                    jsonCleanPlayerData = jsonString;
+                    isTringToGetData = false;
+                },
+                (string jsonString) =>
+                {
+                    isTringToGetData = false;
+                });
+
+            WaitForSeconds waitForSeconds = new WaitForSeconds(CloudPollingLatency);
+
+            while (isTringToGetData)       
+                yield return waitForSeconds;          
+
+            Debug.Log("Load: " + jsonCleanPlayerData);
+
+            if (string.IsNullOrEmpty(jsonCleanPlayerData))
+                yield break;
 
             CleanPlayerData cleanPlayerData = JsonConvert.DeserializeObject<CleanPlayerData>(jsonCleanPlayerData);
 
-            if (cleanPlayerData.LevelsData.Length < numberOfLevels)
-                return new PlayerData(cleanPlayerData, numberOfLevels);
+            if (cleanPlayerData.LevelsData.Length < _levelsData.Length)
+                SetData(cleanPlayerData, _levelsData.Length);
+            else
+                SetData(cleanPlayerData);
 
-            return new PlayerData(cleanPlayerData);
+            yield return null;
         }
 
         public void SaveToCloud()
@@ -92,6 +101,7 @@ namespace IJunior.ArrowBlocks.Main
             CleanPlayerData cleanPlayerData = ConvertToCleanData();
             string jsonString = JsonConvert.SerializeObject(cleanPlayerData);
 
+            Debug.Log("Save: " + jsonString);
             PlayerAccount.SetCloudSaveData(jsonString);
         }
 
@@ -100,13 +110,38 @@ namespace IJunior.ArrowBlocks.Main
             _levelsData[number - 1].Pass(time);
 
             if (number == _levelsData.Length)
+            {
+                SaveToCloud();
                 return;
+            }
 
             if (_levelsData[number].State != LevelState.Blocked)
                 return;
 
             _levelsData[number].Open();
             SaveToCloud();
+        }
+
+        private void SetData(CleanPlayerData cleanPlayerData)
+        {
+            _money = cleanPlayerData.Money;
+            _levelsData = cleanPlayerData.LevelsData.Select(levelData => new LevelData(levelData)).ToArray();
+        }
+
+        private void SetData(CleanPlayerData cleanPlayerData, int numberOfLevels)
+        {
+            int previusNumberOfLevels = _levelsData.Length;
+            Array.Resize(ref _levelsData, numberOfLevels);
+
+            for (int i = previusNumberOfLevels; i < _levelsData.Length; i++)
+            {
+                _levelsData[i] = new LevelData();
+            }
+
+            if (_levelsData[previusNumberOfLevels - 1].State == LevelState.Passed)
+                _levelsData[previusNumberOfLevels].Open();
+
+            SetData(cleanPlayerData);
         }
 
         private CleanPlayerData ConvertToCleanData()
