@@ -78,6 +78,7 @@
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerInput.cs" />
     <Compile Include="Assets\Source\Modules\Main\AuxiliaryTools\Extensions\Vector3Extensions.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionProgressPresenter.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Audio\BackgroundMusicPlayer.cs" />
     <Compile Include="Assets\Source\Modules\Main\BombThrower\BombThrower.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\CleanPlayerData.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstruction.cs" />

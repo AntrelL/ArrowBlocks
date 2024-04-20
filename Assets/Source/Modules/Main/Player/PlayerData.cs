@@ -14,6 +14,7 @@ namespace IJunior.ArrowBlocks.Main
     {
         private const int DefaultMoney = 250;
         private const int CloudPollingLatency = 1;
+        private const string EmptyJsonString = "{}";
 
         private int _money;
         private LevelData[] _levelsData;
@@ -79,7 +80,7 @@ namespace IJunior.ArrowBlocks.Main
 
             Debug.Log("Load: " + jsonCleanPlayerData);
 
-            if (string.IsNullOrEmpty(jsonCleanPlayerData))
+            if (string.IsNullOrEmpty(jsonCleanPlayerData) || jsonCleanPlayerData == EmptyJsonString)
                 yield break;
 
             CleanPlayerData cleanPlayerData = JsonConvert.DeserializeObject<CleanPlayerData>(jsonCleanPlayerData);

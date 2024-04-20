@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\player\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\player\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +15,28 @@
       "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\menu\\menucompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\level\\levelcompositeroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\player\\cleanplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\player\\cleanplayerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\ui\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57251260-7B0B-45E7-0896-38C5FD0E4CF1}|IJunior.UI.csproj|solutionrelative:assets\\source\\modules\\ui\\screen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\levelscontrol\\cleanleveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\levelscontrol\\cleanleveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\audio\\backgroundmusicplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\audio\\backgroundmusicplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\blockconstruction\\arrowblock\\arrowblockeffector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\blockconstruction\\arrowblock\\arrowblockeffector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\game\\scripts\\level\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D063546F-99C2-D40B-22FD-9F044C13B84A}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\game\\scripts\\level\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\blockconstruction\\arrowblock\\arrowblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\blockconstruction\\arrowblock\\arrowblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\bombthrower\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\bombthrower\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,79 +54,112 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CleanLevelData.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
-              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
-              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\LevelsControl\\CleanLevelData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T18:34:50.725Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CleanPlayerData.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
-              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
-              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Player\\CleanPlayerData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T18:29:38.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerData.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
-              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
-              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAuwI0AAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T17:53:23.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MenuCompositeRoot.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
-              "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
-              "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAowEkAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T13:07:12.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LevelCompositeRoot.cs",
-              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
-              "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
-              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
-              "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
-              "ViewState": "AQIAALYAAAAAAAAAAAAAwDYAAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T08:06:54.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Screen.cs",
               "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Screen.cs",
               "RelativeDocumentMoniker": "Assets\\Source\\Modules\\UI\\Screen.cs",
               "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\UI\\Screen.cs",
               "RelativeToolTip": "Assets\\Source\\Modules\\UI\\Screen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAjAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-15T21:03:59.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BackgroundMusicPlayer.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Audio\\BackgroundMusicPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\Audio\\BackgroundMusicPlayer.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Audio\\BackgroundMusicPlayer.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Audio\\BackgroundMusicPlayer.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:52:23.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Level.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\Level.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Level\\Level.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\Level.cs",
+              "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Level\\Level.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:12:13.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ArrowBlockEffector.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlockEffector.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlockEffector.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlockEffector.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlockEffector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:05:53.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ArrowBlock.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlock.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlock.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlock.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\BlockConstruction\\ArrowBlock\\ArrowBlock.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAIwEAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T13:05:50.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bomb.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\BombThrower\\Bomb.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\BombThrower\\Bomb.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\BombThrower\\Bomb.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\BombThrower\\Bomb.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAIwGwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T12:28:19.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerData.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Player\\PlayerData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAABkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T17:53:23.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuCompositeRoot.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Menu\\MenuCompositeRoot.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAqwEcAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T13:07:12.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LevelCompositeRoot.cs",
+              "DocumentMoniker": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "RelativeToolTip": "Assets\\Source\\Game\\Scripts\\Level\\LevelCompositeRoot.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAgwM0AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T08:06:54.948Z",
+              "EditorCaption": ""
             }
           ]
         }

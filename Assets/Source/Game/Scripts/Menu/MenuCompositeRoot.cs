@@ -30,6 +30,10 @@ namespace IJunior.ArrowBlocks
         [Header("Animators")]
         [SerializeField] private Rotator _cameraRotator;
         [Space]
+        [Header("Audio")]
+        [SerializeField] private BackgroundMusicPlayer _backgroundMusicPlayer;
+        [SerializeField] private Slider _backgroundMusicVolumeSlider;
+        [Space]
         [Header("Menu Control")]
         [SerializeField] private FlowControl _menuFlowControl;
 
@@ -38,6 +42,8 @@ namespace IJunior.ArrowBlocks
         private MenuScreenId _screenIdToSwitch = MenuScreenId.None;
         private UnityAction[] _levelActivators;
         private Button[] _levelButtons;
+
+        private void Awake() => InitializeEarly();
 
         private void OnDisable() => UnsubscribeEvents();
 
@@ -59,13 +65,20 @@ namespace IJunior.ArrowBlocks
             _screenIdToSwitch = sceneTransitionData.MenuScreenId;
         }
 
+        private void InitializeEarly()
+        {
+            InitializeScreens();
+
+            if (_screenIdToSwitch != MenuScreenId.None)
+                SwitchScreenById(_screenIdToSwitch);
+        }
+
         private IEnumerator Initialize()
         {
             yield return InitializeYandexGamesSdk();
 
             var rootUpdatebleElements = new List<IRootUpdateble>();
 
-            InitializeScreens();
             _levelButtons = _levelButtonsStorage.Initialize();
 
             if (_playerData == null)
@@ -73,9 +86,6 @@ namespace IJunior.ArrowBlocks
                 _playerData = new PlayerData(_levelButtons.Length);
                 yield return _playerData.TryGetFromCloud();
             }
-
-            if (_screenIdToSwitch != MenuScreenId.None)
-                SwitchScreenById(_screenIdToSwitch);
 
             _levelLoader = new LevelLoader(_playerData);
             _levelActivators = new UnityAction[_levelButtons.Length];
@@ -85,6 +95,8 @@ namespace IJunior.ArrowBlocks
 
             _cameraRotator.Initialize();
             rootUpdatebleElements.Add(_cameraRotator);
+
+            _backgroundMusicPlayer = _backgroundMusicPlayer.Initialize(_backgroundMusicVolumeSlider);
 
             _menuFlowControl.Initialize(rootUpdatebleElements, new List<IRootFixedUpdateble>());
 
@@ -98,6 +110,8 @@ namespace IJunior.ArrowBlocks
                 _levelActivators[i] = _levelLoader.GetLevelActivator(i + 1);
                 _levelButtons[i].onClick.AddListener(_levelActivators[i]);
             }
+
+            _backgroundMusicPlayer.OnActivate();
         }
 
         private void UnsubscribeEvents()
@@ -106,6 +120,8 @@ namespace IJunior.ArrowBlocks
             {
                 _levelButtons[i].onClick.RemoveListener(_levelActivators[i]);
             }
+
+            _backgroundMusicPlayer.OnDeactivate();
         }
 
         private void InitializeScreens()

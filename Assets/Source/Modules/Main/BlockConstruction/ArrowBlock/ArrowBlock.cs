@@ -62,6 +62,7 @@ namespace IJunior.ArrowBlocks.Main
             if (_mover.IsMoving || _animator.IsAnimated || IsReleased)
                 return;
 
+            _effector.PlayActivationSound();
             Activated?.Invoke();
 
             if (Physics.Raycast(Transform.position, Transform.forward, out RaycastHit hit) == false)

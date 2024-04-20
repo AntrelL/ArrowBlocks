@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - IJunior.ArrowBlocks.Main.ArrowBlockAnimator
     - IJunior.ArrowBlocks.Main.ArrowBlockEffector
     - IJunior.ArrowBlocks.Main.ArrowBlockMover
+    - IJunior.ArrowBlocks.Main.BackgroundMusicPlayer
     - IJunior.ArrowBlocks.Main.BlockConstruction
     - IJunior.ArrowBlocks.Main.Bomb
     - IJunior.ArrowBlocks.Main.BombSeller
@@ -129,51 +130,117 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: RestartFromMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: Restart
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadNextLevel
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLeaderboardMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: Restart
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: RestartFromMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadNextLevel
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLeaderboardMenu
@@ -203,6 +270,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 96
@@ -222,69 +293,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 1886}
+      Script: {instanceID: 1888}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2508}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2606}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 2750}
-    - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2752}
     - Class: 114
       Script: {instanceID: 2896}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 2898}
     - Class: 114
-      Script: {instanceID: 3288}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 3336}
+      Script: {instanceID: 3290}
     - Class: 114
-      Script: {instanceID: 3482}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 4000}
     - Class: 114
-      Script: {instanceID: 4728}
+      Script: {instanceID: 4322}
     - Class: 114
-      Script: {instanceID: 4920}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 5076}
+      Script: {instanceID: 4924}
     - Class: 114
-      Script: {instanceID: 5174}
+      Script: {instanceID: 5080}
     - Class: 114
-      Script: {instanceID: 5206}
+      Script: {instanceID: 5178}
     - Class: 114
-      Script: {instanceID: 5264}
+      Script: {instanceID: 5210}
     - Class: 114
-      Script: {instanceID: 5344}
+      Script: {instanceID: 5268}
     - Class: 114
-      Script: {instanceID: 5530}
+      Script: {instanceID: 5348}
     - Class: 114
-      Script: {instanceID: 5890}
+      Script: {instanceID: 5536}
     - Class: 114
-      Script: {instanceID: 6148}
+      Script: {instanceID: 5902}
     - Class: 114
-      Script: {instanceID: 6254}
+      Script: {instanceID: 6160}
     - Class: 114
-      Script: {instanceID: 6320}
+      Script: {instanceID: 6266}
     - Class: 114
-      Script: {instanceID: 6562}
+      Script: {instanceID: 6332}
     - Class: 114
-      Script: {instanceID: 7092}
+      Script: {instanceID: 6576}
     - Class: 114
-      Script: {instanceID: 7822}
+      Script: {instanceID: 7108}
     - Class: 114
-      Script: {instanceID: 7878}
+      Script: {instanceID: 7840}
     - Class: 114
-      Script: {instanceID: 8250}
+      Script: {instanceID: 7896}
     - Class: 114
-      Script: {instanceID: 8354}
+      Script: {instanceID: 8268}
     - Class: 114
-      Script: {instanceID: 8492}
+      Script: {instanceID: 8372}
+    - Class: 114
+      Script: {instanceID: 8512}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -336,6 +407,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 96
@@ -355,69 +430,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1790}
     - Class: 114
-      Script: {instanceID: 1886}
+      Script: {instanceID: 1888}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2508}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2606}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 2750}
-    - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2752}
     - Class: 114
       Script: {instanceID: 2896}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 2898}
     - Class: 114
-      Script: {instanceID: 3288}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 3336}
+      Script: {instanceID: 3290}
     - Class: 114
-      Script: {instanceID: 3482}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 4318}
+      Script: {instanceID: 4000}
     - Class: 114
-      Script: {instanceID: 4728}
+      Script: {instanceID: 4322}
     - Class: 114
-      Script: {instanceID: 4920}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 5076}
+      Script: {instanceID: 4924}
     - Class: 114
-      Script: {instanceID: 5174}
+      Script: {instanceID: 5080}
     - Class: 114
-      Script: {instanceID: 5206}
+      Script: {instanceID: 5178}
     - Class: 114
-      Script: {instanceID: 5264}
+      Script: {instanceID: 5210}
     - Class: 114
-      Script: {instanceID: 5344}
+      Script: {instanceID: 5268}
     - Class: 114
-      Script: {instanceID: 5530}
+      Script: {instanceID: 5348}
     - Class: 114
-      Script: {instanceID: 5890}
+      Script: {instanceID: 5536}
     - Class: 114
-      Script: {instanceID: 6148}
+      Script: {instanceID: 5902}
     - Class: 114
-      Script: {instanceID: 6254}
+      Script: {instanceID: 6160}
     - Class: 114
-      Script: {instanceID: 6320}
+      Script: {instanceID: 6266}
     - Class: 114
-      Script: {instanceID: 6562}
+      Script: {instanceID: 6332}
     - Class: 114
-      Script: {instanceID: 7092}
+      Script: {instanceID: 6576}
     - Class: 114
-      Script: {instanceID: 7822}
+      Script: {instanceID: 7108}
     - Class: 114
-      Script: {instanceID: 7878}
+      Script: {instanceID: 7840}
     - Class: 114
-      Script: {instanceID: 8250}
+      Script: {instanceID: 7896}
     - Class: 114
-      Script: {instanceID: 8354}
+      Script: {instanceID: 8268}
     - Class: 114
-      Script: {instanceID: 8492}
+      Script: {instanceID: 8372}
+    - Class: 114
+      Script: {instanceID: 8512}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -461,6 +536,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -476,53 +555,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1674}
     - Class: 114
-      Script: {instanceID: 2250}
+      Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2260}
+      Script: {instanceID: 2262}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 2752}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 3676}
+      Script: {instanceID: 3680}
     - Class: 114
-      Script: {instanceID: 3836}
+      Script: {instanceID: 3840}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 4000}
     - Class: 114
-      Script: {instanceID: 4444}
+      Script: {instanceID: 4448}
     - Class: 114
-      Script: {instanceID: 4460}
+      Script: {instanceID: 4464}
     - Class: 114
-      Script: {instanceID: 4728}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 4742}
+      Script: {instanceID: 4746}
     - Class: 114
-      Script: {instanceID: 5160}
+      Script: {instanceID: 5164}
     - Class: 114
-      Script: {instanceID: 5174}
+      Script: {instanceID: 5178}
     - Class: 114
-      Script: {instanceID: 5322}
+      Script: {instanceID: 5326}
     - Class: 114
-      Script: {instanceID: 5444}
+      Script: {instanceID: 5448}
     - Class: 114
-      Script: {instanceID: 5530}
+      Script: {instanceID: 5536}
     - Class: 114
-      Script: {instanceID: 6148}
+      Script: {instanceID: 5772}
     - Class: 114
-      Script: {instanceID: 6254}
+      Script: {instanceID: 6160}
     - Class: 114
-      Script: {instanceID: 6320}
+      Script: {instanceID: 6266}
     - Class: 114
-      Script: {instanceID: 7092}
+      Script: {instanceID: 6332}
     - Class: 114
-      Script: {instanceID: 7868}
+      Script: {instanceID: 7108}
     - Class: 114
-      Script: {instanceID: 7878}
+      Script: {instanceID: 7886}
     - Class: 114
-      Script: {instanceID: 8622}
+      Script: {instanceID: 7896}
+    - Class: 114
+      Script: {instanceID: 8642}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -718,7 +799,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 339375ac17b8d6773e25c82df83d1443
+      Hash: d37ced63c709c1035840fdc104f50a81
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: LevelCompositeRoot
@@ -910,7 +991,7 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: ffe2db140bee6daf65f1687be07170c1
+      Hash: 106fdceb41eeee889805a80276826bdf
     assemblyName: IJunior.ArrowBlocks.Main
     namespaceName: IJunior.ArrowBlocks.Main
     className: Bomb
@@ -1367,6 +1448,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Main
+    namespaceName: IJunior.ArrowBlocks.Main
+    className: BackgroundMusicPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnDeselectMessageListener
@@ -1672,7 +1759,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 1eceaf36c81bffd26617bcf94e6d0b29
+      Hash: 04df0ef5067d7dd2ea2f6355357a1447
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: MenuCompositeRoot
@@ -1762,7 +1849,7 @@ ScriptsOnlyBuild:
     className: ProgressBar
   - hash:
       serializedVersion: 2
-      Hash: 4da7bac842d1fafc349d613b1314f771
+      Hash: 68746bb57e231b05c7ac08d4d6af46e2
     assemblyName: IJunior.ArrowBlocks.Main
     namespaceName: IJunior.ArrowBlocks.Main
     className: ArrowBlockEffector

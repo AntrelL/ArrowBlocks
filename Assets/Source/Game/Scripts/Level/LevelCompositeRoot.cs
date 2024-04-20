@@ -41,6 +41,10 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private BombSeller _bombSeller;
         [SerializeField] private Bomb _bombTemplate;
         [Space]
+        [Header("Level Audio")]
+        [SerializeField] private AudioSource _levelAudioSource;
+        [SerializeField] private AudioClip _levelVictorySound;
+        [Space]
         [Header("Level Control")]
         [SerializeField] private Level _level;
         [SerializeField] private FlowControl _levelFlowControl;
@@ -199,6 +203,7 @@ namespace IJunior.ArrowBlocks
             _level.InitializeBaseInfo(_blockConstruction, _passingTimeText, _bombThrower, timer);
             _level.InitializePlayerInfo(_playerInput, _playerData);
             _level.InitializeScreensInfo(_mainScreen, _victoryScreen);
+            _level.InitializeAudio(_levelAudioSource, _levelVictorySound);
 
             _levelLoader = new LevelLoader(_playerData);
             _levelSceneSwitcher.Initialize(_levelLoader, _playerData, _level.Number);

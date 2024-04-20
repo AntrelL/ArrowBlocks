@@ -7,22 +7,30 @@ namespace IJunior.ArrowBlocks.Main
 {
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(MeshRenderer))]
+    [RequireComponent(typeof(AudioSource))]
     public class Bomb : Script
     {
         [SerializeField] private float _explosionCheckRadius;
         [SerializeField] private float _maxDelayForExplosionEffect;
         [SerializeField] private ParticleSystem _explosionEffect;
+        [SerializeField] private AudioClip _explosionSound;
 
         private Rigidbody _rigidbody;
         private Coroutine _autoDestroyer;
         private Transform _transform;
         private Coroutine _exploder;
         private MeshRenderer _meshRenderer;
+        private AudioSource _audioSource;
+
+        private bool _isExploded = false;
 
         public event Action Destroyed;
 
         private void OnCollisionEnter(Collision collision)
         {
+            if (_isExploded)
+                return;
+
             _exploder = StartCoroutine(Explode());
         }
 
@@ -30,6 +38,7 @@ namespace IJunior.ArrowBlocks.Main
         {
             _rigidbody = GetComponent<Rigidbody>();
             _meshRenderer = GetComponent<MeshRenderer>();
+            _audioSource = GetComponent<AudioSource>();
 
             _transform = transform;
         }
@@ -55,6 +64,8 @@ namespace IJunior.ArrowBlocks.Main
                 _explosionEffect.Stop();
                 _explosionEffect.Clear();
             }
+
+            _isExploded = false;
         }
 
         public void Throw(Vector3 startPosition, Vector3 startVelocity,
@@ -77,6 +88,7 @@ namespace IJunior.ArrowBlocks.Main
 
         private IEnumerator Explode()
         {
+            _isExploded = true;
             _meshRenderer.enabled = false;
 
             Collider[] colliders = Physics.OverlapSphere(_transform.position, _explosionCheckRadius);
@@ -88,6 +100,8 @@ namespace IJunior.ArrowBlocks.Main
             }
 
             _explosionEffect.Play();
+            _audioSource.PlayOneShot(_explosionSound);
+
             yield return new WaitForSeconds(_maxDelayForExplosionEffect);
 
             Destroy();

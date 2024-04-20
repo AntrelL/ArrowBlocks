@@ -45,7 +45,11 @@
           },
           {
             "name": "AudioClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Source/Game/Scenes/Levels/Level2.unity",
+              "Assets/Source/Game/Scenes/Levels/LevelTemplate/LevelTemplate.unity",
+              "Assets/Source/Game/Scenes/Menu.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -66,8 +70,22 @@
             "icon": null
           },
           {
+            "name": "AudioSource",
+            "scenes": [
+              "Assets/Source/Game/Scenes/Levels/Level2.unity",
+              "Assets/Source/Game/Scenes/Levels/LevelTemplate/LevelTemplate.unity",
+              "Assets/Source/Game/Scenes/Menu.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "SampleClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Source/Game/Scenes/Levels/Level2.unity",
+              "Assets/Source/Game/Scenes/Levels/LevelTemplate/LevelTemplate.unity",
+              "Assets/Source/Game/Scenes/Menu.unity"
+            ],
             "dependencyType": 1,
             "icon": null
           }

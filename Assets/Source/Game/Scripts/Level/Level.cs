@@ -22,6 +22,8 @@ namespace IJunior.ArrowBlocks
         private Timer _timer;
         private TimeText _passingTimeText;
         private BombThrower _bombThrower;
+        private AudioSource _audioSource;
+        private AudioClip _victorySound;
 
         public int Number => _number;
 
@@ -48,6 +50,12 @@ namespace IJunior.ArrowBlocks
             _victoryScreen = victoryScreen;
         }
 
+        public void InitializeAudio(AudioSource audioSource, AudioClip victorySound)
+        {
+            _audioSource = audioSource;
+            _victorySound = victorySound;
+        }
+
         public void OnActivate()
         {
             _blockConstruction.AllBlocksReleased += OnAllBlocksReleased;
@@ -68,6 +76,8 @@ namespace IJunior.ArrowBlocks
         {
             _timer.StopCounting();
             yield return new WaitForSeconds(delay);
+
+            _audioSource.PlayOneShot(_victorySound);
 
             _passingTimeText.Value = _timer.Value;
             _mainScreen.SwitchTo(_victoryScreen);
