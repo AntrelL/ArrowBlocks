@@ -17,7 +17,8 @@ namespace IJunior.UI
             TimeSpan timeSpan = TimeSpan.FromSeconds(time);
             string textTime = timeSpan.Minutes + ":" + timeSpan.ToString(@"ss\.ff");
 
-            Text = PrefixText + textTime;
+            _value = time;
+            Text = textTime;
         }
     }
 }

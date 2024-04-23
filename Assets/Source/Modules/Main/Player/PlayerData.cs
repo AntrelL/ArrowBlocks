@@ -8,6 +8,8 @@ using UnityEngine;
 using System.Linq;
 using System;
 
+using AgavaLeaderboard = Agava.YandexGames.Leaderboard;
+
 namespace IJunior.ArrowBlocks.Main
 {
     public class PlayerData
@@ -106,9 +108,26 @@ namespace IJunior.ArrowBlocks.Main
             PlayerAccount.SetCloudSaveData(jsonString);
         }
 
-        public void PassLevel(int number, float time)
+        public void PassLevel(int number, int coinsForCompleting, float time)
         {
-            _levelsData[number - 1].Pass(time);
+            if (coinsForCompleting < 0)
+                throw new Exception("The number of coins cannot be less than zero");
+
+            Money += coinsForCompleting;
+            LevelData levelData = _levelsData[number - 1];
+            levelData.Pass(time);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+            if (PlayerAccount.IsAuthorized)
+            {
+                string leaderboardName = Leaderboard.GetName(number);
+                int recordConvertedTime = (int)(levelData.RecordTime * Leaderboard.TimeConversionFactor);
+
+                AgavaLeaderboard.SetScore(leaderboardName, recordConvertedTime);
+
+                Debug.Log("Save to leaderboard: " + leaderboardName + " " + recordConvertedTime);
+            }
+#endif
 
             if (number == _levelsData.Length)
             {

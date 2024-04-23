@@ -67,6 +67,7 @@
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\CleanLevelData.cs" />
     <Compile Include="Assets\Source\Modules\Main\BombThrower\BombThrowerCalculations.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerMoneyPresenter.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Leaderboard\LeaderboardLine.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCameraBooster.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\IReadOnlyLevelData.cs" />
     <Compile Include="Assets\Source\Modules\Main\BombThrower\BombSeller.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCamera.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Player.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCameraCalculations.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Leaderboard\Leaderboard.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelData.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerInput.cs" />
     <Compile Include="Assets\Source\Modules\Main\AuxiliaryTools\Extensions\Vector3Extensions.cs" />
@@ -760,6 +762,9 @@
     </Reference>
     <Reference Include="Agava.YandexGames">
       <HintPath>Library\ScriptAssemblies\Agava.YandexGames.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>

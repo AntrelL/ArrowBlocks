@@ -7,7 +7,11 @@ namespace IJunior.UI
         public float Value
         {
             get => _value;
-            set => Text = PrefixText + value;
+            set
+            {
+                _value = value;
+                Text = value.ToString();
+            }
         }
     }
 }

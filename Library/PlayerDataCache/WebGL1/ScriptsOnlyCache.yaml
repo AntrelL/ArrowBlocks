@@ -17,6 +17,8 @@ ScriptsOnlyBuild:
     - IJunior.ArrowBlocks.Main.Bomb
     - IJunior.ArrowBlocks.Main.BombSeller
     - IJunior.ArrowBlocks.Main.BombThrower
+    - IJunior.ArrowBlocks.Main.Leaderboard
+    - IJunior.ArrowBlocks.Main.LeaderboardLine
     - IJunior.ArrowBlocks.Main.LevelButton
     - IJunior.ArrowBlocks.Main.LevelButtonsStorage
     - IJunior.ArrowBlocks.Main.Player
@@ -33,6 +35,7 @@ ScriptsOnlyBuild:
     - IJunior.UI.DigitalText
     - IJunior.UI.IndicatingIcon
     - IJunior.UI.LinkedDigitalText
+    - IJunior.UI.PlainText
     - IJunior.UI.ProgressBar
     - IJunior.UI.ProgressBarIndicator
     - IJunior.UI.Screen
@@ -213,6 +216,12 @@ ScriptsOnlyBuild:
     methodName: PlayOneShot
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
+    methodName: RestartFromMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.Level
     methodName: Restart
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
@@ -220,12 +229,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLevelsMenu
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.Level
-    methodName: RestartFromMenu
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -579,6 +582,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4746}
     - Class: 114
+      Script: {instanceID: 4924}
+    - Class: 114
       Script: {instanceID: 5164}
     - Class: 114
       Script: {instanceID: 5178}
@@ -597,6 +602,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6332}
     - Class: 114
+      Script: {instanceID: 6576}
+    - Class: 114
       Script: {instanceID: 7108}
     - Class: 114
       Script: {instanceID: 7886}
@@ -604,6 +611,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7896}
     - Class: 114
       Script: {instanceID: 8642}
+    - Class: 114
+      Script: {instanceID: 30572}
+    - Class: 114
+      Script: {instanceID: 30580}
+    - Class: 114
+      Script: {instanceID: 46996}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -751,7 +764,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 836c471fe18ab7521b4b74af9ac6a88e
+      Hash: 959e73b8e023bb85f461bc3d615c6ca7
     assemblyName: IJunior.UI
     namespaceName: IJunior.UI
     className: VersionText
@@ -871,7 +884,7 @@ ScriptsOnlyBuild:
     className: BlockConstruction
   - hash:
       serializedVersion: 2
-      Hash: 720426f2425bc853ce70cdc9f531ae77
+      Hash: a238994a18b4d2e2f02cd6a08822cd77
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: Level
@@ -1261,7 +1274,7 @@ ScriptsOnlyBuild:
     className: InputSystemObject
   - hash:
       serializedVersion: 2
-      Hash: 836c471fe18ab7521b4b74af9ac6a88e
+      Hash: 959e73b8e023bb85f461bc3d615c6ca7
     assemblyName: IJunior.UI
     namespaceName: IJunior.UI
     className: TimeText
@@ -1321,7 +1334,7 @@ ScriptsOnlyBuild:
     className: FlowControl
   - hash:
       serializedVersion: 2
-      Hash: 836c471fe18ab7521b4b74af9ac6a88e
+      Hash: 959e73b8e023bb85f461bc3d615c6ca7
     assemblyName: IJunior.UI
     namespaceName: IJunior.UI
     className: LinkedDigitalText
@@ -1525,7 +1538,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 836c471fe18ab7521b4b74af9ac6a88e
+      Hash: 959e73b8e023bb85f461bc3d615c6ca7
     assemblyName: IJunior.UI
     namespaceName: IJunior.UI
     className: DigitalText
@@ -1759,7 +1772,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 04df0ef5067d7dd2ea2f6355357a1447
+      Hash: c2ce6adb42d3089cf740e5aa4e518cd3
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: MenuCompositeRoot
@@ -1837,7 +1850,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 836c471fe18ab7521b4b74af9ac6a88e
+      Hash: 959e73b8e023bb85f461bc3d615c6ca7
     assemblyName: IJunior.UI
     namespaceName: IJunior.UI
     className: TextInfo
@@ -1901,6 +1914,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 6c55370d2b2ce93fa7282f63cca293b5
+    assemblyName: IJunior.ArrowBlocks.Main
+    namespaceName: IJunior.ArrowBlocks.Main
+    className: Leaderboard
+  - hash:
+      serializedVersion: 2
+      Hash: 51f00a4e710751cab86fa572f134ce86
+    assemblyName: IJunior.ArrowBlocks.Main
+    namespaceName: IJunior.ArrowBlocks.Main
+    className: LeaderboardLine
+  - hash:
+      serializedVersion: 2
+      Hash: 959e73b8e023bb85f461bc3d615c6ca7
+    assemblyName: IJunior.UI
+    namespaceName: IJunior.UI
+    className: PlainText
   platform: 20
   scenePathNames:
   - Assets/Source/Game/Scenes/Menu.unity

@@ -337,6 +337,7 @@
 "Assets/Source/Modules/UI/Text/DigitalText.cs"
 "Assets/Source/Modules/UI/Text/ILinkedDigitalTextSource.cs"
 "Assets/Source/Modules/UI/Text/LinkedDigitalText.cs"
+"Assets/Source/Modules/UI/Text/PlainText.cs"
 "Assets/Source/Modules/UI/Text/TextInfo.cs"
 "Assets/Source/Modules/UI/Text/TimeText.cs"
 "Assets/Source/Modules/UI/Text/VersionText.cs"

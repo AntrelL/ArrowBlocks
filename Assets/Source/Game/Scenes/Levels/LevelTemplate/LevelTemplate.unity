@@ -262,7 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627bbfb50c97d524eb56219b35915cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefixText: 
+  _prefixText: 
+  _undefinedValueText: '-'
 --- !u!114 &39675666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,7 +1582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627bbfb50c97d524eb56219b35915cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefixText: 
+  _prefixText: 
+  _undefinedValueText: '-'
 --- !u!1 &561857173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,7 +2359,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae46aac3c06319479adb82127d18b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefixText: 'Time: '
+  _prefixText: 'Time: '
+  _undefinedValueText: -:--
 --- !u!1 &804515906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,7 +3796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f3b7f2937a92140b3c80da39b5617e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PrefixText: 'Level '
+  _prefixText: 'Level '
+  _undefinedValueText: '-'
 --- !u!1001 &1265955708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6400,6 +6404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _number: 1
+  _coinsForCompleting: 100
   _victoryDelay: 0.5
 --- !u!114 &1992020074
 MonoBehaviour:

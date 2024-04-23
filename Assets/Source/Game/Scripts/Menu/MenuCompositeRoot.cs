@@ -10,8 +10,10 @@ using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 using IJunior.UI;
+using TMPro;
 
 using Screen = IJunior.UI.Screen;
+using Leaderboard = IJunior.ArrowBlocks.Main.Leaderboard;
 
 namespace IJunior.ArrowBlocks
 {
@@ -19,9 +21,9 @@ namespace IJunior.ArrowBlocks
         ISceneLoadHandler<(PlayerData PlayerData, MenuScreenId MenuScreenId)>
     {
         [Header("Screens")]
-        [SerializeField] private Screen _main;
-        [SerializeField] private Screen _levels;
-        [SerializeField] private Screen _leaderboard;
+        [SerializeField] private Screen _mainScreen;
+        [SerializeField] private Screen _levelsScreen;
+        [SerializeField] private Screen _leaderboardScreen;
         [Space]
         [Header("User Interface")]
         [SerializeField] private LevelButtonsStorage _levelButtonsStorage;
@@ -33,6 +35,13 @@ namespace IJunior.ArrowBlocks
         [Header("Audio")]
         [SerializeField] private BackgroundMusicPlayer _backgroundMusicPlayer;
         [SerializeField] private Slider _backgroundMusicVolumeSlider;
+        [Space]
+        [Header("Leaderboard")]
+        [SerializeField] private Leaderboard _leaderboard;
+        [SerializeField] private LeaderboardLine _leaderboardLineTemplate;
+        [SerializeField] private TMP_InputField _leaderboardLevelNumberInput;
+        [SerializeField] private TimeText _leaderboardPlayerTime;
+        [SerializeField] private DigitalText _leaderboardPlayerPosition;
         [Space]
         [Header("Menu Control")]
         [SerializeField] private FlowControl _menuFlowControl;
@@ -93,6 +102,8 @@ namespace IJunior.ArrowBlocks
             _levelButtonsStorage.UpdateLevelButtons(_playerData.LevelsData);
             _versionText.Initialize();
 
+            InitializeLeaderboard(_playerData.LevelsData.Count);
+
             _cameraRotator.Initialize();
             rootUpdatebleElements.Add(_cameraRotator);
 
@@ -111,6 +122,7 @@ namespace IJunior.ArrowBlocks
                 _levelButtons[i].onClick.AddListener(_levelActivators[i]);
             }
 
+            _leaderboard.OnActivate();
             _backgroundMusicPlayer.OnActivate();
         }
 
@@ -121,14 +133,27 @@ namespace IJunior.ArrowBlocks
                 _levelButtons[i].onClick.RemoveListener(_levelActivators[i]);
             }
 
+            _leaderboard.OnDeactivate();
             _backgroundMusicPlayer.OnDeactivate();
         }
 
         private void InitializeScreens()
         {
-            _main.Initialize();
-            _levels.Initialize();
-            _leaderboard.Initialize();
+            _mainScreen.Initialize();
+            _levelsScreen.Initialize();
+            _leaderboardScreen.Initialize();
+        }
+
+        private void InitializeLeaderboard(int numberOfLevels)
+        {
+            _leaderboardPlayerTime.Initialize();
+            _leaderboardPlayerPosition.Initialize();
+
+            _leaderboard.Initialize(_leaderboardLineTemplate, numberOfLevels);
+            _leaderboard.InitializeIOElements(_leaderboardLevelNumberInput,
+                _leaderboardPlayerTime, _leaderboardPlayerPosition);
+
+            _leaderboard.FinalInitialize();
         }
 
         private IEnumerator InitializeYandexGamesSdk()
@@ -147,17 +172,17 @@ namespace IJunior.ArrowBlocks
             switch (screenId)
             {
                 case MenuScreenId.Main:
-                    target = _main;
+                    target = _mainScreen;
                     break;
                 case MenuScreenId.Levels:
-                    target = _levels;
+                    target = _levelsScreen;
                     break;
                 case MenuScreenId.Leaderboard:
-                    target = _leaderboard;
+                    target = _leaderboardScreen;
                     break;
             }
 
-            _main.SwitchTo(target);
+            _mainScreen.SwitchTo(target);
         }
     }
 }

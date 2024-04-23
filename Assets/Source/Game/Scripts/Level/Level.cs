@@ -11,6 +11,7 @@ namespace IJunior.ArrowBlocks
     internal class Level : MonoBehaviour, IActivatable
     {
         [SerializeField][Range(0, 100)] private int _number;
+        [SerializeField][Range(0, 1000)] private int _coinsForCompleting;
         [SerializeField][Range(0, 100)] private float _victoryDelay;
 
         private Coroutine _victoryRetarder;
@@ -84,7 +85,7 @@ namespace IJunior.ArrowBlocks
             Time.timeScale = 0;
 
             _playerInput.Disable();
-            _playerData.PassLevel(_number, _timer.Value);
+            _playerData.PassLevel(_number, _coinsForCompleting, _timer.Value);
         }
 
         public void Restart()

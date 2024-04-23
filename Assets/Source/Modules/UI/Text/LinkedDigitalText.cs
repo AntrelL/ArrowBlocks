@@ -26,7 +26,7 @@ namespace IJunior.UI
 
         private void OnValueChanged(float value)
         {
-            Text = PrefixText + value;
+            Text = value.ToString();
         }
     }
 }

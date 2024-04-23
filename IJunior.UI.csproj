@@ -64,6 +64,7 @@
     <Compile Include="Assets\Source\Modules\UI\ProgressBar\IProgressBarInfo.cs" />
     <Compile Include="Assets\Source\Modules\UI\Icon\Icon.cs" />
     <Compile Include="Assets\Source\Modules\UI\Text\VersionText.cs" />
+    <Compile Include="Assets\Source\Modules\UI\Text\PlainText.cs" />
     <Compile Include="Assets\Source\Modules\UI\ProgressBar\ProgressBarIndicator.cs" />
     <Compile Include="Assets\Source\Modules\UI\Text\TextInfo.cs" />
     <Compile Include="Assets\Source\Modules\UI\ProgressBar\ProgressBar.cs" />

@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 101770772690595498}
   - component: {fileID: 3487577063496846121}
   - component: {fileID: 3592972124362194355}
+  - component: {fileID: 7983359938298193265}
   m_Layer: 5
-  m_Name: Nick
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nick
+  m_text: Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -134,6 +135,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7983359938298193265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500090885325804677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f249e1d6359474b4ebbdd36ec4672553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefixText: 
+  _undefinedValueText: '-'
 --- !u!1 &4076079591924353521
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +160,7 @@ GameObject:
   - component: {fileID: 2097346071490035189}
   - component: {fileID: 8917029461310859467}
   - component: {fileID: 3626832638733585531}
+  - component: {fileID: -5884434725893832239}
   m_Layer: 5
   m_Name: PlayerInfoLine
   m_TagString: Untagged
@@ -212,6 +228,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-5884434725893832239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076079591924353521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e337c5792aab34a93d6c2363a89631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rankText: {fileID: 2670823906196423027}
+  _nameText: {fileID: 7983359938298193265}
+  _timeText: {fileID: 7969315697736475158}
 --- !u!1 &6418788809430147300
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,8 +254,9 @@ GameObject:
   - component: {fileID: 6137474131977846728}
   - component: {fileID: 8624005301562294320}
   - component: {fileID: 876366301321775792}
+  - component: {fileID: 2670823906196423027}
   m_Layer: 5
-  m_Name: Position
+  m_Name: Rank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,6 +378,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2670823906196423027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418788809430147300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f3b7f2937a92140b3c80da39b5617e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefixText: 
+  _undefinedValueText: '-'
 --- !u!1 &7970434890928161858
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +403,7 @@ GameObject:
   - component: {fileID: 1617205880302234573}
   - component: {fileID: 244127068005421436}
   - component: {fileID: 9054739157999137073}
+  - component: {fileID: 7969315697736475158}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -480,3 +527,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7969315697736475158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7970434890928161858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae46aac3c06319479adb82127d18b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefixText: 'Time: '
+  _undefinedValueText: '-'

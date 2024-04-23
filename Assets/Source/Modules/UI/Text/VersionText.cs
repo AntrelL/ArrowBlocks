@@ -8,7 +8,7 @@ namespace IJunior.UI
         {
             base.Initialize();
 
-            Text = PrefixText + Application.version;
+            Text = Application.version;
         }
     }
 }
