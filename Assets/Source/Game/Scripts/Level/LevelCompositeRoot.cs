@@ -45,6 +45,10 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private AudioSource _levelAudioSource;
         [SerializeField] private AudioClip _levelVictorySound;
         [Space]
+        [Header("Advertising")]
+        [SerializeField] private AdvertisingVisualizer _advertisingVisualizer;
+        [SerializeField] private Button _playRewardVideoButton;
+        [Space]
         [Header("Level Control")]
         [SerializeField] private Level _level;
         [SerializeField] private FlowControl _levelFlowControl;
@@ -99,6 +103,9 @@ namespace IJunior.ArrowBlocks
             _availableBombsCountPresenter = new AvailableBombsCountPresenter(_bombSeller);
             _availableBombsCount.Initialize(_availableBombsCountPresenter);
 
+            _advertisingVisualizer.Initialize(_playRewardVideoButton,
+                _playerData, BackgroundMusicPlayer.CurrentInstance, _bombSeller);
+
             _levelFlowControl.Initialize(rootUpdatebleElements, rootFixedUpdatebleElements);
         }
 
@@ -120,6 +127,8 @@ namespace IJunior.ArrowBlocks
             _availableBombsCount.OnActivate();
             _bombThrower.OnActivate();
 
+            _advertisingVisualizer.OnActivate();
+
             _level.OnActivate();
         }
 
@@ -140,6 +149,8 @@ namespace IJunior.ArrowBlocks
             _availableBombsCountPresenter.OnDeactivate();
             _availableBombsCount.OnDeactivate();
             _bombThrower.OnDeactivate();
+
+            _advertisingVisualizer.OnDeactivate();
 
             _level.OnDeactivate();
         }
@@ -206,7 +217,7 @@ namespace IJunior.ArrowBlocks
             _level.InitializeAudio(_levelAudioSource, _levelVictorySound);
 
             _levelLoader = new LevelLoader(_playerData);
-            _levelSceneSwitcher.Initialize(_levelLoader, _playerData, _level.Number);
+            _levelSceneSwitcher.Initialize(_levelLoader, _playerData, _level.Number, _advertisingVisualizer);
         }
     }
 }

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionCalculations.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Advertising\AdvertisingVisualizer.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelButtonsStorage.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockMover.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockAnimator.cs" />

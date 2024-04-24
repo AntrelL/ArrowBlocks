@@ -23,7 +23,9 @@ namespace IJunior.ArrowBlocks.Main
         public void PayForBomb()
         {
             _playerData.Money -= _bombPrice;
-            AvailableBombsCountChanged?.Invoke(AvailableBombsCount);
-        }    
+            UpdateAvailableBombsCount();
+        }
+
+        public void UpdateAvailableBombsCount() => AvailableBombsCountChanged?.Invoke(AvailableBombsCount);
     }
 }

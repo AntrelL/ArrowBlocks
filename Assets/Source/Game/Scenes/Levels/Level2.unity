@@ -5282,6 +5282,7 @@ GameObject:
   - component: {fileID: 1992020072}
   - component: {fileID: 1992020073}
   - component: {fileID: 1992020074}
+  - component: {fileID: 1992020076}
   - component: {fileID: 1992020075}
   m_Layer: 0
   m_Name: StaticLogicPoint
@@ -5338,6 +5339,8 @@ MonoBehaviour:
   _bombTemplate: {fileID: 3674957142614756550, guid: 4101024a23c0d9f419c124786a64a8ff, type: 3}
   _levelAudioSource: {fileID: 1992020075}
   _levelVictorySound: {fileID: 8300000, guid: b78bebd8ff5e3c6438749119847d64bd, type: 3}
+  _advertisingVisualizer: {fileID: 1992020076}
+  _playRewardVideoButton: {fileID: 566079551}
   _level: {fileID: 1992020073}
   _levelFlowControl: {fileID: 1992020072}
   _levelSceneSwitcher: {fileID: 1992020074}
@@ -5476,6 +5479,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1992020076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992020069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541d098b8bdd713449f5a6a99d5f75f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1994784815 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7524766099073331820, guid: d5b42b9e3a4386649b5815086e291e75, type: 3}

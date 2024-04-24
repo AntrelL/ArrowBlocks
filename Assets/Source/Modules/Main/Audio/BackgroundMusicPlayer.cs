@@ -13,6 +13,8 @@ namespace IJunior.ArrowBlocks.Main
 
         private Slider _volumeSlider;
 
+        public static BackgroundMusicPlayer CurrentInstance => Instance;
+
         public BackgroundMusicPlayer Initialize(Slider volumeSlider)
         {
             _volumeSlider = volumeSlider;
@@ -46,9 +48,10 @@ namespace IJunior.ArrowBlocks.Main
             _volumeSlider.onValueChanged.RemoveListener(ChangeVolume);
         }
 
-        private void ChangeVolume(float value)
-        {
-            AudioSource.volume = value;
-        }
+        public void Pause() => AudioSource.Pause();
+        
+        public void UnPause() => AudioSource.UnPause();
+        
+        private void ChangeVolume(float value) => AudioSource.volume = value;
     }
 }
