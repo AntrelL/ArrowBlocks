@@ -7,6 +7,8 @@ using UnityEngine;
 using IJunior.UI;
 
 using Screen = IJunior.UI.Screen;
+using Lean.Localization;
+using System.Collections;
 
 namespace IJunior.ArrowBlocks
 {
@@ -26,6 +28,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private VirtualBlockGrid _virtualBlockGrid;
         [Space]
         [Header("User Interface")]
+        [SerializeField] private LeanLocalization _leanLocalization;
         [SerializeField] private DigitalText _levelNumberText;
         [SerializeField] private TimeText _passingTimeText;
         [SerializeField] private LinkedDigitalText _playerMoneyText;
@@ -62,12 +65,31 @@ namespace IJunior.ArrowBlocks
         private AvailableBombsCountPresenter _availableBombsCountPresenter;
         private BlockConstructionProgressPresenter _blockConstructionProgressPresenter;
 
-        private void Awake()
+        private void Awake() => InitializeEarly();
+
+        private void OnDisable() => UnsubscribeEvents();
+
+        private void Start()
         {
+            Initialize();
+            SubscribeEvents();
+
+            _blockConstruction.OnStart();
+            _levelFlowControl.Run();
+        }
+
+        private void InitializeEarly()
+        {
+            InitializeScreens();
+        }
+
+        private void Initialize()
+        {
+            Localization.SetLanguage(_leanLocalization);
+
             var rootFixedUpdatebleElements = new List<IRootFixedUpdateble>();
             var rootUpdatebleElements = new List<IRootUpdateble>();
 
-            InitializeScreens();
             rootFixedUpdatebleElements.AddRange(InitializeBlockConstruction());
 
             _playerInput = new PlayerInput();
@@ -109,7 +131,7 @@ namespace IJunior.ArrowBlocks
             _levelFlowControl.Initialize(rootUpdatebleElements, rootFixedUpdatebleElements);
         }
 
-        private void OnEnable()
+        private void SubscribeEvents()
         {
             _playerCamera.OnActivate();
             _blockConstruction.OnActivate();
@@ -132,7 +154,7 @@ namespace IJunior.ArrowBlocks
             _level.OnActivate();
         }
 
-        private void OnDisable()
+        private void UnsubscribeEvents()
         {
             _playerCamera.OnDeactivate();
             _blockConstruction.OnDeactivate();
@@ -153,13 +175,6 @@ namespace IJunior.ArrowBlocks
             _advertisingVisualizer.OnDeactivate();
 
             _level.OnDeactivate();
-        }
-
-        private void Start()
-        {
-            _blockConstruction.OnStart();
-
-            _levelFlowControl.Run();
         }
 
         public void OnSceneLoaded(PlayerData playerData)

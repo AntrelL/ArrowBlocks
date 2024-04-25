@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionCalculations.cs" />
-    <Compile Include="Assets\Source\Modules\Main\Advertising\AdvertisingVisualizer.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelButtonsStorage.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockMover.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockAnimator.cs" />
@@ -80,11 +79,13 @@
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelData.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerInput.cs" />
     <Compile Include="Assets\Source\Modules\Main\AuxiliaryTools\Extensions\Vector3Extensions.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Misc\AdvertisingVisualizer.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionProgressPresenter.cs" />
     <Compile Include="Assets\Source\Modules\Main\Audio\BackgroundMusicPlayer.cs" />
     <Compile Include="Assets\Source\Modules\Main\BombThrower\BombThrower.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\CleanPlayerData.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstruction.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Misc\Localization.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\VirtualBlockGrid.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\IPlayerCameraTarget.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelButton.cs" />
@@ -782,6 +783,10 @@
     <ProjectReference Include="IJunior.UI.csproj">
       <Project>{57251260-7B0B-45E7-0896-38C5FD0E4CF1}</Project>
       <Name>IJunior.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanLocalization.csproj">
+      <Project>{FD3C09C0-C09A-B435-EEFA-745BE36E793C}</Project>
+      <Name>LeanLocalization</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

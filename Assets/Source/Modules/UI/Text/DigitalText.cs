@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace IJunior.UI
 {
     public class DigitalText : TextInfo

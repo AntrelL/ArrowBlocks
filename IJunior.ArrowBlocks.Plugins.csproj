@@ -94,6 +94,8 @@
     <None Include="Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Plugins\IJunior.ArrowBlocks.Plugins.asmdef" />
+    <None Include="Assets\Plugins\CW\READ ME.txt" />
+    <None Include="Assets\Plugins\CW\Third-Party Notices.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

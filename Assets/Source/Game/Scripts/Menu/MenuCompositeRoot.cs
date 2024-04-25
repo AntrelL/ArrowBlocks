@@ -7,6 +7,7 @@ using IJunior.TypedScenes;
 using UnityEngine.Events;
 using System.Collections;
 using Agava.YandexGames;
+using Lean.Localization;
 using UnityEngine.UI;
 using UnityEngine;
 using IJunior.UI;
@@ -14,6 +15,7 @@ using TMPro;
 
 using Screen = IJunior.UI.Screen;
 using Leaderboard = IJunior.ArrowBlocks.Main.Leaderboard;
+
 
 namespace IJunior.ArrowBlocks
 {
@@ -26,6 +28,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private Screen _leaderboardScreen;
         [Space]
         [Header("User Interface")]
+        [SerializeField] private LeanLocalization _leanLocalization;
         [SerializeField] private LevelButtonsStorage _levelButtonsStorage;
         [SerializeField] private VersionText _versionText;
         [Space]
@@ -96,13 +99,17 @@ namespace IJunior.ArrowBlocks
                 yield return _playerData.TryGetFromCloud();
             }
 
+            InitializeLeaderboard(_playerData.LevelsData.Count);
+
+            Localization.SetLanguage(_leanLocalization);
+
+            FinalInitializeLeaderboard();
+
             _levelLoader = new LevelLoader(_playerData);
             _levelActivators = new UnityAction[_levelButtons.Length];
 
             _levelButtonsStorage.UpdateLevelButtons(_playerData.LevelsData);
             _versionText.Initialize();
-
-            InitializeLeaderboard(_playerData.LevelsData.Count);
 
             _cameraRotator.Initialize();
             rootUpdatebleElements.Add(_cameraRotator);
@@ -146,12 +153,15 @@ namespace IJunior.ArrowBlocks
 
         private void InitializeLeaderboard(int numberOfLevels)
         {
-            _leaderboardPlayerTime.Initialize();
-            _leaderboardPlayerPosition.Initialize();
-
             _leaderboard.Initialize(_leaderboardLineTemplate, numberOfLevels);
             _leaderboard.InitializeIOElements(_leaderboardLevelNumberInput,
                 _leaderboardPlayerTime, _leaderboardPlayerPosition);
+        }
+
+        private void FinalInitializeLeaderboard()
+        {
+            _leaderboardPlayerTime.Initialize();
+            _leaderboardPlayerPosition.Initialize();
 
             _leaderboard.FinalInitialize();
         }

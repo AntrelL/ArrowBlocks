@@ -63,6 +63,7 @@
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelCompositeRoot.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuScreenId.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\Level.cs" />
+    <Compile Include="Assets\Scenes\Typed\_13_Debug.cs" />
     <Compile Include="Assets\Scenes\Typed\Level2.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuCompositeRoot.cs" />
     <Compile Include="Assets\Scenes\Typed\Menu.cs" />
@@ -720,14 +721,14 @@
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
@@ -779,6 +780,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="LeanLocalization.TMP.csproj">
+      <Project>{7FED219E-F4F3-1027-10E4-A09B5E02A1C1}</Project>
+      <Name>LeanLocalization.TMP</Name>
+    </ProjectReference>
     <ProjectReference Include="IJunior.ArrowBlocks.Main.Editor.csproj">
       <Project>{71FC33A0-E283-5C15-ADCC-9BB0070C5B89}</Project>
       <Name>IJunior.ArrowBlocks.Main.Editor</Name>
@@ -795,6 +800,14 @@
       <Project>{167F28ED-376E-2BF7-912F-6E2933ED212A}</Project>
       <Name>Agava.YandexGames.Samples.Playtesting</Name>
     </ProjectReference>
+    <ProjectReference Include="LeanLocalization.csproj">
+      <Project>{FD3C09C0-C09A-B435-EEFA-745BE36E793C}</Project>
+      <Name>LeanLocalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanLocalizationEditor.csproj">
+      <Project>{D18DAE1C-77C1-1B1A-E0CF-E1EB59519975}</Project>
+      <Name>LeanLocalizationEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="IJunior.ArrowBlocks.Main.csproj">
       <Project>{56A80868-7504-1F4A-AA51-B32848A6A92D}</Project>
       <Name>IJunior.ArrowBlocks.Main</Name>
@@ -802,6 +815,14 @@
     <ProjectReference Include="IJunior.CompositeRoot.csproj">
       <Project>{94B74912-76C5-11B9-2E29-2CBF84036268}</Project>
       <Name>IJunior.CompositeRoot</Name>
+    </ProjectReference>
+    <ProjectReference Include="CW.Common.csproj">
+      <Project>{AFEEBCAA-603A-A7AB-954F-CBF19F6CF43E}</Project>
+      <Name>CW.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{23EED7B1-0AF9-6EB1-4C76-DB11E1A29048}</Project>
+      <Name>LeanCommon</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

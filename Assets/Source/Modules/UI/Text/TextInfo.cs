@@ -7,9 +7,10 @@ namespace IJunior.UI
     [RequireComponent(typeof(TMP_Text))]
     public class TextInfo : Script
     {
-        [SerializeField] private string _prefixText;
+        [SerializeField] private bool _useDefaultTextAsPrefix = true;
         [SerializeField] private string _undefinedValueText;
 
+        private string _prefixText;
         private TMP_Text _tmpText;
 
         protected string Text
@@ -21,14 +22,15 @@ namespace IJunior.UI
             }
         }
 
-        public void SetUndefinedValue()
-        {
-            Text = _undefinedValueText;
-        }
-
         public virtual void Initialize()
         {
             _tmpText = GetComponent<TMP_Text>();
+            _prefixText = _useDefaultTextAsPrefix ? _tmpText.text : string.Empty;
+        }
+
+        public void SetUndefinedValue()
+        {
+            Text = _undefinedValueText;
         }
     }
 }

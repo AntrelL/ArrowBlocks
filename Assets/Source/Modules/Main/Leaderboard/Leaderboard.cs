@@ -9,6 +9,7 @@ using System;
 using TMPro;
 
 using AgavaLeaderboard = Agava.YandexGames.Leaderboard;
+using Lean.Localization;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -18,7 +19,7 @@ namespace IJunior.ArrowBlocks.Main
 
         private const string NameTemplate = "Level";
 
-        [SerializeField] private string _anonymousUsername;
+        [SerializeField] private string _localizationAnonymousNameField;
         [SerializeField] private int _maxNumberOfLines;
 
         private TMP_InputField _levelNumberInputField;
@@ -43,7 +44,6 @@ namespace IJunior.ArrowBlocks.Main
             for (int i = 0; i < _maxNumberOfLines; i++)
             {
                 var leaderboardLine = Instantiate(leaderboardLineTemplate, _transform);
-                leaderboardLine.Initialize();
 
                 _leaderboardLines.Add(leaderboardLine);
             }
@@ -59,6 +59,11 @@ namespace IJunior.ArrowBlocks.Main
 
         public void FinalInitialize()
         {
+            foreach (var leaderboardLine in _leaderboardLines)
+            {
+                leaderboardLine.Initialize();
+            }
+
             UpdateData();
         }
 
@@ -138,7 +143,7 @@ namespace IJunior.ArrowBlocks.Main
                 string name = entry.player.publicName;
 
                 if (string.IsNullOrEmpty(name))
-                    name = _anonymousUsername;
+                    name = LeanLocalization.GetTranslationText(_localizationAnonymousNameField);
 
                 _leaderboardLines[i].Activate();
                 _leaderboardLines[i].SetData(entry.rank, name, ConvertToFloatTime(entry.score));
