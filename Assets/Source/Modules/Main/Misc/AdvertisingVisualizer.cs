@@ -11,12 +11,14 @@ namespace IJunior.ArrowBlocks.Main
     public class AdvertisingVisualizer : Script, IActivatable
     {
         private const int MinLevelToDisplayAds = 0;
-        private const int RewardForWatchingVideo = 500;
+        private const int RewardForWatchingVideo = 200;
 
         private Button _playRewardVideoButton;
         private PlayerData _playerData;
         private BackgroundMusicPlayer _backgroundMusicPlayer;
         private BombSeller _bombSeller;
+
+        public bool IsShowing { get; private set; } = false;
 
         public void Initialize(Button playRewardVideoButton,
             PlayerData playerData, BackgroundMusicPlayer backgroundMusicPlayer, BombSeller bombSeller)
@@ -76,12 +78,18 @@ namespace IJunior.ArrowBlocks.Main
         {
             _backgroundMusicPlayer.Pause();
             Time.timeScale = 0;
+
+            IsShowing = true;
+            Debug.Log("OpenAd");
         }
 
         private void OnCloseAdCallback()
         {
             _backgroundMusicPlayer.UnPause();
             Time.timeScale = 1;
+
+            IsShowing = false;
+            Debug.Log("CloseAd");
         }
     }
 }

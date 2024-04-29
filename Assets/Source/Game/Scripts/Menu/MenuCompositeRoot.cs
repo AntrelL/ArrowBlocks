@@ -22,6 +22,8 @@ namespace IJunior.ArrowBlocks
     internal class MenuCompositeRoot : MonoBehaviour, 
         ISceneLoadHandler<(PlayerData PlayerData, MenuScreenId MenuScreenId)>
     {
+        private static bool IsGameReadyMethodCalled = false;
+
         [Header("Screens")]
         [SerializeField] private Screen _mainScreen;
         [SerializeField] private Screen _levelsScreen;
@@ -42,12 +44,13 @@ namespace IJunior.ArrowBlocks
         [Header("Leaderboard")]
         [SerializeField] private Leaderboard _leaderboard;
         [SerializeField] private LeaderboardLine _leaderboardLineTemplate;
-        [SerializeField] private TMP_InputField _leaderboardLevelNumberInput;
+        [SerializeField] private TMP_Dropdown _leaderboardLevelNumberInput;
         [SerializeField] private TimeText _leaderboardPlayerTime;
         [SerializeField] private DigitalText _leaderboardPlayerPosition;
         [Space]
         [Header("Menu Control")]
         [SerializeField] private FlowControl _menuFlowControl;
+        [SerializeField] private BrowserTabFocus _browserTabFocus;
 
         private PlayerData _playerData;
         private LevelLoader _levelLoader;
@@ -67,6 +70,14 @@ namespace IJunior.ArrowBlocks
 
             Time.timeScale = 1;
             _menuFlowControl.Run();
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+            if (IsGameReadyMethodCalled == false)
+            {
+                YandexGamesSdk.GameReady();
+                IsGameReadyMethodCalled = true;
+            }
+#endif
 
             yield return null;
         }
@@ -116,6 +127,8 @@ namespace IJunior.ArrowBlocks
 
             _backgroundMusicPlayer = _backgroundMusicPlayer.Initialize(_backgroundMusicVolumeSlider);
 
+            _browserTabFocus.Initialize(_backgroundMusicPlayer);
+
             _menuFlowControl.Initialize(rootUpdatebleElements, new List<IRootFixedUpdateble>());
 
             yield return null;
@@ -131,6 +144,7 @@ namespace IJunior.ArrowBlocks
 
             _leaderboard.OnActivate();
             _backgroundMusicPlayer.OnActivate();
+            _browserTabFocus.OnActivate();
         }
 
         private void UnsubscribeEvents()
@@ -142,6 +156,7 @@ namespace IJunior.ArrowBlocks
 
             _leaderboard.OnDeactivate();
             _backgroundMusicPlayer.OnDeactivate();
+            _browserTabFocus.OnDeactivate();
         }
 
         private void InitializeScreens()

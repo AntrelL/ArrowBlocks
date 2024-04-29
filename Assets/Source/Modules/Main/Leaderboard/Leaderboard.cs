@@ -22,7 +22,7 @@ namespace IJunior.ArrowBlocks.Main
         [SerializeField] private string _localizationAnonymousNameField;
         [SerializeField] private int _maxNumberOfLines;
 
-        private TMP_InputField _levelNumberInputField;
+        private TMP_Dropdown _levelNumberDropdown;
         private TimeText _playerTime;
         private DigitalText _playerPosition;
 
@@ -49,10 +49,10 @@ namespace IJunior.ArrowBlocks.Main
             }
         }
 
-        public void InitializeIOElements(TMP_InputField levelNumberInputField,
+        public void InitializeIOElements(TMP_Dropdown levelNumberDropdown,
             TimeText playerTime, DigitalText playerPosition)
         {
-            _levelNumberInputField = levelNumberInputField;
+            _levelNumberDropdown = levelNumberDropdown;
             _playerTime = playerTime;
             _playerPosition = playerPosition;
         }
@@ -64,36 +64,43 @@ namespace IJunior.ArrowBlocks.Main
                 leaderboardLine.Initialize();
             }
 
+            for (int i = _minLevelNumber; i <= _maxLevelNumber; i++)
+            {
+                _levelNumberDropdown.options.Add(new TMP_Dropdown.OptionData(i.ToString()));
+            }
+
+            _levelNumberDropdown.captionText.text = _levelNumberDropdown.options[0].text;
+
             UpdateData();
         }
 
         public void OnActivate()
         {
-            _levelNumberInputField.onEndEdit.AddListener(OnLevelNumberChanged);
+            _levelNumberDropdown.onValueChanged.AddListener(OnLevelNumberChanged);
         }
 
         public void OnDeactivate()
         {
-            _levelNumberInputField.onEndEdit.RemoveListener(OnLevelNumberChanged);
+            _levelNumberDropdown.onValueChanged.RemoveListener(OnLevelNumberChanged);
         }
 
         private void UpdateData()
         {
-            if (string.IsNullOrEmpty(_levelNumberInputField.text) || PlayerAccount.IsAuthorized == false)
+#if !UNITY_WEBGL || UNITY_EDITOR
+            SetUndefinedMode();
+            return;
+#endif
+
+            if (PlayerAccount.IsAuthorized == false)
             {
                 SetUndefinedMode();
                 return;
             }
 
-            int levelNumber = int.Parse(_levelNumberInputField.text);
-            int clampedLevelNumber = Math.Clamp(levelNumber, _minLevelNumber, _maxLevelNumber);
-            _levelNumberInputField.text = clampedLevelNumber.ToString();
+            int levelNumber = _levelNumberDropdown.value + 1;
+            Debug.Log(levelNumber);
 
-#if !UNITY_WEBGL || UNITY_EDITOR
-            SetUndefinedMode();
-            return;
-#endif
-            string leaderboardName = GetName(clampedLevelNumber);
+            string leaderboardName = GetName(levelNumber);
             AgavaLeaderboard.GetPlayerEntry(leaderboardName, OnGetPlayerEntry);
 
             AgavaLeaderboard.GetEntries(leaderboardName, OnGetEntries,
@@ -159,6 +166,6 @@ namespace IJunior.ArrowBlocks.Main
 
         private float ConvertToFloatTime(int time) => time / TimeConversionFactor;
 
-        private void OnLevelNumberChanged(string number) => UpdateData();
+        private void OnLevelNumberChanged(int index) => UpdateData();
     }
 }

@@ -14,7 +14,7 @@ namespace IJunior.ArrowBlocks.Main
 {
     public class PlayerData
     {
-        private const int DefaultMoney = 250;
+        private const int DefaultMoney = 100;
         private const int CloudPollingLatency = 1;
         private const string EmptyJsonString = "{}";
 

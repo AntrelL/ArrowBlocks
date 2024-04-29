@@ -23,17 +23,19 @@ namespace IJunior.ArrowBlocks
         private Timer _timer;
         private TimeText _passingTimeText;
         private BombThrower _bombThrower;
+        private BombSeller _bombSeller;
         private AudioSource _audioSource;
         private AudioClip _victorySound;
 
         public int Number => _number;
 
         public void InitializeBaseInfo(BlockConstruction blockConstruction,
-            TimeText passingTimeText, BombThrower bombThrower, Timer timer)
+            TimeText passingTimeText, BombThrower bombThrower, BombSeller bombSeller, Timer timer)
         {
             _blockConstruction = blockConstruction;
             _passingTimeText = passingTimeText;
             _bombThrower = bombThrower;
+            _bombSeller = bombSeller;
             _timer = timer;
 
             Time.timeScale = 1;
@@ -86,6 +88,8 @@ namespace IJunior.ArrowBlocks
 
             _playerInput.Disable();
             _playerData.PassLevel(_number, _coinsForCompleting, _timer.Value);
+
+            _bombSeller.UpdateAvailableBombsCount();
         }
 
         public void Restart()

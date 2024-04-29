@@ -881,8 +881,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -149.9, y: -100.8}
-  m_SizeDelta: {x: 240, y: 65}
+  m_AnchoredPosition: {x: -160, y: -100}
+  m_SizeDelta: {x: 260, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308372977
 MonoBehaviour:
@@ -1622,15 +1622,15 @@ RectTransform:
   m_GameObject: {fileID: 566079549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.44, y: 0.44, z: 0.44}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1787501416}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -230.1001, y: -100.799866}
-  m_SizeDelta: {x: 35, y: 40}
+  m_AnchoredPosition: {x: -239.4, y: -100}
+  m_SizeDelta: {x: 121.9272, y: 99.9804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566079551
 MonoBehaviour:
@@ -5720,6 +5720,7 @@ GameObject:
   - component: {fileID: 1992020073}
   - component: {fileID: 1992020074}
   - component: {fileID: 1992020076}
+  - component: {fileID: 1992020077}
   - component: {fileID: 1992020075}
   m_Layer: 0
   m_Name: StaticLogicPoint
@@ -5772,16 +5773,17 @@ MonoBehaviour:
   _throwBombButton: {fileID: 1495248769}
   _levelProgressBar: {fileID: 1632788324051759504}
   _victoryLevelProgressBar: {fileID: 1426469222}
+  _playRewardVideoButton: {fileID: 566079551}
   _bombThrower: {fileID: 276130810}
   _bombSeller: {fileID: 276130811}
   _bombTemplate: {fileID: 3674957142614756550, guid: 4101024a23c0d9f419c124786a64a8ff, type: 3}
   _levelAudioSource: {fileID: 1992020075}
   _levelVictorySound: {fileID: 8300000, guid: b78bebd8ff5e3c6438749119847d64bd, type: 3}
   _advertisingVisualizer: {fileID: 1992020076}
-  _playRewardVideoButton: {fileID: 566079551}
   _level: {fileID: 1992020073}
   _levelFlowControl: {fileID: 1992020072}
   _levelSceneSwitcher: {fileID: 1992020074}
+  _browserTabFocus: {fileID: 1992020077}
 --- !u!114 &1992020072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5807,7 +5809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _number: 2
-  _coinsForCompleting: 100
+  _coinsForCompleting: 25
   _victoryDelay: 0.5
 --- !u!114 &1992020074
 MonoBehaviour:
@@ -5927,6 +5929,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 541d098b8bdd713449f5a6a99d5f75f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1992020077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992020069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0993c46d997174498c25694a154c5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1994784815 stripped
@@ -6074,7 +6088,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 127.5
+  m_fontSize: 140.5
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6471,7 +6485,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.3
+  m_fontSize: 36.8
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6521,9 +6535,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1787501416}
     m_Modifications:
+    - target: {fileID: 1226800622535163923, guid: 3092d195a4f086340990762b57371ef4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 16ca272ec25e60c43b223bd5384b7e09, type: 3}
     - target: {fileID: 1671324976088164770, guid: 3092d195a4f086340990762b57371ef4, type: 3}
       propertyPath: m_Name
-      value: Levels
+      value: ExitToLevels
       objectReference: {fileID: 0}
     - target: {fileID: 1755345241144700623, guid: 3092d195a4f086340990762b57371ef4, type: 3}
       propertyPath: m_Pivot.x

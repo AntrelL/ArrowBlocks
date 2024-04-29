@@ -2,13 +2,12 @@ using System.Collections.Generic;
 using IJunior.ArrowBlocks.Main;
 using IJunior.CompositeRoot;
 using IJunior.TypedScenes;
+using Lean.Localization;
 using UnityEngine.UI;
 using UnityEngine;
 using IJunior.UI;
 
 using Screen = IJunior.UI.Screen;
-using Lean.Localization;
-using System.Collections;
 
 namespace IJunior.ArrowBlocks
 {
@@ -38,6 +37,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private Button _throwBombButton;
         [SerializeField] private ProgressBar _levelProgressBar;
         [SerializeField] private ProgressBar _victoryLevelProgressBar;
+        [SerializeField] private Button _playRewardVideoButton;
         [Space]
         [Header("Bomb Thrower")]
         [SerializeField] private BombThrower _bombThrower;
@@ -50,12 +50,12 @@ namespace IJunior.ArrowBlocks
         [Space]
         [Header("Advertising")]
         [SerializeField] private AdvertisingVisualizer _advertisingVisualizer;
-        [SerializeField] private Button _playRewardVideoButton;
         [Space]
         [Header("Level Control")]
         [SerializeField] private Level _level;
         [SerializeField] private FlowControl _levelFlowControl;
         [SerializeField] private LevelSceneSwitcher _levelSceneSwitcher;
+        [SerializeField] private BrowserTabFocus _browserTabFocus;
 
         private PlayerInput _playerInput;
         private List<ArrowBlock> _arrowBlocks;
@@ -128,6 +128,8 @@ namespace IJunior.ArrowBlocks
             _advertisingVisualizer.Initialize(_playRewardVideoButton,
                 _playerData, BackgroundMusicPlayer.CurrentInstance, _bombSeller);
 
+            _browserTabFocus.Initialize(BackgroundMusicPlayer.CurrentInstance, _advertisingVisualizer);
+
             _levelFlowControl.Initialize(rootUpdatebleElements, rootFixedUpdatebleElements);
         }
 
@@ -150,6 +152,7 @@ namespace IJunior.ArrowBlocks
             _bombThrower.OnActivate();
 
             _advertisingVisualizer.OnActivate();
+            _browserTabFocus.OnActivate();
 
             _level.OnActivate();
         }
@@ -173,6 +176,7 @@ namespace IJunior.ArrowBlocks
             _bombThrower.OnDeactivate();
 
             _advertisingVisualizer.OnDeactivate();
+            _browserTabFocus.OnDeactivate();
 
             _level.OnDeactivate();
         }
@@ -226,7 +230,7 @@ namespace IJunior.ArrowBlocks
 
         private void InitializeLevelControl(Timer timer)
         {
-            _level.InitializeBaseInfo(_blockConstruction, _passingTimeText, _bombThrower, timer);
+            _level.InitializeBaseInfo(_blockConstruction, _passingTimeText, _bombThrower, _bombSeller, timer);
             _level.InitializePlayerInfo(_playerInput, _playerData);
             _level.InitializeScreensInfo(_mainScreen, _victoryScreen);
             _level.InitializeAudio(_levelAudioSource, _levelVictorySound);

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionCalculations.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Misc\BrowserTabFocus.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelButtonsStorage.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockMover.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockAnimator.cs" />
@@ -767,6 +768,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Agava.WebUtility">
+      <HintPath>Library\ScriptAssemblies\Agava.WebUtility.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
