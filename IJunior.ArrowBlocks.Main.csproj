@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\BlockConstructionCalculations.cs" />
     <Compile Include="Assets\Source\Modules\Main\Misc\BrowserTabFocus.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Leaderboard\LeaderboardLoader.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\LevelButtonsStorage.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockMover.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlockAnimator.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\IReadOnlyLevelData.cs" />
     <Compile Include="Assets\Source\Modules\Main\BombThrower\BombSeller.cs" />
     <Compile Include="Assets\Source\Modules\Main\BlockConstruction\ArrowBlock\ArrowBlock.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Audio\SoundSwitch.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCamera.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Player.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCameraCalculations.cs" />

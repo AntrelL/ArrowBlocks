@@ -18,12 +18,12 @@ namespace IJunior.TypedScenes
         
         private const string _sceneName = "Menu";
         
-        public static void Load(System.ValueTuple<IJunior.ArrowBlocks.Main.PlayerData, IJunior.ArrowBlocks.MenuScreenId> argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+        public static void Load(System.ValueTuple<IJunior.ArrowBlocks.Main.PlayerData, IJunior.ArrowBlocks.MenuScreenId, int> argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
             LoadScene(_sceneName, loadSceneMode, argument);
         }
         
-        public static UnityEngine.AsyncOperation LoadAsync(System.ValueTuple<IJunior.ArrowBlocks.Main.PlayerData, IJunior.ArrowBlocks.MenuScreenId> argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+        public static UnityEngine.AsyncOperation LoadAsync(System.ValueTuple<IJunior.ArrowBlocks.Main.PlayerData, IJunior.ArrowBlocks.MenuScreenId, int> argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
             return LoadScene(_sceneName, loadSceneMode, argument);
         }

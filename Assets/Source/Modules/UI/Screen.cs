@@ -26,14 +26,14 @@ namespace IJunior.UI
             targetScreen.Open();
         }
 
-        private void Open()
+        public void Open()
         {
             _canvasGroup.alpha = 1;
             _canvasGroup.interactable = true;
             _canvasGroup.blocksRaycasts = true;
         }
 
-        private void Close()
+        public void Close()
         {
             _canvasGroup.alpha = 0;
             _canvasGroup.interactable = false;

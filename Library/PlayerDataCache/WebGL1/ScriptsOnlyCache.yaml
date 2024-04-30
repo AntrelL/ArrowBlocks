@@ -21,12 +21,14 @@ ScriptsOnlyBuild:
     - IJunior.ArrowBlocks.Main.BrowserTabFocus
     - IJunior.ArrowBlocks.Main.Leaderboard
     - IJunior.ArrowBlocks.Main.LeaderboardLine
+    - IJunior.ArrowBlocks.Main.LeaderboardLoader
     - IJunior.ArrowBlocks.Main.LevelButton
     - IJunior.ArrowBlocks.Main.LevelButtonsStorage
     - IJunior.ArrowBlocks.Main.Player
     - IJunior.ArrowBlocks.Main.PlayerCamera
     - IJunior.ArrowBlocks.Main.PlayerCameraBooster
     - IJunior.ArrowBlocks.Main.Rotator
+    - IJunior.ArrowBlocks.Main.SoundSwitch
     - IJunior.ArrowBlocks.Main.VirtualBlockGrid
     IJunior.ArrowBlocks.Plugins.dll:
     - IJunior.TypedScenes.TypedProcessor
@@ -151,9 +153,6 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
@@ -166,15 +165,24 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
-  - assembly: IJunior.UI
-    fullTypeName: IJunior.UI.Screen
-    methodName: SwitchTo
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: IJunior.ArrowBlocks.Main
+    fullTypeName: IJunior.ArrowBlocks.Main.LeaderboardLoader
+    methodName: TrySwitch
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.Level
+    methodName: Restart
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -187,12 +195,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: RestartFromMenu
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.Level
-    methodName: Restart
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -220,15 +222,6 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -239,8 +232,20 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: RestartFromMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -259,6 +264,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
     methodName: LoadLeaderboardMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   sceneClasses:
     Assets/Source/Game/Scenes/Levels/Level2.unity:
     - Class: 1
@@ -383,6 +391,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8508}
     - Class: 114
       Script: {instanceID: 8656}
+    - Class: 114
+      Script: {instanceID: 55576}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -532,6 +542,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8508}
     - Class: 114
       Script: {instanceID: 8656}
+    - Class: 114
+      Script: {instanceID: 55576}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -667,6 +679,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8110}
     - Class: 114
       Script: {instanceID: 8786}
+    - Class: 114
+      Script: {instanceID: 26512}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -892,7 +906,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: b6da46a1b34076752eaad5c996930962
+      Hash: 3479d891e24a7e06b7c549fdcc28060e
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: LevelCompositeRoot
@@ -2086,7 +2100,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: e6734116d555ee03305e30a39b72e451
+      Hash: dd2f736c59f7be5e009459f870221eda
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: MenuCompositeRoot
@@ -2270,6 +2284,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: IJunior.ArrowBlocks.Main
+    namespaceName: IJunior.ArrowBlocks.Main
+    className: LeaderboardLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 2b4a3b196b9847c36ab94a220c6e0002
+    assemblyName: IJunior.ArrowBlocks.Main
+    namespaceName: IJunior.ArrowBlocks.Main
+    className: SoundSwitch
   platform: 20
   scenePathNames:
   - Assets/Source/Game/Scenes/Menu.unity

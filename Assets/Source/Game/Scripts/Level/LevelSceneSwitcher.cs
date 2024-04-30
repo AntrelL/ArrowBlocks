@@ -35,6 +35,6 @@ namespace IJunior.ArrowBlocks
 
         public void LoadLeaderboardMenu() => LoadMenu(MenuScreenId.Leaderboard);
 
-        private void LoadMenu(MenuScreenId menuScreenId) => Menu.Load((_playerData, menuScreenId));
+        private void LoadMenu(MenuScreenId menuScreenId) => Menu.Load((_playerData, menuScreenId, _levelNumber));
     }
 }

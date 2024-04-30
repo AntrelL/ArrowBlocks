@@ -20,7 +20,7 @@ using Leaderboard = IJunior.ArrowBlocks.Main.Leaderboard;
 namespace IJunior.ArrowBlocks
 {
     internal class MenuCompositeRoot : MonoBehaviour, 
-        ISceneLoadHandler<(PlayerData PlayerData, MenuScreenId MenuScreenId)>
+        ISceneLoadHandler<(PlayerData PlayerData, MenuScreenId MenuScreenId, int LevelNumber)>
     {
         private static bool IsGameReadyMethodCalled = false;
 
@@ -30,6 +30,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private Screen _leaderboardScreen;
         [Space]
         [Header("User Interface")]
+        [SerializeField] private GameObject _canvas;
         [SerializeField] private LeanLocalization _leanLocalization;
         [SerializeField] private LevelButtonsStorage _levelButtonsStorage;
         [SerializeField] private VersionText _versionText;
@@ -43,6 +44,7 @@ namespace IJunior.ArrowBlocks
         [Space]
         [Header("Leaderboard")]
         [SerializeField] private Leaderboard _leaderboard;
+        [SerializeField] private LeaderboardLoader _leaderboardLoader;
         [SerializeField] private LeaderboardLine _leaderboardLineTemplate;
         [SerializeField] private TMP_Dropdown _leaderboardLevelNumberInput;
         [SerializeField] private TimeText _leaderboardPlayerTime;
@@ -58,6 +60,8 @@ namespace IJunior.ArrowBlocks
         private UnityAction[] _levelActivators;
         private Button[] _levelButtons;
 
+        private int _lastPlayedLevelNumber;
+
         private void Awake() => InitializeEarly();
 
         private void OnDisable() => UnsubscribeEvents();
@@ -68,7 +72,14 @@ namespace IJunior.ArrowBlocks
 
             SubscribeEvents();
 
+            _mainScreen.Open();
+
+            if (_screenIdToSwitch == MenuScreenId.Leaderboard)
+                _leaderboardLoader.TrySwitch(_lastPlayedLevelNumber); 
+
             Time.timeScale = 1;
+            AudioListener.volume = 1;
+
             _menuFlowControl.Run();
 
 #if UNITY_WEBGL && !UNITY_EDITOR
@@ -78,22 +89,20 @@ namespace IJunior.ArrowBlocks
                 IsGameReadyMethodCalled = true;
             }
 #endif
-
             yield return null;
         }
 
-        public void OnSceneLoaded((PlayerData PlayerData, MenuScreenId MenuScreenId) sceneTransitionData)
+        public void OnSceneLoaded((PlayerData PlayerData,
+            MenuScreenId MenuScreenId, int LevelNumber) sceneTransitionData)
         {
             _playerData = sceneTransitionData.PlayerData;
             _screenIdToSwitch = sceneTransitionData.MenuScreenId;
+            _lastPlayedLevelNumber = sceneTransitionData.LevelNumber;
         }
 
         private void InitializeEarly()
         {
             InitializeScreens();
-
-            if (_screenIdToSwitch != MenuScreenId.None)
-                SwitchScreenById(_screenIdToSwitch);
         }
 
         private IEnumerator Initialize()
@@ -110,6 +119,7 @@ namespace IJunior.ArrowBlocks
                 yield return _playerData.TryGetFromCloud();
             }
 
+            _leaderboardLoader.Initialize(_leaderboard, _leaderboardScreen, _mainScreen);
             InitializeLeaderboard(_playerData.LevelsData.Count);
 
             Localization.SetLanguage(_leanLocalization);

@@ -47,6 +47,7 @@ namespace IJunior.ArrowBlocks
         [Header("Level Audio")]
         [SerializeField] private AudioSource _levelAudioSource;
         [SerializeField] private AudioClip _levelVictorySound;
+        [SerializeField] private SoundSwitch _soundSwitch;
         [Space]
         [Header("Advertising")]
         [SerializeField] private AdvertisingVisualizer _advertisingVisualizer;
@@ -129,6 +130,7 @@ namespace IJunior.ArrowBlocks
                 _playerData, BackgroundMusicPlayer.CurrentInstance, _bombSeller);
 
             _browserTabFocus.Initialize(BackgroundMusicPlayer.CurrentInstance, _advertisingVisualizer);
+            _soundSwitch.Initialize();
 
             _levelFlowControl.Initialize(rootUpdatebleElements, rootFixedUpdatebleElements);
         }
@@ -153,6 +155,7 @@ namespace IJunior.ArrowBlocks
 
             _advertisingVisualizer.OnActivate();
             _browserTabFocus.OnActivate();
+            _soundSwitch.OnActivate();
 
             _level.OnActivate();
         }
@@ -177,6 +180,7 @@ namespace IJunior.ArrowBlocks
 
             _advertisingVisualizer.OnDeactivate();
             _browserTabFocus.OnDeactivate();
+            _soundSwitch.OnDeactivate();
 
             _level.OnDeactivate();
         }

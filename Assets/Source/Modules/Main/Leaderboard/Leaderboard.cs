@@ -34,6 +34,15 @@ namespace IJunior.ArrowBlocks.Main
 
         public static string GetName(int levelNumber) => NameTemplate + levelNumber;
 
+        public int MinLevelNumber => _minLevelNumber;
+        public int LevelNumber
+        {
+            set
+            {
+                _levelNumberDropdown.value = Math.Clamp(value, _minLevelNumber, _maxLevelNumber) - 1;
+            }
+        }
+
         public void Initialize(LeaderboardLine leaderboardLineTemplate, int numberOflevels)
         {
             _leaderboardLines = new List<LeaderboardLine>();
@@ -86,16 +95,11 @@ namespace IJunior.ArrowBlocks.Main
 
         private void UpdateData()
         {
-#if !UNITY_WEBGL || UNITY_EDITOR
             SetUndefinedMode();
+
+#if !UNITY_WEBGL || UNITY_EDITOR
             return;
 #endif
-
-            if (PlayerAccount.IsAuthorized == false)
-            {
-                SetUndefinedMode();
-                return;
-            }
 
             int levelNumber = _levelNumberDropdown.value + 1;
             Debug.Log(levelNumber);
