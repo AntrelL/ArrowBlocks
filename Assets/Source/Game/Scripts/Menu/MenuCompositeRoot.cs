@@ -28,6 +28,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private Screen _mainScreen;
         [SerializeField] private Screen _levelsScreen;
         [SerializeField] private Screen _leaderboardScreen;
+        [SerializeField] private Screen _tutorialScreen;
         [Space]
         [Header("User Interface")]
         [SerializeField] private GameObject _canvas;
@@ -49,6 +50,9 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private TMP_Dropdown _leaderboardLevelNumberInput;
         [SerializeField] private TimeText _leaderboardPlayerTime;
         [SerializeField] private DigitalText _leaderboardPlayerPosition;
+        [Space]
+        [Header("Tuturial")]
+        [SerializeField] private Tutorial _tutorial;
         [Space]
         [Header("Menu Control")]
         [SerializeField] private FlowControl _menuFlowControl;
@@ -72,10 +76,7 @@ namespace IJunior.ArrowBlocks
 
             SubscribeEvents();
 
-            _mainScreen.Open();
-
-            if (_screenIdToSwitch == MenuScreenId.Leaderboard)
-                _leaderboardLoader.TrySwitch(_lastPlayedLevelNumber); 
+            OpenSuitableScreen();
 
             Time.timeScale = 1;
             AudioListener.volume = 1;
@@ -122,6 +123,8 @@ namespace IJunior.ArrowBlocks
             _leaderboardLoader.Initialize(_leaderboard, _leaderboardScreen, _mainScreen);
             InitializeLeaderboard(_playerData.LevelsData.Count);
 
+            _tutorial.Initialize();
+
             Localization.SetLanguage(_leanLocalization);
 
             FinalInitializeLeaderboard();
@@ -138,6 +141,7 @@ namespace IJunior.ArrowBlocks
             _backgroundMusicPlayer = _backgroundMusicPlayer.Initialize(_backgroundMusicVolumeSlider);
 
             _browserTabFocus.Initialize(_backgroundMusicPlayer);
+            _tutorial.FinalInitialize();
 
             _menuFlowControl.Initialize(rootUpdatebleElements, new List<IRootFixedUpdateble>());
 
@@ -174,6 +178,7 @@ namespace IJunior.ArrowBlocks
             _mainScreen.Initialize();
             _levelsScreen.Initialize();
             _leaderboardScreen.Initialize();
+            _tutorialScreen.Initialize();
         }
 
         private void InitializeLeaderboard(int numberOfLevels)
@@ -200,24 +205,25 @@ namespace IJunior.ArrowBlocks
             yield return YandexGamesSdk.Initialize();
         }
 
-        private void SwitchScreenById(MenuScreenId screenId)
+        private void OpenSuitableScreen()
         {
-            Screen target = null;
-
-            switch (screenId)
+            if (_tutorial.ShouldBeShown(_playerData))
             {
-                case MenuScreenId.Main:
-                    target = _mainScreen;
-                    break;
-                case MenuScreenId.Levels:
-                    target = _levelsScreen;
-                    break;
-                case MenuScreenId.Leaderboard:
-                    target = _leaderboardScreen;
-                    break;
+                _tutorialScreen.Open();
+                return;
             }
 
-            _mainScreen.SwitchTo(target);
+            _mainScreen.Open();
+
+            switch (_screenIdToSwitch)
+            {
+                case MenuScreenId.Levels:
+                    _mainScreen.SwitchTo(_levelsScreen);
+                    break;
+                case MenuScreenId.Leaderboard:
+                    _leaderboardLoader.TrySwitch(_lastPlayedLevelNumber);
+                    break;
+            }
         }
     }
 }

@@ -322,6 +322,7 @@
 "Assets/Source/Modules/Main/Misc/AdvertisingVisualizer.cs"
 "Assets/Source/Modules/Main/Misc/BrowserTabFocus.cs"
 "Assets/Source/Modules/Main/Misc/Localization.cs"
+"Assets/Source/Modules/Main/Misc/Tutorial.cs"
 "Assets/Source/Modules/Main/Player/Camera/IPlayerCameraTarget.cs"
 "Assets/Source/Modules/Main/Player/Camera/PlayerCamera.cs"
 "Assets/Source/Modules/Main/Player/Camera/PlayerCameraBooster.cs"

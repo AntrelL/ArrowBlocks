@@ -28,7 +28,7 @@ namespace IJunior.ArrowBlocks.Main
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             _mainScreen.SwitchTo(_leaderboardScreen);
-            Debug.Log(lastPlayedLevelNumber);
+
             _leaderboard.LevelNumber = lastPlayedLevelNumber;
             return;
 #endif
