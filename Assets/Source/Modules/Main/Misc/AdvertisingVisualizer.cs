@@ -10,8 +10,9 @@ namespace IJunior.ArrowBlocks.Main
 {
     public class AdvertisingVisualizer : Script, IActivatable
     {
+        public const int RewardForWatchingVideo = 200;
+
         private const int MinLevelToDisplayAds = 0;
-        private const int RewardForWatchingVideo = 200;
 
         private Button _playRewardVideoButton;
         private PlayerData _playerData;

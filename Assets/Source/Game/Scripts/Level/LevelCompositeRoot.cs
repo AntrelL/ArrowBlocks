@@ -38,6 +38,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private ProgressBar _levelProgressBar;
         [SerializeField] private ProgressBar _victoryLevelProgressBar;
         [SerializeField] private Button _playRewardVideoButton;
+        [SerializeField] private DigitalText _explanatoryTextOfRewardButton;
         [Space]
         [Header("Bomb Thrower")]
         [SerializeField] private BombThrower _bombThrower;
@@ -116,6 +117,9 @@ namespace IJunior.ArrowBlocks
 
             _levelNumberText.Initialize();
             _levelNumberText.Value = _level.Number;
+
+            _explanatoryTextOfRewardButton.Initialize();
+            _explanatoryTextOfRewardButton.Value = AdvertisingVisualizer.RewardForWatchingVideo;
 
             _nextLevelButton.gameObject.SetActive(_level.Number < _playerData.LevelsData.Count);
 

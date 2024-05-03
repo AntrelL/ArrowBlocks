@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - IJunior.ArrowBlocks.Main.ArrowBlockAnimator
     - IJunior.ArrowBlocks.Main.ArrowBlockEffector
     - IJunior.ArrowBlocks.Main.ArrowBlockMover
+    - IJunior.ArrowBlocks.Main.AuthorizationMenu
     - IJunior.ArrowBlocks.Main.BackgroundMusicPlayer
     - IJunior.ArrowBlocks.Main.BlockConstruction
     - IJunior.ArrowBlocks.Main.Bomb
@@ -151,9 +152,6 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
@@ -166,24 +164,30 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
-  - assembly: IJunior.UI
-    fullTypeName: IJunior.UI.Screen
-    methodName: SwitchTo
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: IJunior.UI
     fullTypeName: IJunior.UI.Screen
     methodName: SwitchTo
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: IJunior.ArrowBlocks.Main
     fullTypeName: IJunior.ArrowBlocks.Main.LeaderboardLoader
     methodName: TrySwitch
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -200,14 +204,14 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.Level
-    methodName: Restart
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
+    fullTypeName: IJunior.ArrowBlocks.Level
+    methodName: Restart
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -233,6 +237,18 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
   - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
+    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
+    methodName: LoadLevelsMenu
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: PlayOneShot
+  - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: RestartFromMenu
   - assembly: UnityEngine.AudioModule
@@ -241,18 +257,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: IJunior.ArrowBlocks.Level
     methodName: Restart
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
-  - assembly: UnityEngine.AudioModule
-    fullTypeName: UnityEngine.AudioSource
-    methodName: PlayOneShot
-  - assembly: Assembly-CSharp
-    fullTypeName: IJunior.ArrowBlocks.LevelSceneSwitcher
-    methodName: LoadLevelsMenu
   - assembly: UnityEngine.AudioModule
     fullTypeName: UnityEngine.AudioSource
     methodName: PlayOneShot
@@ -377,29 +381,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5990}
     - Class: 114
-      Script: {instanceID: 6368}
+      Script: {instanceID: 6370}
     - Class: 114
-      Script: {instanceID: 6436}
+      Script: {instanceID: 6438}
     - Class: 114
-      Script: {instanceID: 6680}
+      Script: {instanceID: 6682}
     - Class: 114
-      Script: {instanceID: 6962}
+      Script: {instanceID: 6964}
     - Class: 114
-      Script: {instanceID: 7228}
+      Script: {instanceID: 7230}
     - Class: 114
-      Script: {instanceID: 7704}
+      Script: {instanceID: 7706}
     - Class: 114
-      Script: {instanceID: 7966}
+      Script: {instanceID: 7968}
     - Class: 114
-      Script: {instanceID: 8024}
+      Script: {instanceID: 8026}
     - Class: 114
-      Script: {instanceID: 8112}
+      Script: {instanceID: 8114}
     - Class: 114
-      Script: {instanceID: 8406}
+      Script: {instanceID: 8408}
     - Class: 114
-      Script: {instanceID: 8510}
+      Script: {instanceID: 8512}
     - Class: 114
-      Script: {instanceID: 8658}
+      Script: {instanceID: 8660}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -528,29 +532,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5990}
     - Class: 114
-      Script: {instanceID: 6368}
+      Script: {instanceID: 6370}
     - Class: 114
-      Script: {instanceID: 6436}
+      Script: {instanceID: 6438}
     - Class: 114
-      Script: {instanceID: 6680}
+      Script: {instanceID: 6682}
     - Class: 114
-      Script: {instanceID: 6962}
+      Script: {instanceID: 6964}
     - Class: 114
-      Script: {instanceID: 7228}
+      Script: {instanceID: 7230}
     - Class: 114
-      Script: {instanceID: 7704}
+      Script: {instanceID: 7706}
     - Class: 114
-      Script: {instanceID: 7966}
+      Script: {instanceID: 7968}
     - Class: 114
-      Script: {instanceID: 8024}
+      Script: {instanceID: 8026}
     - Class: 114
-      Script: {instanceID: 8112}
+      Script: {instanceID: 8114}
     - Class: 114
-      Script: {instanceID: 8406}
+      Script: {instanceID: 8408}
     - Class: 114
-      Script: {instanceID: 8510}
+      Script: {instanceID: 8512}
     - Class: 114
-      Script: {instanceID: 8658}
+      Script: {instanceID: 8660}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -663,33 +667,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5860}
     - Class: 114
-      Script: {instanceID: 6244}
+      Script: {instanceID: 5998}
     - Class: 114
-      Script: {instanceID: 6368}
+      Script: {instanceID: 6246}
     - Class: 114
-      Script: {instanceID: 6436}
+      Script: {instanceID: 6370}
     - Class: 114
-      Script: {instanceID: 6680}
+      Script: {instanceID: 6438}
     - Class: 114
-      Script: {instanceID: 6820}
+      Script: {instanceID: 6682}
     - Class: 114
-      Script: {instanceID: 6962}
+      Script: {instanceID: 6822}
     - Class: 114
-      Script: {instanceID: 7228}
+      Script: {instanceID: 6964}
     - Class: 114
-      Script: {instanceID: 7704}
+      Script: {instanceID: 7230}
     - Class: 114
-      Script: {instanceID: 8014}
+      Script: {instanceID: 7706}
     - Class: 114
-      Script: {instanceID: 8024}
+      Script: {instanceID: 8016}
     - Class: 114
-      Script: {instanceID: 8048}
+      Script: {instanceID: 8026}
     - Class: 114
-      Script: {instanceID: 8112}
+      Script: {instanceID: 8050}
     - Class: 114
-      Script: {instanceID: 8788}
+      Script: {instanceID: 8114}
     - Class: 114
-      Script: {instanceID: 32748}
+      Script: {instanceID: 8790}
+    - Class: 114
+      Script: {instanceID: 69228}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -921,7 +927,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 3479d891e24a7e06b7c549fdcc28060e
+      Hash: d8a4f56c69af8e5e32df238a6b40df78
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: LevelCompositeRoot
@@ -1755,6 +1761,12 @@ ScriptsOnlyBuild:
     className: CwRotate
   - hash:
       serializedVersion: 2
+      Hash: c2cb545e2d61605549f552f2f70371f1
+    assemblyName: IJunior.ArrowBlocks.Main
+    namespaceName: IJunior.ArrowBlocks.Main
+    className: Tutorial
+  - hash:
+      serializedVersion: 2
       Hash: 654cebef8aa88cb6cd0504505364d614
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
@@ -2121,7 +2133,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 3c1491f52767b134aa3e63dc5edff573
+      Hash: 149c3a94ccda36fc6d8e79f7deee392a
     assemblyName: Assembly-CSharp
     namespaceName: IJunior.ArrowBlocks
     className: MenuCompositeRoot
@@ -2307,10 +2319,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 941fd213b17fd893f6aa89e43f695587
+      Hash: 4e7ddeda5bf7f56645033386e3f5e3c1
     assemblyName: IJunior.ArrowBlocks.Main
     namespaceName: IJunior.ArrowBlocks.Main
-    className: Tutorial
+    className: AuthorizationMenu
   platform: 20
   scenePathNames:
   - Assets/Source/Game/Scenes/Menu.unity

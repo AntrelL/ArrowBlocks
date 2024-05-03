@@ -70,6 +70,7 @@
     <Compile Include="Assets\Source\Modules\Main\BombThrower\BombThrowerCalculations.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\PlayerMoneyPresenter.cs" />
     <Compile Include="Assets\Source\Modules\Main\Leaderboard\LeaderboardLine.cs" />
+    <Compile Include="Assets\Source\Modules\Main\Misc\AuthorizationMenu.cs" />
     <Compile Include="Assets\Source\Modules\Main\Player\Camera\PlayerCameraBooster.cs" />
     <Compile Include="Assets\Source\Modules\Main\LevelsControl\IReadOnlyLevelData.cs" />
     <Compile Include="Assets\Source\Modules\Main\BombThrower\BombSeller.cs" />

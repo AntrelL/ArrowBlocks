@@ -14,12 +14,15 @@ namespace IJunior.ArrowBlocks.Main
         private Leaderboard _leaderboard;
         private Screen _leaderboardScreen;
         private Screen _mainScreen;
+        private AuthorizationMenu _authorizationMenu;
 
-        public void Initialize(Leaderboard leaderboard, Screen leaderboardScreen, Screen mainScreen)
+        public void Initialize(Leaderboard leaderboard, Screen leaderboardScreen,
+            Screen mainScreen, AuthorizationMenu authorizationMenu)
         {
             _leaderboard = leaderboard;
             _leaderboardScreen = leaderboardScreen;
             _mainScreen = mainScreen;
+            _authorizationMenu = authorizationMenu;
         }
 
         public void TrySwitch() => TrySwitch(_leaderboard.MinLevelNumber);
@@ -27,20 +30,36 @@ namespace IJunior.ArrowBlocks.Main
         public void TrySwitch(int lastPlayedLevelNumber)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
-            _mainScreen.SwitchTo(_leaderboardScreen);
+            _authorizationMenu.Open();
+            //TrySwitchRaw(lastPlayedLevelNumber);
+            return;
+#endif
+            if (PlayerAccount.IsAuthorized == false)
+            {
+                _authorizationMenu.Open(() => TrySwitchRaw(lastPlayedLevelNumber));
+                return;
+            }
 
-            _leaderboard.LevelNumber = lastPlayedLevelNumber;
+            TrySwitchRaw(lastPlayedLevelNumber);
+        }
+
+        private void TrySwitchRaw(int lastPlayedLevelNumber)
+        {
+#if !UNITY_WEBGL || UNITY_EDITOR
+            Switch(lastPlayedLevelNumber);
             return;
 #endif
 
-            PlayerAccount.Authorize();
-
             if (PlayerAccount.IsAuthorized)
                 PlayerAccount.RequestPersonalProfileDataPermission();
-
-            if (PlayerAccount.IsAuthorized == false)
+            else
                 return;
 
+            Switch(lastPlayedLevelNumber);
+        }
+
+        private void Switch(int lastPlayedLevelNumber)
+        {
             _mainScreen.SwitchTo(_leaderboardScreen);
             _leaderboard.LevelNumber = lastPlayedLevelNumber;
         }

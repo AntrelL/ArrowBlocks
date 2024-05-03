@@ -320,6 +320,7 @@
 "Assets/Source/Modules/Main/LevelsControl/LevelData.cs"
 "Assets/Source/Modules/Main/LevelsControl/LevelState.cs"
 "Assets/Source/Modules/Main/Misc/AdvertisingVisualizer.cs"
+"Assets/Source/Modules/Main/Misc/AuthorizationMenu.cs"
 "Assets/Source/Modules/Main/Misc/BrowserTabFocus.cs"
 "Assets/Source/Modules/Main/Misc/Localization.cs"
 "Assets/Source/Modules/Main/Misc/Tutorial.cs"

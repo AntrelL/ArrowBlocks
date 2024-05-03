@@ -29,6 +29,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private Screen _levelsScreen;
         [SerializeField] private Screen _leaderboardScreen;
         [SerializeField] private Screen _tutorialScreen;
+        [SerializeField] private Screen _authorizationScreen;
         [Space]
         [Header("User Interface")]
         [SerializeField] private GameObject _canvas;
@@ -51,8 +52,9 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private TimeText _leaderboardPlayerTime;
         [SerializeField] private DigitalText _leaderboardPlayerPosition;
         [Space]
-        [Header("Tuturial")]
+        [Header("Additional menus")]
         [SerializeField] private Tutorial _tutorial;
+        [SerializeField] private AuthorizationMenu _authorizationMenu;
         [Space]
         [Header("Menu Control")]
         [SerializeField] private FlowControl _menuFlowControl;
@@ -83,14 +85,16 @@ namespace IJunior.ArrowBlocks
 
             _menuFlowControl.Run();
 
-#if UNITY_WEBGL && !UNITY_EDITOR
+#if !UNITY_WEBGL || UNITY_EDITOR
+            yield break;
+#endif
+
             if (IsGameReadyMethodCalled == false)
             {
                 YandexGamesSdk.GameReady();
+                Debug.Log("Game Ready");
                 IsGameReadyMethodCalled = true;
             }
-#endif
-            yield return null;
         }
 
         public void OnSceneLoaded((PlayerData PlayerData,
@@ -104,6 +108,12 @@ namespace IJunior.ArrowBlocks
         private void InitializeEarly()
         {
             InitializeScreens();
+
+#if !UNITY_WEBGL || UNITY_EDITOR
+            return;
+#endif
+
+            YandexGamesSdk.CallbackLogging = true;
         }
 
         private IEnumerator Initialize()
@@ -120,16 +130,17 @@ namespace IJunior.ArrowBlocks
                 yield return _playerData.TryGetFromCloud();
             }
 
-            _leaderboardLoader.Initialize(_leaderboard, _leaderboardScreen, _mainScreen);
+            _leaderboardLoader.Initialize(_leaderboard, _leaderboardScreen, _mainScreen, _authorizationMenu);
             InitializeLeaderboard(_playerData.LevelsData.Count);
 
-            _tutorial.Initialize();
+            _tutorial.Initialize(_tutorialScreen, _levelsScreen);
+            _authorizationMenu.Initialize(_authorizationScreen);
 
             Localization.SetLanguage(_leanLocalization);
 
             FinalInitializeLeaderboard();
 
-            _levelLoader = new LevelLoader(_playerData);
+            _levelLoader = new LevelLoader(_playerData, _tutorial);
             _levelActivators = new UnityAction[_levelButtons.Length];
 
             _levelButtonsStorage.UpdateLevelButtons(_playerData.LevelsData);
@@ -159,6 +170,8 @@ namespace IJunior.ArrowBlocks
             _leaderboard.OnActivate();
             _backgroundMusicPlayer.OnActivate();
             _browserTabFocus.OnActivate();
+            _tutorial.OnActivate();
+            _authorizationMenu.OnActivate();
         }
 
         private void UnsubscribeEvents()
@@ -171,6 +184,8 @@ namespace IJunior.ArrowBlocks
             _leaderboard.OnDeactivate();
             _backgroundMusicPlayer.OnDeactivate();
             _browserTabFocus.OnDeactivate();
+            _tutorial.OnDeactivate();
+            _authorizationMenu.OnDeactivate();
         }
 
         private void InitializeScreens()
@@ -179,6 +194,7 @@ namespace IJunior.ArrowBlocks
             _levelsScreen.Initialize();
             _leaderboardScreen.Initialize();
             _tutorialScreen.Initialize();
+            _authorizationScreen.Initialize();
         }
 
         private void InitializeLeaderboard(int numberOfLevels)
@@ -207,12 +223,6 @@ namespace IJunior.ArrowBlocks
 
         private void OpenSuitableScreen()
         {
-            if (_tutorial.ShouldBeShown(_playerData))
-            {
-                _tutorialScreen.Open();
-                return;
-            }
-
             _mainScreen.Open();
 
             switch (_screenIdToSwitch)

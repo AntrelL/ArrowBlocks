@@ -63,7 +63,6 @@
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelCompositeRoot.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuScreenId.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\Level.cs" />
-    <Compile Include="Assets\Scenes\Typed\Untitled.cs" />
     <Compile Include="Assets\Scenes\Typed\Level2.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuCompositeRoot.cs" />
     <Compile Include="Assets\Scenes\Typed\Menu.cs" />
