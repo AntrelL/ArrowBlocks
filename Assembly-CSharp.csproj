@@ -59,14 +59,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelSceneSwitcher.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level3.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level8.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelLoader.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\LevelCompositeRoot.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level13.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level12.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuScreenId.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level14.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level1.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level19.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level10.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Level\Level.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level6.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level4.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level5.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level20.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level15.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level17.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level16.cs" />
     <Compile Include="Assets\Scenes\Typed\Level2.cs" />
     <Compile Include="Assets\Source\Game\Scripts\Menu\MenuCompositeRoot.cs" />
     <Compile Include="Assets\Scenes\Typed\Menu.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level9.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level11.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level18.cs" />
     <Compile Include="Assets\Scenes\Typed\LevelTemplate.cs" />
+    <Compile Include="Assets\Scenes\Typed\Level7.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

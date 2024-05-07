@@ -40,6 +40,7 @@ namespace IJunior.ArrowBlocks.Main
             set
             {
                 _levelNumberDropdown.value = Math.Clamp(value, _minLevelNumber, _maxLevelNumber) - 1;
+                OnLevelNumberChanged(_levelNumberDropdown.value);
             }
         }
 
@@ -95,14 +96,11 @@ namespace IJunior.ArrowBlocks.Main
 
         private void UpdateData()
         {
-            SetUndefinedMode();
-
 #if !UNITY_WEBGL || UNITY_EDITOR
             return;
 #endif
 
             int levelNumber = _levelNumberDropdown.value + 1;
-            Debug.Log(levelNumber);
 
             string leaderboardName = GetName(levelNumber);
             AgavaLeaderboard.GetPlayerEntry(leaderboardName, OnGetPlayerEntry);
@@ -120,12 +118,6 @@ namespace IJunior.ArrowBlocks.Main
             {
                 _leaderboardLines[i].Deactivate();
             }
-        }
-
-        private void SetUndefinedMode()
-        {
-            SetUndefinedValues();
-            DisableUnnecessaryLines(_maxNumberOfLines);
         }
 
         private void SetUndefinedValues()

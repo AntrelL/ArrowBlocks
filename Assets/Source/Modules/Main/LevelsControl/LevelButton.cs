@@ -1,6 +1,7 @@
 using IJunior.CompositeRoot;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -8,12 +9,14 @@ namespace IJunior.ArrowBlocks.Main
     public class LevelButton : Script
     {
         [SerializeField] private Sprite _passed;
+        [SerializeField] private TMP_Text _tmpText;
 
         public Button Button { get; private set; }
 
-        public void Initialize()
+        public void Initialize(int number)
         {
             Button = GetComponent<Button>();
+            _tmpText.text = number.ToString();
         }
 
         public void UpdateState(LevelState levelState)

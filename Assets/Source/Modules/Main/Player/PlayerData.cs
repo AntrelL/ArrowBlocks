@@ -35,6 +35,13 @@ namespace IJunior.ArrowBlocks.Main
 
             if (levelsQuantity > 0)
                 _levelsData[0].Open();
+
+#if !UNITY_WEBGL || UNITY_EDITOR
+            foreach (var levelData in _levelsData)
+            {
+                levelData.Open(true);
+            }
+#endif
         }
 
         public event Action<int> MoneyQuantityChanged;
@@ -150,6 +157,8 @@ namespace IJunior.ArrowBlocks.Main
 
         private void SetData(CleanPlayerData cleanPlayerData, int numberOfLevels)
         {
+            SetData(cleanPlayerData);
+
             int previusNumberOfLevels = _levelsData.Length;
             Array.Resize(ref _levelsData, numberOfLevels);
 
@@ -160,8 +169,6 @@ namespace IJunior.ArrowBlocks.Main
 
             if (_levelsData[previusNumberOfLevels - 1].State == LevelState.Passed)
                 _levelsData[previusNumberOfLevels].Open();
-
-            SetData(cleanPlayerData);
         }
 
         private CleanPlayerData ConvertToCleanData()

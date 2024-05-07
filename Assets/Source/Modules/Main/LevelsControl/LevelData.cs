@@ -32,9 +32,9 @@ namespace IJunior.ArrowBlocks.Main
             }
         }
 
-        public void Open()
+        public void Open(bool ignoreException = false)
         {
-            if (State != LevelState.Blocked)
+            if (State != LevelState.Blocked && ignoreException == false)
                 throw new Exception("Level is not blocked.");
 
             State = LevelState.Opened;

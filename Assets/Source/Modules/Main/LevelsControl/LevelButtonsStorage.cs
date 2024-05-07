@@ -14,9 +14,9 @@ namespace IJunior.ArrowBlocks.Main
         {
             _levelButtons = GetComponentsInChildren<LevelButton>();
 
-            foreach (var levelButton in _levelButtons)
+            for (int i = 0; i < _levelButtons.Length; i++)
             {
-                levelButton.Initialize();
+                _levelButtons[i].Initialize(i + 1);
             }
 
             return _levelButtons.Select(LevelButton => LevelButton.Button).ToArray();

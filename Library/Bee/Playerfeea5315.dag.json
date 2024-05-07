@@ -26020,14 +26020,14 @@
       "DebugActionIndex": 539
     },
     {
-      "Annotation": "Brotli E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/9c65110d6a1280b3aed64d1723fb78a8.js.unityweb",
-      "DisplayName": "Brotli 9c65110d6a1280b3aed64d1723fb78a8.js",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Brotli/win_x86_64/brotli.exe\" -o \"E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/9c65110d6a1280b3aed64d1723fb78a8.js.unityweb\" -i \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js\" --comment \"UnityWeb Compressed Content (brotli)\"",
+      "Annotation": "Brotli E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/c022afb6b99d2d822a5ca7b7f7cf883b.js.unityweb",
+      "DisplayName": "Brotli c022afb6b99d2d822a5ca7b7f7cf883b.js",
+      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Brotli/win_x86_64/brotli.exe\" -o \"E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/c022afb6b99d2d822a5ca7b7f7cf883b.js.unityweb\" -i \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js\" --comment \"UnityWeb Compressed Content (brotli)\"",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js"
       ],
       "Outputs": [
-        "E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/9c65110d6a1280b3aed64d1723fb78a8.js.unityweb"
+        "E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/c022afb6b99d2d822a5ca7b7f7cf883b.js.unityweb"
       ],
       "ToBuildDependencies": [
         539
@@ -26038,14 +26038,14 @@
       "DebugActionIndex": 540
     },
     {
-      "Annotation": "Brotli E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/efdeb104aed1ed730d9ed937581a825b.wasm.unityweb",
-      "DisplayName": "Brotli efdeb104aed1ed730d9ed937581a825b.wasm",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Brotli/win_x86_64/brotli.exe\" -o \"E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/efdeb104aed1ed730d9ed937581a825b.wasm.unityweb\" -i \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm\" --comment \"UnityWeb Compressed Content (brotli)\"",
+      "Annotation": "Brotli E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/a574e653a8b261d51ec8881d5e1e186a.wasm.unityweb",
+      "DisplayName": "Brotli a574e653a8b261d51ec8881d5e1e186a.wasm",
+      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Brotli/win_x86_64/brotli.exe\" -o \"E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/a574e653a8b261d51ec8881d5e1e186a.wasm.unityweb\" -i \"Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm\" --comment \"UnityWeb Compressed Content (brotli)\"",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm"
       ],
       "Outputs": [
-        "E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/efdeb104aed1ed730d9ed937581a825b.wasm.unityweb"
+        "E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/a574e653a8b261d51ec8881d5e1e186a.wasm.unityweb"
       ],
       "ToBuildDependencies": [
         537
@@ -26142,14 +26142,14 @@
       "DebugActionIndex": 545
     },
     {
-      "Annotation": "Brotli E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/b8a17ccfb36472c740855f8af67d984f.data.unityweb",
-      "DisplayName": "Brotli b8a17ccfb36472c740855f8af67d984f.data",
-      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Brotli/win_x86_64/brotli.exe\" -o \"E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/b8a17ccfb36472c740855f8af67d984f.data.unityweb\" -i \"Library/Bee/artifacts/WebGL/webgl.data\" --comment \"UnityWeb Compressed Content (brotli)\"",
+      "Annotation": "Brotli E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/cfe2e7bf0db92ab4084fd383dc84cbbb.data.unityweb",
+      "DisplayName": "Brotli cfe2e7bf0db92ab4084fd383dc84cbbb.data",
+      "Action": "\"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Brotli/win_x86_64/brotli.exe\" -o \"E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/cfe2e7bf0db92ab4084fd383dc84cbbb.data.unityweb\" -i \"Library/Bee/artifacts/WebGL/webgl.data\" --comment \"UnityWeb Compressed Content (brotli)\"",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/webgl.data"
       ],
       "Outputs": [
-        "E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/b8a17ccfb36472c740855f8af67d984f.data.unityweb"
+        "E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/cfe2e7bf0db92ab4084fd383dc84cbbb.data.unityweb"
       ],
       "ToBuildDependencies": [
         545
@@ -26162,7 +26162,7 @@
     {
       "Annotation": "PreprocessJS E:/Data/Programming/BuiltProjects/ArrowBlocks/Build/ArrowBlocks.loader.js",
       "DisplayName": "PreprocessJS ArrowBlocks.loader",
-      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='E\\x3a/Data/Programming/BuiltProjects/ArrowBlocks/Build/ArrowBlocks.loader.js'\"  \"locals.webglIncludes='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='ArrowBlocks'\" \"PRODUCT_VERSION='0.8'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='b8a17ccfb36472c740855f8af67d984f.data.unityweb'\" \"FRAMEWORK_FILENAME='9c65110d6a1280b3aed64d1723fb78a8.js.unityweb'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='efdeb104aed1ed730d9ed937581a825b.wasm.unityweb'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=false\" \"DECOMPRESSION_FALLBACK='Brotli'\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.7f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"MOBILE_RENDER_SCALE=''\" \"RENDER_SCALE=''\" \"LOADER_FILENAME='ArrowBlocks.loader.js'\"",
+      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='E\\x3a/Data/Programming/BuiltProjects/ArrowBlocks/Build/ArrowBlocks.loader.js'\"  \"locals.webglIncludes='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='ArrowBlocks'\" \"PRODUCT_VERSION='0.8'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='cfe2e7bf0db92ab4084fd383dc84cbbb.data.unityweb'\" \"FRAMEWORK_FILENAME='c022afb6b99d2d822a5ca7b7f7cf883b.js.unityweb'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='a574e653a8b261d51ec8881d5e1e186a.wasm.unityweb'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=false\" \"DECOMPRESSION_FALLBACK='Brotli'\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.7f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"MOBILE_RENDER_SCALE=''\" \"RENDER_SCALE=''\" \"LOADER_FILENAME='ArrowBlocks.loader.js'\"",
       "Inputs": [
         "UnityLoader/UnityLoader.js"
       ],
@@ -26176,7 +26176,7 @@
     {
       "Annotation": "PreprocessJS E:/Data/Programming/BuiltProjects/ArrowBlocks/index.html",
       "DisplayName": "PreprocessJS index",
-      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='E\\x3a/Data/Programming/Projects/ArrowBlocks/Assets/WebGLTemplates/FullscreenWindow/index.html'\"  \"locals.outputPath='E\\x3a/Data/Programming/BuiltProjects/ArrowBlocks/index.html'\"  \"locals.webglIncludes='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='ArrowBlocks'\" \"PRODUCT_VERSION='0.8'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='b8a17ccfb36472c740855f8af67d984f.data.unityweb'\" \"FRAMEWORK_FILENAME='9c65110d6a1280b3aed64d1723fb78a8.js.unityweb'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='efdeb104aed1ed730d9ed937581a825b.wasm.unityweb'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=false\" \"DECOMPRESSION_FALLBACK='Brotli'\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.7f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"MOBILE_RENDER_SCALE=''\" \"RENDER_SCALE=''\" \"LOADER_FILENAME='ArrowBlocks.loader.js'\"",
+      "Action": "cd /d \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='E\\x3a/Data/Programming/Projects/ArrowBlocks/Assets/WebGLTemplates/FullscreenWindow/index.html'\"  \"locals.outputPath='E\\x3a/Data/Programming/BuiltProjects/ArrowBlocks/index.html'\"  \"locals.webglIncludes='C\\x3a/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='ArrowBlocks'\" \"PRODUCT_VERSION='0.8'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='cfe2e7bf0db92ab4084fd383dc84cbbb.data.unityweb'\" \"FRAMEWORK_FILENAME='c022afb6b99d2d822a5ca7b7f7cf883b.js.unityweb'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='a574e653a8b261d51ec8881d5e1e186a.wasm.unityweb'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=false\" \"DECOMPRESSION_FALLBACK='Brotli'\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.7f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"MOBILE_RENDER_SCALE=''\" \"RENDER_SCALE=''\" \"LOADER_FILENAME='ArrowBlocks.loader.js'\"",
       "Inputs": [
         "E:/Data/Programming/Projects/ArrowBlocks/Assets/WebGLTemplates/FullscreenWindow/index.html"
       ],

@@ -3,6 +3,7 @@ using IJunior.ArrowBlocks.Main;
 using IJunior.TypedScenes;
 using UnityEngine.Events;
 using System;
+using System.Reflection;
 
 namespace IJunior.ArrowBlocks
 {
@@ -17,14 +18,22 @@ namespace IJunior.ArrowBlocks
             _playerData = playerData;
             _tutorial = tutorial;
 
-            _levelActivators = new UnityAction[]
-            {
-                () => LoadLevel(LevelTemplate.Load),
-                () => LoadLevel(Level2.Load)
-            };
+            string assemblyName = "IJunior.TypedScenes";
+            string levelNameTemplate = "Level";
+            string levelLoadMethodName = "Load";
 
-            if (_playerData.LevelsData.Count != _levelActivators.Length)
-                throw new Exception("The number of levels and their activators does not match.");
+            _levelActivators = new UnityAction[_playerData.LevelsData.Count];
+
+            for (int i = 0; i < _playerData.LevelsData.Count; i++)
+            {
+                Type levelType = Type.GetType($"{assemblyName}.{levelNameTemplate + (i + 1)}");
+                dynamic level = Activator.CreateInstance(levelType);
+
+                MethodInfo loadMethodInfo = levelType.GetMethod(levelLoadMethodName);
+                Delegate loadDelegate = loadMethodInfo.CreateDelegate(typeof(Action<PlayerData, LoadSceneMode>));
+
+                _levelActivators[i] = () => LoadLevel((Action<PlayerData, LoadSceneMode>)loadDelegate);
+            }
         }
 
         public void LoadLevel(int number)
