@@ -118,7 +118,7 @@ namespace IJunior.ArrowBlocks.Main
         public void PassLevel(int number, int coinsForCompleting, float time)
         {
             if (coinsForCompleting < 0)
-                throw new Exception("The number of coins cannot be less than zero");
+                throw new Exception("The number of coins for completing cannot be less than zero");
 
             Money += coinsForCompleting;
             LevelData levelData = _levelsData[number - 1];
