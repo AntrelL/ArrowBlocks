@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\player\\playermoneypresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|e:\\data\\programming\\projects\\arrowblocks\\assets\\source\\modules\\main\\levelscontrol\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|E:\\Data\\Programming\\Projects\\ArrowBlocks\\assets\\source\\modules\\main\\levelscontrol\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{56A80868-7504-1F4A-AA51-B32848A6A92D}|IJunior.ArrowBlocks.Main.csproj|solutionrelative:assets\\source\\modules\\main\\levelscontrol\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "Assets\\Source\\Modules\\Main\\Misc\\Localization.cs",
               "ToolTip": "E:\\Data\\Programming\\Projects\\ArrowBlocks\\Assets\\Source\\Modules\\Main\\Misc\\Localization.cs",
               "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Misc\\Localization.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T13:41:23.346Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Assets\\Source\\Modules\\Main\\LevelsControl\\LevelData.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAcwC0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T17:18:53.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T17:18:53.626Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "Assets\\Source\\Modules\\Main\\Player\\PlayerMoneyPresenter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T17:16:51.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T17:16:51.219Z"
             },
             {
               "$type": "Document",

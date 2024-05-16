@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Source/Game/Scenes/LevelTemplate/LevelTemplate.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
