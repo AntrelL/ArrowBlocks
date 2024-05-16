@@ -1,4 +1,4 @@
-#pragma warning disable
+#pragma warning disable CS0162
 
 using System.Collections.Generic;
 using System.Collections;

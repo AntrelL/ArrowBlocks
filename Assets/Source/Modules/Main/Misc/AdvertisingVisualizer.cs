@@ -1,4 +1,4 @@
-#pragma warning disable
+#pragma warning disable CS0162
 
 using IJunior.CompositeRoot;
 using Agava.YandexGames;

@@ -48,10 +48,11 @@ namespace IJunior.ArrowBlocks.Main
 
         public CleanLevelData ConvertToCleanData()
         {
-            CleanLevelData cleanLevelData = new CleanLevelData();
-
-            cleanLevelData.State = State;
-            cleanLevelData.RecordTime = RecordTime;
+            CleanLevelData cleanLevelData = new()
+            {
+                State = State,
+                RecordTime = RecordTime
+            };
 
             return cleanLevelData;
         }

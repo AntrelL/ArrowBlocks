@@ -1,5 +1,3 @@
-#pragma warning disable
-
 using Agava.YandexGames;
 using Lean.Localization;
 
