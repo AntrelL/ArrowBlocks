@@ -1,0 +1,19 @@
+{
+    "name": "IJunior.ArrowBlocks.Main.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7a596a79a19530b459ab8979a94b4e16",
+        "GUID:0d0d823f5a1b8e9478f45820139db066"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
