@@ -26,6 +26,12 @@
 # Visual Studio cache directory
 .vs/
 
+# Visual Studio packages and settings
+/Packages/StyleCop.Analyzers.1.1.118/
+.editorconfig
+packages.config
+app.config
+
 # Gradle cache directory
 .gradle/
 
