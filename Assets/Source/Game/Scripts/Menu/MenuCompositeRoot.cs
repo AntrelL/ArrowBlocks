@@ -1,25 +1,24 @@
 #pragma warning disable CS0162
 
+using System.Collections;
 using System.Collections.Generic;
+using Agava.YandexGames;
 using IJunior.ArrowBlocks.Main;
 using IJunior.CompositeRoot;
 using IJunior.TypedScenes;
-using UnityEngine.Events;
-using System.Collections;
-using Agava.YandexGames;
-using Lean.Localization;
-using UnityEngine.UI;
-using UnityEngine;
 using IJunior.UI;
+using Lean.Localization;
 using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
-using Screen = IJunior.UI.Screen;
 using Leaderboard = IJunior.ArrowBlocks.Main.Leaderboard;
-
+using Screen = IJunior.UI.Screen;
 
 namespace IJunior.ArrowBlocks
 {
-    internal class MenuCompositeRoot : MonoBehaviour, 
+    internal class MenuCompositeRoot : MonoBehaviour,
         ISceneLoadHandler<(PlayerData PlayerData, MenuScreenId MenuScreenId, int LevelNumber)>
     {
         private static bool IsGameReadyMethodCalled = false;
@@ -200,8 +199,8 @@ namespace IJunior.ArrowBlocks
         private void InitializeLeaderboard(int numberOfLevels)
         {
             _leaderboard.Initialize(_leaderboardLineTemplate, numberOfLevels);
-            _leaderboard.InitializeIOElements(_leaderboardLevelNumberInput,
-                _leaderboardPlayerTime, _leaderboardPlayerPosition);
+            _leaderboard.InitializeIOElements(
+                _leaderboardLevelNumberInput, _leaderboardPlayerTime, _leaderboardPlayerPosition);
         }
 
         private void FinalInitializeLeaderboard()

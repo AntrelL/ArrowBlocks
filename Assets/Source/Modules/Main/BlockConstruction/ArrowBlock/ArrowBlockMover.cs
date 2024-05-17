@@ -1,6 +1,6 @@
+using System;
 using IJunior.CompositeRoot;
 using UnityEngine;
-using System;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -14,6 +14,7 @@ namespace IJunior.ArrowBlocks.Main
         public event Action TargetPositionReached;
 
         public Vector3 TargetPosition { get; private set; }
+
         public bool IsMoving { get; private set; }
 
         public void Initialize(Transform transform)
@@ -27,19 +28,19 @@ namespace IJunior.ArrowBlocks.Main
             if (IsMoving == false)
                 return;
 
-            _transform.position = Vector3.MoveTowards(_transform.position,
-                TargetPosition, _movementSpeed * Time.fixedDeltaTime);
+            _transform.position = Vector3.MoveTowards(
+                _transform.position, TargetPosition, _movementSpeed * Time.fixedDeltaTime);
 
             if (_transform.position == TargetPosition)
             {
                 IsMoving = false;
                 TargetPositionReached?.Invoke();
-            }     
+            }
         }
 
         public void MoveTo(Vector3 direction, float time)
         {
-            MoveTo(_transform.position + direction * (_movementSpeed * time));
+            MoveTo(_transform.position + (_movementSpeed * time * direction));
         }
 
         public void MoveTo(Vector3 position)

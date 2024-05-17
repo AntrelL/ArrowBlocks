@@ -1,14 +1,13 @@
 using IJunior.CompositeRoot;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace IJunior.ArrowBlocks.Main
 {
     [RequireComponent(typeof(AudioSource))]
     public class BackgroundMusicPlayer : Script, IActivatable
     {
-        [SerializeField] private static BackgroundMusicPlayer Instance = null;
-
+        private static BackgroundMusicPlayer Instance = null;
         private static AudioSource AudioSource;
 
         private Slider _volumeSlider;
@@ -49,9 +48,9 @@ namespace IJunior.ArrowBlocks.Main
         }
 
         public void Pause() => AudioSource.Pause();
-        
+
         public void UnPause() => AudioSource.UnPause();
-        
+
         private void ChangeVolume(float value) => AudioSource.volume = value;
     }
 }

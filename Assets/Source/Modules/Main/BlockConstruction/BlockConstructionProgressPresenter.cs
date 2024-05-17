@@ -1,33 +1,33 @@
+using System;
 using IJunior.CompositeRoot;
 using IJunior.UI;
-using System;
 
 namespace IJunior.ArrowBlocks.Main
 {
     public class BlockConstructionProgressPresenter : IProgressBarInfo, IActivatable
     {
-        private BlockConstruction _blockConstruction;
+        private readonly BlockConstruction BlockConstruction;
 
         public BlockConstructionProgressPresenter(BlockConstruction blockConstruction)
         {
-            _blockConstruction = blockConstruction;
+            BlockConstruction = blockConstruction;
         }
 
         public event Action<float> ValueChanged;
 
         public void OnActivate()
         {
-            _blockConstruction.ReleasedBlocksQuantityChanged += OnReleasedBlocksQuantityChanged;
+            BlockConstruction.ReleasedBlocksQuantityChanged += OnReleasedBlocksQuantityChanged;
         }
 
         public void OnDeactivate()
         {
-            _blockConstruction.ReleasedBlocksQuantityChanged -= OnReleasedBlocksQuantityChanged;
+            BlockConstruction.ReleasedBlocksQuantityChanged -= OnReleasedBlocksQuantityChanged;
         }
 
         private void OnReleasedBlocksQuantityChanged(int total)
         {
-            float ratio = CalculateRatio(total, _blockConstruction.BlocksQuantity);
+            float ratio = CalculateRatio(total, BlockConstruction.BlocksQuantity);
             ValueChanged?.Invoke(ratio);
         }
 

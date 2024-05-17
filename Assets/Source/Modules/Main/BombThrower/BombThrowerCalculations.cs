@@ -8,7 +8,7 @@ namespace IJunior.ArrowBlocks.Main
         {
             Vector3 directionToTarget = endPosition - startPosition;
 
-            Vector3 horizontalDirectionToTarget = new Vector3(directionToTarget.x, 0f, directionToTarget.z);
+            Vector3 horizontalDirectionToTarget = new (directionToTarget.x, 0f, directionToTarget.z);
             Vector3 finalDirection = horizontalDirectionToTarget.normalized;
 
             Vector3 rotationAxis = Vector3.Cross(startPosition, Vector3.up);
@@ -23,7 +23,7 @@ namespace IJunior.ArrowBlocks.Main
             float degreeToRadianConversionFactor = Mathf.PI / 180;
             float angleInRadians = throwAngle * degreeToRadianConversionFactor;
 
-            float speedSquared = (g * x * x) / (2 * (y - Mathf.Tan(angleInRadians) * x)
+            float speedSquared = (g * x * x) / (2 * (y - (Mathf.Tan(angleInRadians) * x))
                 * Mathf.Pow(Mathf.Cos(angleInRadians), 2));
 
             float speed = Mathf.Sqrt(Mathf.Abs(speedSquared));

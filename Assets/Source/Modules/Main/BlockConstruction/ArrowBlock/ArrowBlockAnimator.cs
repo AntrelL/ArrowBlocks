@@ -1,8 +1,8 @@
-using IJunior.CompositeRoot;
-using DG.Tweening;
-using UnityEngine;
 using System;
 using System.Linq;
+using DG.Tweening;
+using IJunior.CompositeRoot;
+using UnityEngine;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -15,6 +15,7 @@ namespace IJunior.ArrowBlocks.Main
         private Transform _transform;
 
         public Vector3 Position => _transform.position;
+
         public bool IsAnimated { get; private set; }
 
         public void Initialize(Transform transform)
@@ -23,7 +24,7 @@ namespace IJunior.ArrowBlocks.Main
         }
 
         public void PerformChainPushAnimation(Vector3 direction)
-        {          
+        {
             RaycastHit[] hits = Physics.RaycastAll(_transform.position, direction);
 
             Vector3 previousBlockPosition = _transform.position;
@@ -54,7 +55,7 @@ namespace IJunior.ArrowBlocks.Main
             int movementPartQuantity = 2;
 
             Vector3 basePosition = _transform.position;
-            Vector3 shiftPosition = _transform.position + direction * _pushAnimationDistance;
+            Vector3 shiftPosition = _transform.position + (direction * _pushAnimationDistance);
             float time = _pushAnimationDistance * movementPartQuantity / _pushAnimationSpeed;
 
             IsAnimated = true;

@@ -1,8 +1,8 @@
-using IJunior.CompositeRoot;
-using Agava.YandexGames;
-using UnityEngine.UI;
-using UnityEngine;
 using System;
+using Agava.YandexGames;
+using IJunior.CompositeRoot;
+using UnityEngine;
+using UnityEngine.UI;
 
 using Screen = IJunior.UI.Screen;
 

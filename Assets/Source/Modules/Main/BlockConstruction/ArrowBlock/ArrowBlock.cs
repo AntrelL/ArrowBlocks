@@ -1,7 +1,7 @@
-using IJunior.CompositeRoot;
-using System.Collections;
-using UnityEngine;
 using System;
+using System.Collections;
+using IJunior.CompositeRoot;
+using UnityEngine;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -21,11 +21,15 @@ namespace IJunior.ArrowBlocks.Main
         private ArrowBlock _obstructingBlock;
 
         public event Action<ArrowBlock> Released;
+
         public event Action Activated;
+
         public event Action ChangedPosition;
 
         public bool IsReleased { get; private set; }
+
         public Transform Transform { get; private set; }
+
         public Vector3 CellPosition { get; private set; }
 
         public ArrowBlockMover Initialize(BlockConstruction blockConstruction)
@@ -110,7 +114,7 @@ namespace IJunior.ArrowBlocks.Main
         }
 
         private void Destroy()
-        {       
+        {
             _blockConstruction.RemoveBlock(this);
         }
 

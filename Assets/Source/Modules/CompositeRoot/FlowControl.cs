@@ -31,7 +31,8 @@ namespace IJunior.CompositeRoot
             }
         }
 
-        public void Initialize(List<IRootUpdateble> rootUpdatebleElements,
+        public void Initialize(
+            List<IRootUpdateble> rootUpdatebleElements,
             List<IRootFixedUpdateble> rootFixedUpdatebleElements)
         {
             _rootUpdatebleElements = rootUpdatebleElements;
@@ -39,7 +40,7 @@ namespace IJunior.CompositeRoot
         }
 
         public void Run() => _isRunning = true;
-        
+
         public void Stop() => _isRunning = false;
     }
 }

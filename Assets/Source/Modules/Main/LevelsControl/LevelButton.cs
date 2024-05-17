@@ -1,7 +1,7 @@
 using IJunior.CompositeRoot;
-using UnityEngine.UI;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace IJunior.ArrowBlocks.Main
 {

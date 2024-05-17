@@ -1,5 +1,5 @@
-using IJunior.CompositeRoot;
 using System;
+using IJunior.CompositeRoot;
 using UnityEngine;
 
 namespace IJunior.ArrowBlocks.Main
@@ -13,6 +13,7 @@ namespace IJunior.ArrowBlocks.Main
         public event Action<int> AvailableBombsCountChanged;
 
         public bool CanBuy => _playerData.Money >= _bombPrice;
+
         public int AvailableBombsCount => _playerData.Money / _bombPrice;
 
         public void Initialize(PlayerData playerData)

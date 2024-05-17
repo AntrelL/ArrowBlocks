@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using IJunior.ArrowBlocks.Main;
 using IJunior.CompositeRoot;
 using IJunior.TypedScenes;
-using Lean.Localization;
-using UnityEngine.UI;
-using UnityEngine;
 using IJunior.UI;
+using Lean.Localization;
+using UnityEngine;
+using UnityEngine.UI;
 
 using Screen = IJunior.UI.Screen;
 
@@ -99,7 +99,7 @@ namespace IJunior.ArrowBlocks
 
             rootUpdatebleElements.Add(_playerCamera);
 
-            Timer timer = new Timer();
+            var timer = new Timer();
             rootUpdatebleElements.Add(timer);
 
             _levelProgressBar.Initialize();
@@ -130,8 +130,8 @@ namespace IJunior.ArrowBlocks
             _availableBombsCountPresenter = new AvailableBombsCountPresenter(_bombSeller);
             _availableBombsCount.Initialize(_availableBombsCountPresenter);
 
-            _advertisingVisualizer.Initialize(_playRewardVideoButton,
-                _playerData, BackgroundMusicPlayer.CurrentInstance, _bombSeller);
+            _advertisingVisualizer.Initialize(
+                _playRewardVideoButton, _playerData, BackgroundMusicPlayer.CurrentInstance, _bombSeller);
 
             _browserTabFocus.Initialize(BackgroundMusicPlayer.CurrentInstance, _advertisingVisualizer);
             _soundSwitch.Initialize();
@@ -189,19 +189,13 @@ namespace IJunior.ArrowBlocks
             _level.OnDeactivate();
         }
 
-        public void OnSceneLoaded(PlayerData playerData)
-        {
-            _playerData = playerData;
-        }
-
         private void InitializeScreens()
         {
             _mainScreen.Initialize();
             _victoryScreen.Initialize();
         }
 
-        private void InitializePlayerElements(PlayerInput playerInput,
-            IPlayerCameraTarget playerCameraTarget)
+        private void InitializePlayerElements(PlayerInput playerInput, IPlayerCameraTarget playerCameraTarget)
         {
             _playerCameraBooster.Initialize();
             _playerCamera.Initialize(playerInput, playerCameraTarget, _playerCameraBooster);
@@ -220,8 +214,8 @@ namespace IJunior.ArrowBlocks
                 blockMovers.Add(block.Initialize(_blockConstruction));
             }
 
-            var _calculations = new BlockConstructionCalculations(_virtualBlockGrid.CellSize);
-            _blockConstruction.Initialize(_calculations, _arrowBlocks);
+            var calculations = new BlockConstructionCalculations(_virtualBlockGrid.CellSize);
+            _blockConstruction.Initialize(calculations, _arrowBlocks);
             _blockConstructionProgressPresenter = new BlockConstructionProgressPresenter(_blockConstruction);
 
             return blockMovers;
@@ -245,6 +239,11 @@ namespace IJunior.ArrowBlocks
 
             _levelLoader = new LevelLoader(_playerData);
             _levelSceneSwitcher.Initialize(_levelLoader, _playerData, _level.Number, _advertisingVisualizer);
+        }
+
+        public void OnSceneLoaded(PlayerData playerData)
+        {
+            _playerData = playerData;
         }
     }
 }

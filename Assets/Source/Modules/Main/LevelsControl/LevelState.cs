@@ -4,6 +4,6 @@ namespace IJunior.ArrowBlocks.Main
     {
         Passed,
         Opened,
-        Blocked
+        Blocked,
     }
 }

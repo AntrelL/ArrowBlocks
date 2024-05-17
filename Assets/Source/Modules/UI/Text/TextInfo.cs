@@ -1,6 +1,6 @@
 using IJunior.CompositeRoot;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 namespace IJunior.UI
 {

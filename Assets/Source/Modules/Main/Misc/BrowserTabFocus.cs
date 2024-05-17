@@ -1,5 +1,5 @@
-using IJunior.CompositeRoot;
 using Agava.WebUtility;
+using IJunior.CompositeRoot;
 using UnityEngine;
 
 namespace IJunior.ArrowBlocks.Main
@@ -9,7 +9,8 @@ namespace IJunior.ArrowBlocks.Main
         private BackgroundMusicPlayer _backgroundMusicPlayer;
         private AdvertisingVisualizer _advertisingVisualizer;
 
-        public void Initialize(BackgroundMusicPlayer backgroundMusicPlayer,
+        public void Initialize(
+            BackgroundMusicPlayer backgroundMusicPlayer,
             AdvertisingVisualizer advertisingVisualizer = null)
         {
             _backgroundMusicPlayer = backgroundMusicPlayer;

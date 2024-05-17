@@ -11,8 +11,11 @@ namespace IJunior.ArrowBlocks
         private int _levelNumber;
         private AdvertisingVisualizer _advertisingVisualizer;
 
-        public void Initialize(LevelLoader levelLoader, PlayerData playerData,
-            int levelNumber, AdvertisingVisualizer advertisingVisualizer)
+        public void Initialize(
+            LevelLoader levelLoader,
+            PlayerData playerData,
+            int levelNumber,
+            AdvertisingVisualizer advertisingVisualizer)
         {
             _levelLoader = levelLoader;
             _playerData = playerData;

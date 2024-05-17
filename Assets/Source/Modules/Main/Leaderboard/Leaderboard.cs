@@ -1,15 +1,15 @@
 #pragma warning disable CS0162
 
-using System.Collections.Generic;
-using IJunior.CompositeRoot;
-using Agava.YandexGames;
-using UnityEngine;
-using IJunior.UI;
 using System;
+using System.Collections.Generic;
+using Agava.YandexGames;
+using IJunior.CompositeRoot;
+using IJunior.UI;
+using Lean.Localization;
 using TMPro;
+using UnityEngine;
 
 using AgavaLeaderboard = Agava.YandexGames.Leaderboard;
-using Lean.Localization;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -29,20 +29,20 @@ namespace IJunior.ArrowBlocks.Main
         private List<LeaderboardLine> _leaderboardLines;
         private Transform _transform;
 
-        private int _minLevelNumber = 1;
         private int _maxLevelNumber;
 
-        public static string GetName(int levelNumber) => NameTemplate + levelNumber;
+        public int MinLevelNumber { get; } = 1;
 
-        public int MinLevelNumber => _minLevelNumber;
         public int LevelNumber
         {
             set
             {
-                _levelNumberDropdown.value = Math.Clamp(value, _minLevelNumber, _maxLevelNumber) - 1;
+                _levelNumberDropdown.value = Math.Clamp(value, MinLevelNumber, _maxLevelNumber) - 1;
                 OnLevelNumberChanged(_levelNumberDropdown.value);
             }
         }
+
+        public static string GetName(int levelNumber) => NameTemplate + levelNumber;
 
         public void Initialize(LeaderboardLine leaderboardLineTemplate, int numberOflevels)
         {
@@ -59,8 +59,8 @@ namespace IJunior.ArrowBlocks.Main
             }
         }
 
-        public void InitializeIOElements(TMP_Dropdown levelNumberDropdown,
-            TimeText playerTime, DigitalText playerPosition)
+        public void InitializeIOElements(
+            TMP_Dropdown levelNumberDropdown, TimeText playerTime, DigitalText playerPosition)
         {
             _levelNumberDropdown = levelNumberDropdown;
             _playerTime = playerTime;
@@ -74,7 +74,7 @@ namespace IJunior.ArrowBlocks.Main
                 leaderboardLine.Initialize();
             }
 
-            for (int i = _minLevelNumber; i <= _maxLevelNumber; i++)
+            for (int i = MinLevelNumber; i <= _maxLevelNumber; i++)
             {
                 _levelNumberDropdown.options.Add(new TMP_Dropdown.OptionData(i.ToString()));
             }
@@ -105,8 +105,11 @@ namespace IJunior.ArrowBlocks.Main
             string leaderboardName = GetName(levelNumber);
             AgavaLeaderboard.GetPlayerEntry(leaderboardName, OnGetPlayerEntry);
 
-            AgavaLeaderboard.GetEntries(leaderboardName, OnGetEntries,
-                topPlayersCount: _maxNumberOfLines, competingPlayersCount: _maxNumberOfLines);
+            AgavaLeaderboard.GetEntries(
+                leaderboardName,
+                OnGetEntries,
+                topPlayersCount: _maxNumberOfLines,
+                competingPlayersCount: _maxNumberOfLines);
         }
 
         private void DisableUnnecessaryLines(int quantity)

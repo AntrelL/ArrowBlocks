@@ -1,7 +1,7 @@
-using UnityEngine.InputSystem;
+using System;
 using IJunior.CompositeRoot;
 using UnityEngine;
-using System;
+using UnityEngine.InputSystem;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -37,6 +37,7 @@ namespace IJunior.ArrowBlocks.Main
         public event Action<float> VerticalAngleToTargetChanged;
 
         public Vector3 Position => _transform.position;
+
         public float CurrentVerticalAngle => _currentVerticalAngle;
 
         public void Initialize(PlayerInput input, IPlayerCameraTarget target, PlayerCameraBooster booster)
@@ -82,8 +83,7 @@ namespace IJunior.ArrowBlocks.Main
             if (_booster.IsActivated)
                 _booster.ProcessSpeedValues(ref speedToTarget, ref zoomSpeed);
 
-            _targetPosition = Vector3.MoveTowards(_targetPosition,
-                newTargetPosition, speedToTarget);
+            _targetPosition = Vector3.MoveTowards(_targetPosition, newTargetPosition, speedToTarget);
 
             if (_targetPosition != newTargetPosition)
                 _transform.LookAt(_targetPosition);

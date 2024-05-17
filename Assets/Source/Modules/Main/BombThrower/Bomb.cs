@@ -1,7 +1,7 @@
-using IJunior.CompositeRoot;
-using System.Collections;
-using UnityEngine;
 using System;
+using System.Collections;
+using IJunior.CompositeRoot;
+using UnityEngine;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -68,8 +68,11 @@ namespace IJunior.ArrowBlocks.Main
             _isExploded = false;
         }
 
-        public void Throw(Vector3 startPosition, Vector3 startVelocity,
-            Vector3 angularVelocity, float autoDestructionDelay)
+        public void Throw(
+            Vector3 startPosition,
+            Vector3 startVelocity,
+            Vector3 angularVelocity,
+            float autoDestructionDelay)
         {
             _transform.position = startPosition;
             _rigidbody.velocity = startVelocity;

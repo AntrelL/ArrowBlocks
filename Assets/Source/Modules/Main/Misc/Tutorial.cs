@@ -1,11 +1,10 @@
 #pragma warning disable CS0162
 
-using IJunior.CompositeRoot;
-using Agava.WebUtility;
-using UnityEngine;
-using Agava.YandexGames;
-using UnityEngine.UI;
 using System;
+using Agava.WebUtility;
+using IJunior.CompositeRoot;
+using UnityEngine;
+using UnityEngine.UI;
 
 using Screen = IJunior.UI.Screen;
 
@@ -84,7 +83,7 @@ namespace IJunior.ArrowBlocks.Main
         }
 
         private void OnCloseScreenButtonClick()
-        {            
+        {
             _endCallback?.Invoke();
             _endCallback = null;
         }

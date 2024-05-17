@@ -36,7 +36,7 @@ namespace IJunior.ArrowBlocks.Main.Editor
         {
             base.OnInspectorGUI();
             GUI.enabled = Application.isPlaying == false;
-            
+
             EditorGUILayout.PropertyField(_cellSize);
 
             if (Application.isPlaying)
@@ -45,6 +45,7 @@ namespace IJunior.ArrowBlocks.Main.Editor
             GUILayout.Space(IndentationBeforeButtons);
 
             GUILayout.BeginHorizontal();
+
             if (GUILayout.Button("Check Blocks Positions", WidthSetting))
                 CheckBlocksPositions();
 
@@ -53,6 +54,7 @@ namespace IJunior.ArrowBlocks.Main.Editor
                 if (GUILayout.Button("Fix All Blocks Positions", WidthSetting))
                     _virtualBlockGrid.FixAllBlocksOffGrid();
             }
+
             GUILayout.EndHorizontal();
 
             GUILayout.TextArea(GetBlocksInfoString(), WidthSetting);

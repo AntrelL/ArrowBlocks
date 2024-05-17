@@ -1,30 +1,30 @@
 using System;
-using IJunior.UI;
 using IJunior.CompositeRoot;
+using IJunior.UI;
 
 namespace IJunior.ArrowBlocks.Main
 {
     public class AvailableBombsCountPresenter : ILinkedDigitalTextSource, IActivatable
     {
-        private BombSeller _bombSeller;
+        private readonly BombSeller BombSeller;
 
         public AvailableBombsCountPresenter(BombSeller bombSeller)
         {
-            _bombSeller = bombSeller;
+            BombSeller = bombSeller;
         }
 
         public event Action<float> ValueChanged;
 
-        public float Value => _bombSeller.AvailableBombsCount;
+        public float Value => BombSeller.AvailableBombsCount;
 
         public void OnActivate()
         {
-            _bombSeller.AvailableBombsCountChanged += OnAvailableBombsCountChanged;
+            BombSeller.AvailableBombsCountChanged += OnAvailableBombsCountChanged;
         }
 
         public void OnDeactivate()
         {
-            _bombSeller.AvailableBombsCountChanged -= OnAvailableBombsCountChanged;
+            BombSeller.AvailableBombsCountChanged -= OnAvailableBombsCountChanged;
         }
 
         private void OnAvailableBombsCountChanged(int quantity) => ValueChanged?.Invoke(quantity);

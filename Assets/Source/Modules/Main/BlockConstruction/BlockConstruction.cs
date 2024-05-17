@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using IJunior.CompositeRoot;
 using UnityEngine;
-using System.Linq;
-using System;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -13,13 +13,19 @@ namespace IJunior.ArrowBlocks.Main
         private bool _isFirstBlockActivated;
 
         public event Action<float> ThroughLineLengthChanged;
+
         public event Action FirstBlockActivated;
+
         public event Action AllBlocksReleased;
+
         public event Action<int> ReleasedBlocksQuantityChanged;
 
         public Vector3 CenterPointPosition { get; private set; }
+
         public BlockConstructionCalculations Calculations { get; private set; }
+
         public int BlocksQuantity => _blocks.Count;
+
         private int ReleasedBlocksQuantity => _blocks.Count - _unreleasedBlocks.Count;
 
         public void Initialize(BlockConstructionCalculations calculations, List<ArrowBlock> blocks)

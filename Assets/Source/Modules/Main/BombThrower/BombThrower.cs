@@ -1,7 +1,7 @@
 using IJunior.CompositeRoot;
-using UnityEngine.UI;
-using UnityEngine;
 using IJunior.UI;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -82,10 +82,10 @@ namespace IJunior.ArrowBlocks.Main
         private void OnThrowBombButtonClicked()
         {
             Vector3 directionToTarget = _blockConstruction.CenterPointPosition - _playerCamera.Position;
-            Vector3 startPosition = _playerCamera.Position + directionToTarget.normalized * _offsetDistance;
+            Vector3 startPosition = _playerCamera.Position + (directionToTarget.normalized * _offsetDistance);
 
-            Vector3 startVelocity = _calculations.CalculateThrowStartVelocity(startPosition,
-                _blockConstruction.CenterPointPosition, _throwAngle);
+            Vector3 startVelocity = _calculations.CalculateThrowStartVelocity(
+                startPosition, _blockConstruction.CenterPointPosition, _throwAngle);
 
             _bombSeller.PayForBomb();
 

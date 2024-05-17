@@ -1,10 +1,10 @@
 #pragma warning disable CS0162
 
-using IJunior.CompositeRoot;
-using Agava.YandexGames;
-using UnityEngine.UI;
-using UnityEngine;
 using System;
+using Agava.YandexGames;
+using IJunior.CompositeRoot;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -21,8 +21,11 @@ namespace IJunior.ArrowBlocks.Main
 
         public bool IsShowing { get; private set; } = false;
 
-        public void Initialize(Button playRewardVideoButton,
-            PlayerData playerData, BackgroundMusicPlayer backgroundMusicPlayer, BombSeller bombSeller)
+        public void Initialize(
+            Button playRewardVideoButton,
+            PlayerData playerData,
+            BackgroundMusicPlayer backgroundMusicPlayer,
+            BombSeller bombSeller)
         {
             _playRewardVideoButton = playRewardVideoButton;
             _playerData = playerData;
@@ -53,7 +56,8 @@ namespace IJunior.ArrowBlocks.Main
                 return;
             }
 
-            InterstitialAd.Show(onOpenCallback: OnOpenAdCallback,
+            InterstitialAd.Show(
+                onOpenCallback: OnOpenAdCallback,
                 onCloseCallback: (bool wasShown) =>
                 {
                     OnCloseAdCallback();
@@ -67,7 +71,9 @@ namespace IJunior.ArrowBlocks.Main
             return;
 #endif
 
-            VideoAd.Show(onOpenCallback: OnOpenAdCallback, onCloseCallback: OnCloseAdCallback,
+            VideoAd.Show(
+                onOpenCallback: OnOpenAdCallback,
+                onCloseCallback: OnCloseAdCallback,
                 onRewardedCallback: () =>
                 {
                     _playerData.Money += RewardForWatchingVideo;

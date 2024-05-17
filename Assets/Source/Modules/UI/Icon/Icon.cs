@@ -5,7 +5,7 @@ namespace IJunior.UI
 {
     public class Icon : Script
     {
-        protected Image Image;
+        protected Image Image { get; set; }
 
         public virtual void Initialize()
         {

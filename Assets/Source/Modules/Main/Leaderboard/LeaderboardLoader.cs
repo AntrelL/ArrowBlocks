@@ -16,8 +16,11 @@ namespace IJunior.ArrowBlocks.Main
         private Screen _mainScreen;
         private AuthorizationMenu _authorizationMenu;
 
-        public void Initialize(Leaderboard leaderboard, Screen leaderboardScreen,
-            Screen mainScreen, AuthorizationMenu authorizationMenu)
+        public void Initialize(
+            Leaderboard leaderboard,
+            Screen leaderboardScreen,
+            Screen mainScreen,
+            AuthorizationMenu authorizationMenu)
         {
             _leaderboard = leaderboard;
             _leaderboardScreen = leaderboardScreen;
@@ -31,7 +34,8 @@ namespace IJunior.ArrowBlocks.Main
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             _authorizationMenu.Open();
-            //TrySwitchRaw(lastPlayedLevelNumber);
+
+            // TrySwitchRaw(lastPlayedLevelNumber); // Debug
             return;
 #endif
             if (PlayerAccount.IsAuthorized == false)

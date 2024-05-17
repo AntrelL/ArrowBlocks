@@ -1,8 +1,8 @@
+using System.Collections;
 using IJunior.ArrowBlocks.Main;
 using IJunior.CompositeRoot;
-using System.Collections;
-using UnityEngine;
 using IJunior.UI;
+using UnityEngine;
 
 using Screen = IJunior.UI.Screen;
 
@@ -29,8 +29,12 @@ namespace IJunior.ArrowBlocks
 
         public int Number => _number;
 
-        public void InitializeBaseInfo(BlockConstruction blockConstruction,
-            TimeText passingTimeText, BombThrower bombThrower, BombSeller bombSeller, Timer timer)
+        public void InitializeBaseInfo(
+            BlockConstruction blockConstruction,
+            TimeText passingTimeText,
+            BombThrower bombThrower,
+            BombSeller bombSeller,
+            Timer timer)
         {
             _blockConstruction = blockConstruction;
             _passingTimeText = passingTimeText;

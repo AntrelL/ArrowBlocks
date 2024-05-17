@@ -1,7 +1,7 @@
+using System;
 using System.Collections.Generic;
 using IJunior.CompositeRoot;
 using UnityEngine;
-using System;
 
 namespace IJunior.UI
 {
@@ -86,10 +86,10 @@ namespace IJunior.UI
             scale.x = value;
 
             _fill.localScale = scale;
-            UpdateIndicatingIconStates(value);
+            UpdateIndicatingIconStates();
         }
 
-        private void UpdateIndicatingIconStates(float value)
+        private void UpdateIndicatingIconStates()
         {
             if (_indicators == null)
                 return;

@@ -1,3 +1,4 @@
+using System;
 using IJunior.CompositeRoot;
 
 namespace IJunior.UI
@@ -12,6 +13,12 @@ namespace IJunior.UI
             base.Initialize();
 
             OnValueChanged(_source.Value);
+        }
+
+        public override void Initialize()
+        {
+            throw new Exception("An empty constructor is not valid," +
+                " use 'Initialize(ILinkedDigitalTextSource source)'.");
         }
 
         public void OnActivate()

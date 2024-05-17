@@ -13,12 +13,12 @@ namespace IJunior.ArrowBlocks.Main
 
         private float _boosterDistanceCoefficient;
 
+        public bool IsActivated { get; private set; }
+
         public void Initialize()
         {
             _boosterDistanceCoefficient = BaseBoosterDistanceCoefficient;
         }
-
-        public bool IsActivated { get; private set; }
 
         public void ProcessSpeedValues(ref float speedToTarget, ref float zoomSpeed)
         {
@@ -26,8 +26,11 @@ namespace IJunior.ArrowBlocks.Main
             zoomSpeed *= _zoomSpeedCoefficient * _boosterDistanceCoefficient;
         }
 
-        public void UpdateState(Vector3 newTargetPosition, float offsetDistance,
-            PlayerCameraCalculations calculations, Transform transform)
+        public void UpdateState(
+            Vector3 newTargetPosition,
+            float offsetDistance,
+            PlayerCameraCalculations calculations,
+            Transform transform)
         {
             Vector3 realOffsetPosition = calculations.CalculateOffsetPosition(
                 newTargetPosition, offsetDistance, transform);

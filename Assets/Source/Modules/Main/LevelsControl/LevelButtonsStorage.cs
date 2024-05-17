@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using IJunior.CompositeRoot;
 using UnityEngine.UI;
-using System.Linq;
-using System;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -19,7 +19,7 @@ namespace IJunior.ArrowBlocks.Main
                 _levelButtons[i].Initialize(i + 1);
             }
 
-            return _levelButtons.Select(LevelButton => LevelButton.Button).ToArray();
+            return _levelButtons.Select(levelButton => levelButton.Button).ToArray();
         }
 
         public void UpdateLevelButtons(IReadOnlyList<IReadOnlyLevelData> levelsData)

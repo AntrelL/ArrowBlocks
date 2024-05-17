@@ -1,14 +1,12 @@
 #pragma warning disable CS0162
 
-using System.Collections.Generic;
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Agava.YandexGames;
 using Newtonsoft.Json;
 using UnityEngine;
-using System.Linq;
-using System;
-
-using AgavaLeaderboard = Agava.YandexGames.Leaderboard;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -21,7 +19,10 @@ namespace IJunior.ArrowBlocks.Main
         private int _money;
         private LevelData[] _levelsData;
 
-        public PlayerData(int levelsQuantity) : this(DefaultMoney, levelsQuantity) { }
+        public PlayerData(int levelsQuantity)
+            : this(DefaultMoney, levelsQuantity)
+        {
+        }
 
         private PlayerData(int money, int levelsQuantity)
         {
@@ -47,6 +48,7 @@ namespace IJunior.ArrowBlocks.Main
         public event Action<int> MoneyQuantityChanged;
 
         public IReadOnlyList<IReadOnlyLevelData> LevelsData => _levelsData;
+
         public int Money
         {
             get => _money;
@@ -82,10 +84,10 @@ namespace IJunior.ArrowBlocks.Main
                     isTringToGetData = false;
                 });
 
-            WaitForSeconds waitForSeconds = new WaitForSeconds(CloudPollingLatency);
+            var waitForSeconds = new WaitForSeconds(CloudPollingLatency);
 
-            while (isTringToGetData)       
-                yield return waitForSeconds;          
+            while (isTringToGetData)
+                yield return waitForSeconds;
 
             Debug.Log("Load: " + jsonCleanPlayerData);
 
@@ -173,10 +175,11 @@ namespace IJunior.ArrowBlocks.Main
 
         private CleanPlayerData ConvertToCleanData()
         {
-            CleanPlayerData cleanPlayerData = new CleanPlayerData();
-
-            cleanPlayerData.Money = Money;
-            cleanPlayerData.LevelsData = _levelsData.Select(levelData => levelData.ConvertToCleanData()).ToArray();
+            var cleanPlayerData = new CleanPlayerData
+            {
+                Money = Money,
+                LevelsData = _levelsData.Select(levelData => levelData.ConvertToCleanData()).ToArray(),
+            };
 
             return cleanPlayerData;
         }

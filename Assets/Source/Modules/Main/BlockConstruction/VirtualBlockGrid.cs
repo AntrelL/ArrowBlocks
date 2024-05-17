@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using IJunior.CompositeRoot;
 using UnityEngine;
-using System.Linq;
-using System;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -47,7 +47,7 @@ namespace IJunior.ArrowBlocks.Main
                 Vector3 position = block.transform.position;
 
                 if (position.DivideByModulus(_cellSize) != Vector3.zero)
-                    _blocksOffGrid.Add(block);    
+                    _blocksOffGrid.Add(block);
             }
         }
 

@@ -1,6 +1,6 @@
-using UnityEngine.InputSystem;
 using IJunior.CompositeRoot;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace IJunior.ArrowBlocks.Main
 {

@@ -1,6 +1,6 @@
 using IJunior.CompositeRoot;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace IJunior.ArrowBlocks.Main
 {
@@ -10,7 +10,7 @@ namespace IJunior.ArrowBlocks.Main
     {
         private static bool IsSoundActive = true;
 
-        [SerializeField] Color _disabledColor;
+        [SerializeField] private Color _disabledColor;
 
         private Color _normalColor;
         private Button _button;
