@@ -7,50 +7,49 @@ namespace IJunior.ArrowBlocks.Main
     [RequireComponent(typeof(AudioSource))]
     public class BackgroundMusicPlayer : Script, IActivatable
     {
-        private static BackgroundMusicPlayer Instance = null;
-        private static AudioSource AudioSource;
-
+        private AudioSource _audioSource;
         private Slider _volumeSlider;
 
-        public static BackgroundMusicPlayer CurrentInstance => Instance;
-
-        public BackgroundMusicPlayer Initialize(Slider volumeSlider)
+        public void Initialize()
         {
-            _volumeSlider = volumeSlider;
-
-            if (Instance == null)
-            {
-                Instance = this;
-                AudioSource = GetComponent<AudioSource>();
-
-                ChangeVolume(_volumeSlider.value);
-                DontDestroyOnLoad(gameObject);
-            }
-            else if (Instance != this)
-            {
-                Instance._volumeSlider = volumeSlider;
-                _volumeSlider.value = AudioSource.volume;
-
-                Destroy(gameObject);
-            }
-
-            return Instance;
+            _audioSource = GetComponent<AudioSource>();
         }
 
         public void OnActivate()
         {
+            if (_volumeSlider == null)
+                return;
+
             _volumeSlider.onValueChanged.AddListener(ChangeVolume);
         }
 
         public void OnDeactivate()
         {
+            if (_volumeSlider == null)
+                return;
+
             _volumeSlider.onValueChanged.RemoveListener(ChangeVolume);
         }
 
-        public void Pause() => AudioSource.Pause();
+        public void UpdateVolumeSlider(Slider volumeSlider = null)
+        {
+            _volumeSlider = volumeSlider;
+        }
 
-        public void UnPause() => AudioSource.UnPause();
+        public void SetVolumeFromSlider()
+        {
+            ChangeVolume(_volumeSlider.value);
+        }
 
-        private void ChangeVolume(float value) => AudioSource.volume = value;
+        public void SetVolumeToSlider()
+        {
+            _volumeSlider.value = _audioSource.volume;
+        }
+
+        public void Pause() => _audioSource.Pause();
+
+        public void UnPause() => _audioSource.UnPause();
+
+        private void ChangeVolume(float value) => _audioSource.volume = value;
     }
 }

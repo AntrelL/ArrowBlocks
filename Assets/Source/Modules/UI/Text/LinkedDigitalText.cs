@@ -33,7 +33,7 @@ namespace IJunior.UI
 
         private void OnValueChanged(float value)
         {
-            Text = value.ToString();
+            SetText(value.ToString());
         }
     }
 }

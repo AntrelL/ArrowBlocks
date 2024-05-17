@@ -1,9 +1,8 @@
 #pragma warning disable CS0162
 
+using System;
 using Agava.YandexGames;
 using IJunior.CompositeRoot;
-using IJunior.UI;
-using UnityEngine;
 
 using Screen = IJunior.UI.Screen;
 
@@ -28,44 +27,47 @@ namespace IJunior.ArrowBlocks.Main
             _authorizationMenu = authorizationMenu;
         }
 
-        public void TrySwitch() => TrySwitch(_leaderboard.MinLevelNumber);
+        public void TrySwitch(Action<bool> endCallback = null) =>
+            TrySwitch(_leaderboard.MinLevelNumber, endCallback);
 
-        public void TrySwitch(int lastPlayedLevelNumber)
+        public void TrySwitch(int lastPlayedLevelNumber, Action<bool> endCallback = null)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             _authorizationMenu.Open();
-
-            // TrySwitchRaw(lastPlayedLevelNumber); // Debug
+            endCallback?.Invoke(false);
             return;
 #endif
+            Action tryingToSwitchWithCallback = () => endCallback?.Invoke(TrySwitchRaw(lastPlayedLevelNumber));
+
             if (PlayerAccount.IsAuthorized == false)
             {
-                _authorizationMenu.Open(() => TrySwitchRaw(lastPlayedLevelNumber));
+                _authorizationMenu.Open(() => tryingToSwitchWithCallback.Invoke());
                 return;
             }
 
-            TrySwitchRaw(lastPlayedLevelNumber);
+            tryingToSwitchWithCallback.Invoke();
         }
 
-        private void TrySwitchRaw(int lastPlayedLevelNumber)
+        private bool TrySwitchRaw(int lastPlayedLevelNumber)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             Switch(lastPlayedLevelNumber);
-            return;
+            return true;
 #endif
 
             if (PlayerAccount.IsAuthorized)
                 PlayerAccount.RequestPersonalProfileDataPermission();
             else
-                return;
+                return false;
 
             Switch(lastPlayedLevelNumber);
+            return true;
         }
 
         private void Switch(int lastPlayedLevelNumber)
         {
             _mainScreen.SwitchTo(_leaderboardScreen);
-            _leaderboard.LevelNumber = lastPlayedLevelNumber;
+            _leaderboard.SetLevelNumber(lastPlayedLevelNumber);
         }
     }
 }

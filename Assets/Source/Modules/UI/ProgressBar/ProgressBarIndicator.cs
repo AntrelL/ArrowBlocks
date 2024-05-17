@@ -16,12 +16,16 @@ namespace IJunior.UI
             _indicatingIcon.Initialize();
         }
 
-        public void TryActivate(float value)
+        public bool TryActivate(float value)
         {
             if (value >= _activateValue)
+            {
                 _indicatingIcon.Activate();
-            else
-                _indicatingIcon.Deactivate();
+                return true;
+            }
+
+            _indicatingIcon.Deactivate();
+            return false;
         }
     }
 }

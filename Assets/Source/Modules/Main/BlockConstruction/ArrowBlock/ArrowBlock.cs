@@ -20,6 +20,8 @@ namespace IJunior.ArrowBlocks.Main
         private Coroutine _submitRemovalRequester;
         private ArrowBlock _obstructingBlock;
 
+        private WaitForSeconds _removalRequestDelayObject;
+
         public event Action<ArrowBlock> Released;
 
         public event Action Activated;
@@ -46,6 +48,8 @@ namespace IJunior.ArrowBlocks.Main
             _animator.Initialize(Transform);
             _mover.Initialize(Transform);
 
+            _removalRequestDelayObject = new WaitForSeconds(_flightTimeIntoVoid);
+
             _effector.DeactivateTrail();
 
             return _mover;
@@ -61,10 +65,10 @@ namespace IJunior.ArrowBlocks.Main
             _mover.TargetPositionReached -= OnTargetPositionReached;
         }
 
-        public void TryActivate()
+        public bool TryActivate()
         {
             if (_mover.IsMoving || _animator.IsAnimated || IsReleased)
-                return;
+                return false;
 
             _effector.PlayActivationSound();
             Activated?.Invoke();
@@ -85,6 +89,7 @@ namespace IJunior.ArrowBlocks.Main
             }
 
             _effector.TryActivateTrail(_mover.TargetPosition);
+            return true;
         }
 
         public void ResetValues()
@@ -123,7 +128,7 @@ namespace IJunior.ArrowBlocks.Main
             _mover.MoveTo(Transform.forward, _flightTimeIntoVoid);
             Release();
 
-            _submitRemovalRequester = StartCoroutine(SubmitRemovalRequest(_flightTimeIntoVoid));
+            _submitRemovalRequester = StartCoroutine(SubmitRemovalRequest());
         }
 
         private void StartMovingToTargetPosition(ArrowBlock obstructingArrowBlock)
@@ -135,9 +140,9 @@ namespace IJunior.ArrowBlocks.Main
             _obstructingBlock = obstructingArrowBlock;
         }
 
-        private IEnumerator SubmitRemovalRequest(float delay)
+        private IEnumerator SubmitRemovalRequest()
         {
-            yield return new WaitForSeconds(delay);
+            yield return _removalRequestDelayObject;
             Destroy();
         }
 

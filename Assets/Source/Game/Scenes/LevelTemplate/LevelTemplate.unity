@@ -1075,6 +1075,7 @@ MonoBehaviour:
   _cellSize: {x: 2, y: 2, z: 2}
   _blocks:
   - {fileID: 274310480}
+  - {fileID: 0}
   _blocksOffGrid: []
 --- !u!114 &561857176
 MonoBehaviour:

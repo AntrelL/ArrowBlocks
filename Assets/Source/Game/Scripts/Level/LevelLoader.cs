@@ -10,11 +10,16 @@ namespace IJunior.ArrowBlocks
     {
         private readonly UnityAction[] LevelActivators;
         private readonly PlayerData PlayerData;
+        private readonly BackgroundMusicPlayer BackgroundMusicPlayer;
         private readonly Tutorial Tutorial;
 
-        public LevelLoader(PlayerData playerData, Tutorial tutorial = null)
+        public LevelLoader(
+            PlayerData playerData,
+            BackgroundMusicPlayer backgroundMusicPlayer,
+            Tutorial tutorial = null)
         {
             PlayerData = playerData;
+            BackgroundMusicPlayer = backgroundMusicPlayer;
             Tutorial = tutorial;
 
             string assemblyName = "IJunior.TypedScenes";
@@ -29,9 +34,10 @@ namespace IJunior.ArrowBlocks
                 dynamic level = Activator.CreateInstance(levelType);
 
                 MethodInfo loadMethodInfo = levelType.GetMethod(levelLoadMethodName);
-                Delegate loadDelegate = loadMethodInfo.CreateDelegate(typeof(Action<PlayerData, LoadSceneMode>));
+                Type delegateType = typeof(Action<LevelSceneTransitionData, LoadSceneMode>);
+                Delegate loadDelegate = loadMethodInfo.CreateDelegate(delegateType);
 
-                LevelActivators[i] = () => LoadLevel((Action<PlayerData, LoadSceneMode>)loadDelegate);
+                LevelActivators[i] = () => LoadLevel((Action<LevelSceneTransitionData, LoadSceneMode>)loadDelegate);
             }
         }
 
@@ -45,7 +51,7 @@ namespace IJunior.ArrowBlocks
             return LevelActivators[levelNumber - 1];
         }
 
-        private void LoadLevel(Action<PlayerData, LoadSceneMode> levelActivator)
+        private void LoadLevel(Action<LevelSceneTransitionData, LoadSceneMode> levelActivator)
         {
             if (Tutorial == null)
             {
@@ -59,9 +65,10 @@ namespace IJunior.ArrowBlocks
             });
         }
 
-        private void LoadLevelRaw(Action<PlayerData, LoadSceneMode> levelActivator)
+        private void LoadLevelRaw(Action<LevelSceneTransitionData, LoadSceneMode> levelActivator)
         {
-            levelActivator.Invoke(PlayerData, LoadSceneMode.Single);
+            var levelSceneTransitionData = new LevelSceneTransitionData(PlayerData, BackgroundMusicPlayer);
+            levelActivator.Invoke(levelSceneTransitionData, LoadSceneMode.Single);
         }
     }
 }

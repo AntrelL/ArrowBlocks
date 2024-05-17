@@ -23,9 +23,9 @@ namespace IJunior.ArrowBlocks.Main
 
         public void SetData(int position, string playerName, float time)
         {
-            _rankText.Value = position;
-            _nameText.Value = playerName;
-            _timeText.Value = time;
+            _rankText.SetValue(position);
+            _nameText.SetValue(playerName);
+            _timeText.SetValue(time);
         }
     }
 }

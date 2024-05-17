@@ -69,7 +69,6 @@ namespace IJunior.ArrowBlocks.Main.Editor
         private void CheckBlocksPositions()
         {
             _virtualBlockGrid.SetBlocksOffGrid();
-            _virtualBlockGrid.TryFindMatchedBlocks();
         }
     }
 }

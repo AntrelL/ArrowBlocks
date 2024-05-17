@@ -53,16 +53,17 @@ namespace IJunior.ArrowBlocks.Main
             _closeScreenButton.onClick.RemoveListener(OnCloseScreenButtonClick);
         }
 
-        public void TryShow(PlayerData playerData, Action endCallback = null)
+        public bool TryShow(PlayerData playerData, Action endCallback = null)
         {
             if (ShouldBeShown(playerData) == false)
             {
                 endCallback?.Invoke();
-                return;
+                return false;
             }
 
             _levelsScreen.SwitchTo(_tutorialScreen);
             _endCallback = endCallback;
+            return true;
         }
 
         private bool ShouldBeShown(PlayerData playerData)

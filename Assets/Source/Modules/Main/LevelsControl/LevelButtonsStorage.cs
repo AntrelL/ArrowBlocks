@@ -10,9 +10,15 @@ namespace IJunior.ArrowBlocks.Main
     {
         private LevelButton[] _levelButtons;
 
-        public Button[] Initialize()
+        public void Initialize()
         {
             _levelButtons = GetComponentsInChildren<LevelButton>();
+        }
+
+        public Button[] InitializeButtons()
+        {
+            if (_levelButtons == null)
+                throw new Exception("LevelButtonsStorage is not initialized.");
 
             for (int i = 0; i < _levelButtons.Length; i++)
             {

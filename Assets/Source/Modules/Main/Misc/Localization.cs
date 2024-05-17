@@ -10,7 +10,7 @@ namespace IJunior.ArrowBlocks.Main
             string languageCode = string.Empty;
 
 #if !UNITY_WEBGL || UNITY_EDITOR
-            languageCode = "en"; // Debug (en, ru, tr)
+            languageCode = "en";
 #else
             languageCode = YandexGamesSdk.Environment.i18n.lang;
 #endif

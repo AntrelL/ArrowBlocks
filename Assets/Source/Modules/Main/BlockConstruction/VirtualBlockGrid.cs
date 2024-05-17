@@ -19,7 +19,7 @@ namespace IJunior.ArrowBlocks.Main
             SetBlocksFromChildElements();
             SetBlocksOffGrid();
 
-            TryFindMatchedBlocks();
+            CheckForMatchedBlocks();
 
             if (_blocksOffGrid.Count > 0)
                 throw new Exception("There are blocks outside the grid.");
@@ -51,14 +51,14 @@ namespace IJunior.ArrowBlocks.Main
             }
         }
 
-        public void TryFindMatchedBlocks()
+        public void CheckForMatchedBlocks()
         {
             for (int i = 0; i < _blocks.Count; i++)
             {
                 for (int j = 0; j < i; j++)
                 {
                     if (_blocks[i].transform.position == _blocks[j].transform.position)
-                        Debug.LogError($"{_blocks[i]} matched with {_blocks[j]}");
+                        throw new Exception($"{_blocks[i]} matched with {_blocks[j]}");
                 }
             }
         }
@@ -75,10 +75,10 @@ namespace IJunior.ArrowBlocks.Main
 
         private void FixBlockPosition(Transform block)
         {
-            block.position = block.position.PerformFunctionForCoordinates(_cellSize, FixBlockCoordinate);
+            block.position = block.position.PerformFunctionForCoordinates(_cellSize, GetFixedBlockCoordinate);
         }
 
-        private float FixBlockCoordinate(float value, float step)
+        private float GetFixedBlockCoordinate(float value, float step)
         {
             return (float)(Math.Round(value / step) * step);
         }

@@ -22,6 +22,9 @@ namespace IJunior.ArrowBlocks.Main
         private MeshRenderer _meshRenderer;
         private AudioSource _audioSource;
 
+        private WaitForSeconds _maxDelayForExplosionEffectObject;
+        private WaitForSeconds _autoDestructionDelayObject;
+
         private bool _isExploded = false;
 
         public event Action Destroyed;
@@ -34,11 +37,14 @@ namespace IJunior.ArrowBlocks.Main
             _exploder = StartCoroutine(Explode());
         }
 
-        public void Initialize()
+        public void Initialize(float autoDestructionDelay)
         {
             _rigidbody = GetComponent<Rigidbody>();
             _meshRenderer = GetComponent<MeshRenderer>();
             _audioSource = GetComponent<AudioSource>();
+
+            _maxDelayForExplosionEffectObject = new WaitForSeconds(_maxDelayForExplosionEffect);
+            _autoDestructionDelayObject = new WaitForSeconds(autoDestructionDelay);
 
             _transform = transform;
         }
@@ -71,8 +77,7 @@ namespace IJunior.ArrowBlocks.Main
         public void Throw(
             Vector3 startPosition,
             Vector3 startVelocity,
-            Vector3 angularVelocity,
-            float autoDestructionDelay)
+            Vector3 angularVelocity)
         {
             _transform.position = startPosition;
             _rigidbody.velocity = startVelocity;
@@ -80,12 +85,12 @@ namespace IJunior.ArrowBlocks.Main
 
             _transform.rotation = Quaternion.LookRotation(startVelocity.normalized);
 
-            _autoDestroyer = StartCoroutine(AutoDestroy(autoDestructionDelay));
+            _autoDestroyer = StartCoroutine(AutoDestroy());
         }
 
-        private IEnumerator AutoDestroy(float delay)
+        private IEnumerator AutoDestroy()
         {
-            yield return new WaitForSeconds(delay);
+            yield return _autoDestructionDelayObject;
             Destroy();
         }
 
@@ -105,7 +110,7 @@ namespace IJunior.ArrowBlocks.Main
             _explosionEffect.Play();
             _audioSource.PlayOneShot(_explosionSound);
 
-            yield return new WaitForSeconds(_maxDelayForExplosionEffect);
+            yield return _maxDelayForExplosionEffectObject;
 
             Destroy();
         }

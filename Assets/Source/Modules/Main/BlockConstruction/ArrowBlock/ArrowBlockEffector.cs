@@ -24,10 +24,15 @@ namespace IJunior.ArrowBlocks.Main
             _audioSource.PlayOneShot(_activationSound);
         }
 
-        public void TryActivateTrail(Vector3 targetPosition)
+        public bool TryActivateTrail(Vector3 targetPosition)
         {
             if (Vector3.Distance(_transform.position, targetPosition) >= _minTrailDistance)
+            {
                 _trail.enabled = true;
+                return true;
+            }
+
+            return false;
         }
 
         public void DeactivateTrail() => _trail.enabled = false;

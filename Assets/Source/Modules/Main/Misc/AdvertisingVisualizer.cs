@@ -43,16 +43,16 @@ namespace IJunior.ArrowBlocks.Main
             _playRewardVideoButton.onClick.RemoveListener(OnPlayRewardVideoButtonClick);
         }
 
-        public void TryShowAdAfterLevel(int levelNumber, Action onCloseCallback = null)
+        public void TryShowAdAfterLevel(int levelNumber, Action<bool> onCloseCallback = null)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
-            onCloseCallback?.Invoke();
+            onCloseCallback?.Invoke(false);
             return;
 #endif
 
             if (levelNumber < MinLevelToDisplayAds)
             {
-                onCloseCallback?.Invoke();
+                onCloseCallback?.Invoke(false);
                 return;
             }
 
@@ -61,7 +61,7 @@ namespace IJunior.ArrowBlocks.Main
                 onCloseCallback: (bool wasShown) =>
                 {
                     OnCloseAdCallback();
-                    onCloseCallback?.Invoke();
+                    onCloseCallback?.Invoke(wasShown);
                 });
         }
 
@@ -87,7 +87,6 @@ namespace IJunior.ArrowBlocks.Main
             Time.timeScale = 0;
 
             IsShowing = true;
-            Debug.Log("OpenAd");
         }
 
         private void OnCloseAdCallback()
@@ -96,7 +95,6 @@ namespace IJunior.ArrowBlocks.Main
             Time.timeScale = 1;
 
             IsShowing = false;
-            Debug.Log("CloseAd");
         }
     }
 }

@@ -18,12 +18,12 @@ namespace IJunior.TypedScenes
         
         private const string _sceneName = "Level4";
         
-        public static void Load(IJunior.ArrowBlocks.Main.PlayerData argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+        public static void Load(IJunior.ArrowBlocks.LevelSceneTransitionData argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
             LoadScene(_sceneName, loadSceneMode, argument);
         }
         
-        public static UnityEngine.AsyncOperation LoadAsync(IJunior.ArrowBlocks.Main.PlayerData argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
+        public static UnityEngine.AsyncOperation LoadAsync(IJunior.ArrowBlocks.LevelSceneTransitionData argument, LoadSceneMode loadSceneMode = LoadSceneMode.Single)
         {
             return LoadScene(_sceneName, loadSceneMode, argument);
         }

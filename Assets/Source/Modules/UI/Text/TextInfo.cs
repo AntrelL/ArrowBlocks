@@ -13,14 +13,7 @@ namespace IJunior.UI
         private string _prefixText;
         private TMP_Text _tmpText;
 
-        protected string Text
-        {
-            get => _tmpText.text;
-            set
-            {
-                _tmpText.text = _prefixText + value;
-            }
-        }
+        protected string Text => _tmpText.text;
 
         public virtual void Initialize()
         {
@@ -30,7 +23,12 @@ namespace IJunior.UI
 
         public void SetUndefinedValue()
         {
-            Text = _undefinedValueText;
+            SetText(_undefinedValueText);
+        }
+
+        protected void SetText(string value)
+        {
+            _tmpText.text = _prefixText + value;
         }
     }
 }

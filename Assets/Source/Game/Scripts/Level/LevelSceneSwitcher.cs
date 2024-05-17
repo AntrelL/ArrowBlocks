@@ -10,17 +10,20 @@ namespace IJunior.ArrowBlocks
         private PlayerData _playerData;
         private int _levelNumber;
         private AdvertisingVisualizer _advertisingVisualizer;
+        private BackgroundMusicPlayer _backgroundMusicPlayer;
 
         public void Initialize(
             LevelLoader levelLoader,
             PlayerData playerData,
             int levelNumber,
-            AdvertisingVisualizer advertisingVisualizer)
+            AdvertisingVisualizer advertisingVisualizer,
+            BackgroundMusicPlayer backgroundMusicPlayer)
         {
             _levelLoader = levelLoader;
             _playerData = playerData;
             _levelNumber = levelNumber;
             _advertisingVisualizer = advertisingVisualizer;
+            _backgroundMusicPlayer = backgroundMusicPlayer;
         }
 
         public void LoadNextLevel()
@@ -28,7 +31,7 @@ namespace IJunior.ArrowBlocks
             if (_levelNumber == _playerData.LevelsData.Count)
                 return;
 
-            _advertisingVisualizer.TryShowAdAfterLevel(_levelNumber, () =>
+            _advertisingVisualizer.TryShowAdAfterLevel(_levelNumber, (isSuccessful) =>
             {
                 _levelLoader.LoadLevel(_levelNumber + 1);
             });
@@ -38,6 +41,10 @@ namespace IJunior.ArrowBlocks
 
         public void LoadLeaderboardMenu() => LoadMenu(MenuScreenId.Leaderboard);
 
-        private void LoadMenu(MenuScreenId menuScreenId) => Menu.Load((_playerData, menuScreenId, _levelNumber));
+        private void LoadMenu(MenuScreenId menuScreenId)
+        {
+            Menu.Load(new MenuSceneTransitionData(
+                _playerData, menuScreenId, _levelNumber, _backgroundMusicPlayer));
+        }
     }
 }

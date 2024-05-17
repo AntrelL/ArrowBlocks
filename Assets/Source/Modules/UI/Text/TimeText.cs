@@ -2,23 +2,15 @@ using System;
 
 namespace IJunior.UI
 {
-    public class TimeText : TextInfo
+    public class TimeText : DigitalText
     {
-        private float _value;
-
-        public float Value
-        {
-            get => _value;
-            set => SetTime(value);
-        }
-
-        private void SetTime(float time)
+        public override void SetValue(float time)
         {
             TimeSpan timeSpan = TimeSpan.FromSeconds(time);
             string textTime = timeSpan.Minutes + ":" + timeSpan.ToString(@"ss\.ff");
 
-            _value = time;
-            Text = textTime;
+            Value = time;
+            SetText(textTime);
         }
     }
 }

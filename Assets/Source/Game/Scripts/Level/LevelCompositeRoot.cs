@@ -11,7 +11,7 @@ using Screen = IJunior.UI.Screen;
 
 namespace IJunior.ArrowBlocks
 {
-    internal class LevelCompositeRoot : MonoBehaviour, ISceneLoadHandler<PlayerData>
+    internal class LevelCompositeRoot : MonoBehaviour, ISceneLoadHandler<LevelSceneTransitionData>
     {
         [Header("Screens")]
         [SerializeField] private Screen _mainScreen;
@@ -66,6 +66,7 @@ namespace IJunior.ArrowBlocks
         private PlayerMoneyPresenter _playerMoneyPresenter;
         private AvailableBombsCountPresenter _availableBombsCountPresenter;
         private BlockConstructionProgressPresenter _blockConstructionProgressPresenter;
+        private BackgroundMusicPlayer _backgroundMusicPlayer;
 
         private void Awake() => InitializeEarly();
 
@@ -77,7 +78,9 @@ namespace IJunior.ArrowBlocks
             SubscribeEvents();
 
             _blockConstruction.OnStart();
+
             _levelFlowControl.Run();
+            _level.StartGame();
         }
 
         private void InitializeEarly()
@@ -116,10 +119,10 @@ namespace IJunior.ArrowBlocks
             InitializeLevelControl(timer);
 
             _levelNumberText.Initialize();
-            _levelNumberText.Value = _level.Number;
+            _levelNumberText.SetValue(_level.Number);
 
             _explanatoryTextOfRewardButton.Initialize();
-            _explanatoryTextOfRewardButton.Value = AdvertisingVisualizer.RewardForWatchingVideo;
+            _explanatoryTextOfRewardButton.SetValue(AdvertisingVisualizer.RewardForWatchingVideo);
 
             _nextLevelButton.gameObject.SetActive(_level.Number < _playerData.LevelsData.Count);
 
@@ -130,10 +133,12 @@ namespace IJunior.ArrowBlocks
             _availableBombsCountPresenter = new AvailableBombsCountPresenter(_bombSeller);
             _availableBombsCount.Initialize(_availableBombsCountPresenter);
 
-            _advertisingVisualizer.Initialize(
-                _playRewardVideoButton, _playerData, BackgroundMusicPlayer.CurrentInstance, _bombSeller);
+            _backgroundMusicPlayer.UpdateVolumeSlider();
 
-            _browserTabFocus.Initialize(BackgroundMusicPlayer.CurrentInstance, _advertisingVisualizer);
+            _advertisingVisualizer.Initialize(
+                _playRewardVideoButton, _playerData, _backgroundMusicPlayer, _bombSeller);
+
+            _browserTabFocus.Initialize(_backgroundMusicPlayer, _advertisingVisualizer);
             _soundSwitch.Initialize();
 
             _levelFlowControl.Initialize(rootUpdatebleElements, rootFixedUpdatebleElements);
@@ -237,13 +242,15 @@ namespace IJunior.ArrowBlocks
             _level.InitializeScreensInfo(_mainScreen, _victoryScreen);
             _level.InitializeAudio(_levelAudioSource, _levelVictorySound);
 
-            _levelLoader = new LevelLoader(_playerData);
-            _levelSceneSwitcher.Initialize(_levelLoader, _playerData, _level.Number, _advertisingVisualizer);
+            _levelLoader = new LevelLoader(_playerData, _backgroundMusicPlayer);
+            _levelSceneSwitcher.Initialize(
+                _levelLoader, _playerData, _level.Number, _advertisingVisualizer, _backgroundMusicPlayer);
         }
 
-        public void OnSceneLoaded(PlayerData playerData)
+        public void OnSceneLoaded(LevelSceneTransitionData levelSceneTransitionData)
         {
-            _playerData = playerData;
+            _playerData = levelSceneTransitionData.PlayerData;
+            _backgroundMusicPlayer = levelSceneTransitionData.BackgroundMusicPlayer;
         }
     }
 }

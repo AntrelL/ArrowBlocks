@@ -1,19 +1,13 @@
-using UnityEngine;
-
 namespace IJunior.UI
 {
     public class DigitalText : TextInfo
     {
-        private float _value;
+        public float Value { get; protected set; }
 
-        public float Value
+        public virtual void SetValue(float value)
         {
-            get => _value;
-            set
-            {
-                _value = value;
-                Text = value.ToString();
-            }
+            Value = value;
+            SetText(value.ToString());
         }
     }
 }

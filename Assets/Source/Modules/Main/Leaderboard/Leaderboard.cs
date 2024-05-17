@@ -33,15 +33,6 @@ namespace IJunior.ArrowBlocks.Main
 
         public int MinLevelNumber { get; } = 1;
 
-        public int LevelNumber
-        {
-            set
-            {
-                _levelNumberDropdown.value = Math.Clamp(value, MinLevelNumber, _maxLevelNumber) - 1;
-                OnLevelNumberChanged(_levelNumberDropdown.value);
-            }
-        }
-
         public static string GetName(int levelNumber) => NameTemplate + levelNumber;
 
         public void Initialize(LeaderboardLine leaderboardLineTemplate, int numberOflevels)
@@ -94,6 +85,12 @@ namespace IJunior.ArrowBlocks.Main
             _levelNumberDropdown.onValueChanged.RemoveListener(OnLevelNumberChanged);
         }
 
+        public void SetLevelNumber(int value)
+        {
+            _levelNumberDropdown.value = Math.Clamp(value, MinLevelNumber, _maxLevelNumber) - 1;
+            OnLevelNumberChanged(_levelNumberDropdown.value);
+        }
+
         private void UpdateData()
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
@@ -137,8 +134,8 @@ namespace IJunior.ArrowBlocks.Main
                 return;
             }
 
-            _playerTime.Value = ConvertToFloatTime(entry.score);
-            _playerPosition.Value = entry.rank;
+            _playerTime.SetValue(ConvertToFloatTime(entry.score));
+            _playerPosition.SetValue(entry.rank);
         }
 
         private void OnGetEntries(LeaderboardGetEntriesResponse result)
@@ -153,8 +150,6 @@ namespace IJunior.ArrowBlocks.Main
 
                 _leaderboardLines[i].Activate();
                 _leaderboardLines[i].SetData(entry.rank, name, ConvertToFloatTime(entry.score));
-
-                Debug.Log(name + " " + entry.score);
             }
 
             int entriesLength = result.entries.Length;

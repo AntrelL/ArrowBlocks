@@ -19,7 +19,7 @@ using Screen = IJunior.UI.Screen;
 namespace IJunior.ArrowBlocks
 {
     internal class MenuCompositeRoot : MonoBehaviour,
-        ISceneLoadHandler<(PlayerData PlayerData, MenuScreenId MenuScreenId, int LevelNumber)>
+        ISceneLoadHandler<MenuSceneTransitionData>
     {
         private static bool IsGameReadyMethodCalled = false;
 
@@ -40,7 +40,7 @@ namespace IJunior.ArrowBlocks
         [SerializeField] private Rotator _cameraRotator;
         [Space]
         [Header("Audio")]
-        [SerializeField] private BackgroundMusicPlayer _backgroundMusicPlayer;
+        [SerializeField] private BackgroundMusicPlayer _backgroundMusicPlayerTemplate;
         [SerializeField] private Slider _backgroundMusicVolumeSlider;
         [Space]
         [Header("Leaderboard")]
@@ -64,6 +64,7 @@ namespace IJunior.ArrowBlocks
         private MenuScreenId _screenIdToSwitch = MenuScreenId.None;
         private UnityAction[] _levelActivators;
         private Button[] _levelButtons;
+        private BackgroundMusicPlayer _backgroundMusicPlayer;
 
         private int _lastPlayedLevelNumber;
 
@@ -91,17 +92,16 @@ namespace IJunior.ArrowBlocks
             if (IsGameReadyMethodCalled == false)
             {
                 YandexGamesSdk.GameReady();
-                Debug.Log("Game Ready");
                 IsGameReadyMethodCalled = true;
             }
         }
 
-        public void OnSceneLoaded((PlayerData PlayerData,
-            MenuScreenId MenuScreenId, int LevelNumber) sceneTransitionData)
+        public void OnSceneLoaded(MenuSceneTransitionData menuSceneTransitionData)
         {
-            _playerData = sceneTransitionData.PlayerData;
-            _screenIdToSwitch = sceneTransitionData.MenuScreenId;
-            _lastPlayedLevelNumber = sceneTransitionData.LevelNumber;
+            _playerData = menuSceneTransitionData.PlayerData;
+            _screenIdToSwitch = menuSceneTransitionData.MenuScreenId;
+            _lastPlayedLevelNumber = menuSceneTransitionData.LevelNumber;
+            _backgroundMusicPlayer = menuSceneTransitionData.BackgroundMusicPlayer;
         }
 
         private void InitializeEarly()
@@ -121,7 +121,8 @@ namespace IJunior.ArrowBlocks
 
             var rootUpdatebleElements = new List<IRootUpdateble>();
 
-            _levelButtons = _levelButtonsStorage.Initialize();
+            _levelButtonsStorage.Initialize();
+            _levelButtons = _levelButtonsStorage.InitializeButtons();
 
             if (_playerData == null)
             {
@@ -139,7 +140,9 @@ namespace IJunior.ArrowBlocks
 
             FinalInitializeLeaderboard();
 
-            _levelLoader = new LevelLoader(_playerData, _tutorial);
+            InitializeBackgroundMusicPlayer();
+
+            _levelLoader = new LevelLoader(_playerData, _backgroundMusicPlayer, _tutorial);
             _levelActivators = new UnityAction[_levelButtons.Length];
 
             _levelButtonsStorage.UpdateLevelButtons(_playerData.LevelsData);
@@ -147,8 +150,6 @@ namespace IJunior.ArrowBlocks
 
             _cameraRotator.Initialize();
             rootUpdatebleElements.Add(_cameraRotator);
-
-            _backgroundMusicPlayer = _backgroundMusicPlayer.Initialize(_backgroundMusicVolumeSlider);
 
             _browserTabFocus.Initialize(_backgroundMusicPlayer);
             _tutorial.FinalInitialize();
@@ -185,6 +186,26 @@ namespace IJunior.ArrowBlocks
             _browserTabFocus.OnDeactivate();
             _tutorial.OnDeactivate();
             _authorizationMenu.OnDeactivate();
+        }
+
+        private void InitializeBackgroundMusicPlayer()
+        {
+            bool isBackgroundMusicPlayerNull = _backgroundMusicPlayer == null;
+
+            if (isBackgroundMusicPlayerNull)
+            {
+                _backgroundMusicPlayer = Instantiate(_backgroundMusicPlayerTemplate);
+                DontDestroyOnLoad(_backgroundMusicPlayer);
+
+                _backgroundMusicPlayer.Initialize();
+            }
+
+            _backgroundMusicPlayer.UpdateVolumeSlider(_backgroundMusicVolumeSlider);
+
+            if (isBackgroundMusicPlayerNull)
+                _backgroundMusicPlayer.SetVolumeFromSlider();
+            else
+                _backgroundMusicPlayer.SetVolumeToSlider();
         }
 
         private void InitializeScreens()

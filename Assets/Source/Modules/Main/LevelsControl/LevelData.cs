@@ -4,8 +4,6 @@ namespace IJunior.ArrowBlocks.Main
 {
     public class LevelData : IReadOnlyLevelData
     {
-        private float _recordTime = float.MaxValue;
-
         public LevelData()
             : this(LevelState.Blocked, float.MaxValue)
         {
@@ -19,25 +17,12 @@ namespace IJunior.ArrowBlocks.Main
         public LevelData(LevelState levelState, float recordTime)
         {
             State = levelState;
-            RecordTime = recordTime;
+            SetRecordTime(recordTime);
         }
 
         public LevelState State { get; private set; }
 
-        public float RecordTime
-        {
-            get => _recordTime;
-            private set
-            {
-                if (value < 0)
-                    throw new Exception("Record time cannot be less than zero.");
-
-                if (_recordTime < value)
-                    throw new Exception("New record time cannot be greater than previous.");
-
-                _recordTime = value;
-            }
-        }
+        public float RecordTime { get; private set; } = float.MaxValue;
 
         public void Open(bool ignoreException = false)
         {
@@ -50,7 +35,7 @@ namespace IJunior.ArrowBlocks.Main
         public void Pass(float time)
         {
             State = LevelState.Passed;
-            RecordTime = Math.Min(time, RecordTime);
+            SetRecordTime(Math.Min(time, RecordTime));
         }
 
         public CleanLevelData ConvertToCleanData()
@@ -62,6 +47,17 @@ namespace IJunior.ArrowBlocks.Main
             };
 
             return cleanLevelData;
+        }
+
+        private void SetRecordTime(float value)
+        {
+            if (value < 0)
+                throw new Exception("Record time cannot be less than zero.");
+
+            if (RecordTime < value)
+                throw new Exception("New record time cannot be greater than previous.");
+
+            RecordTime = value;
         }
     }
 }

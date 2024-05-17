@@ -27,6 +27,8 @@ namespace IJunior.ArrowBlocks
         private AudioSource _audioSource;
         private AudioClip _victorySound;
 
+        private WaitForSeconds _victoryDelayObject;
+
         public int Number => _number;
 
         public void InitializeBaseInfo(
@@ -42,7 +44,7 @@ namespace IJunior.ArrowBlocks
             _bombSeller = bombSeller;
             _timer = timer;
 
-            Time.timeScale = 1;
+            _victoryDelayObject = new WaitForSeconds(_victoryDelay);
         }
 
         public void InitializePlayerInfo(PlayerInput playerInput, PlayerData playerData)
@@ -79,16 +81,18 @@ namespace IJunior.ArrowBlocks
             _playerInput.Disable();
         }
 
-        public IEnumerator Win(float delay)
+        public void StartGame() => StartPassageOfTime();
+
+        public IEnumerator Win()
         {
             _timer.StopCounting();
-            yield return new WaitForSeconds(delay);
+            yield return _victoryDelayObject;
 
             _audioSource.PlayOneShot(_victorySound);
 
-            _passingTimeText.Value = _timer.Value;
+            _passingTimeText.SetValue(_timer.Value);
             _mainScreen.SwitchTo(_victoryScreen);
-            Time.timeScale = 0;
+            StopPassageOfTime();
 
             _playerInput.Disable();
             _playerData.PassLevel(_number, _coinsForCompleting, _timer.Value);
@@ -108,12 +112,16 @@ namespace IJunior.ArrowBlocks
 
         public void RestartFromMenu()
         {
-            Time.timeScale = 1;
+            StartPassageOfTime();
             _victoryScreen.SwitchTo(_mainScreen);
             _playerInput.Enable();
 
             Restart();
         }
+
+        private void StartPassageOfTime() => Time.timeScale = 1;
+
+        private void StopPassageOfTime() => Time.timeScale = 0;
 
         private void OnFirstBlockActivated()
         {
@@ -122,7 +130,7 @@ namespace IJunior.ArrowBlocks
 
         private void OnAllBlocksReleased()
         {
-            _victoryRetarder = StartCoroutine(Win(_victoryDelay));
+            _victoryRetarder = StartCoroutine(Win());
         }
     }
 }

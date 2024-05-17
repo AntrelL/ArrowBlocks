@@ -64,9 +64,10 @@ namespace IJunior.ArrowBlocks.Main
             }
         }
 
-        public IEnumerator TryGetFromCloud()
+        public IEnumerator TryGetFromCloud(Action<bool> endCallback = null)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
+            endCallback?.Invoke(false);
             yield break;
 #endif
 
@@ -89,10 +90,11 @@ namespace IJunior.ArrowBlocks.Main
             while (isTringToGetData)
                 yield return waitForSeconds;
 
-            Debug.Log("Load: " + jsonCleanPlayerData);
-
             if (string.IsNullOrEmpty(jsonCleanPlayerData) || jsonCleanPlayerData == EmptyJsonString)
+            {
+                endCallback?.Invoke(false);
                 yield break;
+            }
 
             CleanPlayerData cleanPlayerData = JsonConvert.DeserializeObject<CleanPlayerData>(jsonCleanPlayerData);
 
@@ -101,6 +103,7 @@ namespace IJunior.ArrowBlocks.Main
             else
                 SetData(cleanPlayerData);
 
+            endCallback?.Invoke(true);
             yield return null;
         }
 
@@ -113,7 +116,6 @@ namespace IJunior.ArrowBlocks.Main
             CleanPlayerData cleanPlayerData = ConvertToCleanData();
             string jsonString = JsonConvert.SerializeObject(cleanPlayerData);
 
-            Debug.Log("Save: " + jsonString);
             PlayerAccount.SetCloudSaveData(jsonString);
         }
 
@@ -133,8 +135,6 @@ namespace IJunior.ArrowBlocks.Main
                 int recordConvertedTime = (int)(levelData.RecordTime * Leaderboard.TimeConversionFactor);
 
                 AgavaLeaderboard.SetScore(leaderboardName, recordConvertedTime);
-
-                Debug.Log("Save to leaderboard: " + leaderboardName + " " + recordConvertedTime);
             }
 #endif
 

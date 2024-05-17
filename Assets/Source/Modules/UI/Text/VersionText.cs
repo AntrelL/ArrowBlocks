@@ -8,7 +8,7 @@ namespace IJunior.UI
         {
             base.Initialize();
 
-            Text = Application.version;
+            SetText(Application.version);
         }
     }
 }

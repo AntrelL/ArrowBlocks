@@ -1,5 +1,6 @@
 using IJunior.CompositeRoot;
 using IJunior.UI;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,16 +25,6 @@ namespace IJunior.ArrowBlocks.Main
 
         private bool _isBombThrown = false;
 
-        private bool IsBombThrown
-        {
-            get => _isBombThrown;
-            set
-            {
-                _isBombThrown = value;
-                UpdateUIElements(_playerCamera.CurrentVerticalAngle);
-            }
-        }
-
         public void InitializeBase(Bomb bombTemplate, BombSeller bombSeller, BombThrowerCalculations calculations)
         {
             _bombSeller = bombSeller;
@@ -42,7 +33,7 @@ namespace IJunior.ArrowBlocks.Main
             _transform = transform;
 
             _bomb = Instantiate(bombTemplate, _transform);
-            _bomb.Initialize();
+            _bomb.Initialize(_bombAutoDestructionDelay);
         }
 
         public void InitializeUI(Button throwBombButton, ColorIndicatingIcon availableBombsCountBackground)
@@ -76,7 +67,25 @@ namespace IJunior.ArrowBlocks.Main
         public void ResetValues()
         {
             _bomb.ResetValues();
-            IsBombThrown = false;
+            SetIsBombThrown(false);
+        }
+
+        private void SetIsBombThrown(bool value)
+        {
+            _isBombThrown = value;
+            UpdateUIElements(_playerCamera.CurrentVerticalAngle);
+        }
+
+        private void UpdateUIElements(float angle)
+        {
+            bool isActiveElements = _isBombThrown == false && angle >= _minThrowAngle && _bombSeller.CanBuy;
+
+            _throwBombButton.interactable = isActiveElements;
+
+            if (isActiveElements)
+                _availableBombsCountBackground.Activate();
+            else
+                _availableBombsCountBackground.Deactivate();
         }
 
         private void OnThrowBombButtonClicked()
@@ -90,25 +99,13 @@ namespace IJunior.ArrowBlocks.Main
             _bombSeller.PayForBomb();
 
             _bomb.gameObject.SetActive(true);
-            _bomb.Throw(startPosition, startVelocity, _startAngularVelocity, _bombAutoDestructionDelay);
+            _bomb.Throw(startPosition, startVelocity, _startAngularVelocity);
 
-            IsBombThrown = true;
+            SetIsBombThrown(true);
         }
 
         private void OnCameraVerticalAngleChanged(float angle) => UpdateUIElements(angle);
 
-        private void OnBombDestroyed() => IsBombThrown = false;
-
-        private void UpdateUIElements(float angle)
-        {
-            bool isActiveElements = IsBombThrown == false && angle >= _minThrowAngle && _bombSeller.CanBuy;
-
-            _throwBombButton.interactable = isActiveElements;
-
-            if (isActiveElements)
-                _availableBombsCountBackground.Activate();
-            else
-                _availableBombsCountBackground.Deactivate();
-        }
+        private void OnBombDestroyed() => SetIsBombThrown(false);
     }
 }
