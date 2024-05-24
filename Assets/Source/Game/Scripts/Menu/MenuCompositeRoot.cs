@@ -127,7 +127,7 @@ namespace IJunior.ArrowBlocks
             if (_playerData == null)
             {
                 _playerData = new PlayerData(_levelButtons.Length);
-                yield return _playerData.TryGetFromCloud();
+                yield return _playerData.GetFromCloud();
             }
 
             _leaderboardLoader.Initialize(_leaderboard, _leaderboardScreen, _mainScreen, _authorizationMenu);
@@ -251,7 +251,7 @@ namespace IJunior.ArrowBlocks
                     _mainScreen.SwitchTo(_levelsScreen);
                     break;
                 case MenuScreenId.Leaderboard:
-                    _leaderboardLoader.TrySwitch(_lastPlayedLevelNumber);
+                    _leaderboardLoader.Switch(_lastPlayedLevelNumber);
                     break;
             }
         }

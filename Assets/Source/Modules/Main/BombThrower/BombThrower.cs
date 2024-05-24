@@ -1,6 +1,5 @@
 using IJunior.CompositeRoot;
 using IJunior.UI;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +22,7 @@ namespace IJunior.ArrowBlocks.Main
         private BombThrowerCalculations _calculations;
         private Bomb _bomb;
 
-        private bool _isBombThrown = false;
+        public bool IsThrown { get; private set; } = false;
 
         public void InitializeBase(Bomb bombTemplate, BombSeller bombSeller, BombThrowerCalculations calculations)
         {
@@ -67,18 +66,19 @@ namespace IJunior.ArrowBlocks.Main
         public void ResetValues()
         {
             _bomb.ResetValues();
-            SetIsBombThrown(false);
+
+            IsThrown = false;
+            UpdateUIElements();
         }
 
-        private void SetIsBombThrown(bool value)
+        private void UpdateUIElements()
         {
-            _isBombThrown = value;
             UpdateUIElements(_playerCamera.CurrentVerticalAngle);
         }
 
         private void UpdateUIElements(float angle)
         {
-            bool isActiveElements = _isBombThrown == false && angle >= _minThrowAngle && _bombSeller.CanBuy;
+            bool isActiveElements = IsThrown == false && angle >= _minThrowAngle && _bombSeller.CanBuy;
 
             _throwBombButton.interactable = isActiveElements;
 
@@ -101,11 +101,16 @@ namespace IJunior.ArrowBlocks.Main
             _bomb.gameObject.SetActive(true);
             _bomb.Throw(startPosition, startVelocity, _startAngularVelocity);
 
-            SetIsBombThrown(true);
+            IsThrown = true;
+            UpdateUIElements();
         }
 
         private void OnCameraVerticalAngleChanged(float angle) => UpdateUIElements(angle);
 
-        private void OnBombDestroyed() => SetIsBombThrown(false);
+        private void OnBombDestroyed()
+        {
+            IsThrown = false;
+            UpdateUIElements();
+        } 
     }
 }

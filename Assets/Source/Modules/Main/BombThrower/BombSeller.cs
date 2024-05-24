@@ -23,7 +23,7 @@ namespace IJunior.ArrowBlocks.Main
 
         public void PayForBomb()
         {
-            _playerData.Money -= _bombPrice;
+            _playerData.DecreaseMoney(_bombPrice);
             UpdateAvailableBombsCount();
         }
 

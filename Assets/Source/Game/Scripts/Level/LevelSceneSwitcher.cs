@@ -31,7 +31,7 @@ namespace IJunior.ArrowBlocks
             if (_levelNumber == _playerData.LevelsData.Count)
                 return;
 
-            _advertisingVisualizer.TryShowAdAfterLevel(_levelNumber, (isSuccessful) =>
+            _advertisingVisualizer.ShowAdAfterLevel(_levelNumber, (isSuccessful) =>
             {
                 _levelLoader.LoadLevel(_levelNumber + 1);
             });

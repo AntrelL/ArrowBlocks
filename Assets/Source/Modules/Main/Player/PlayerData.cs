@@ -16,7 +16,6 @@ namespace IJunior.ArrowBlocks.Main
         private const int CloudPollingLatency = 1;
         private const string EmptyJsonString = "{}";
 
-        private int _money;
         private LevelData[] _levelsData;
 
         public PlayerData(int levelsQuantity)
@@ -26,7 +25,8 @@ namespace IJunior.ArrowBlocks.Main
 
         private PlayerData(int money, int levelsQuantity)
         {
-            _money = money;
+            SetMoney(money);
+
             _levelsData = new LevelData[levelsQuantity];
 
             for (int i = 0; i < levelsQuantity; i++)
@@ -49,22 +49,25 @@ namespace IJunior.ArrowBlocks.Main
 
         public IReadOnlyList<IReadOnlyLevelData> LevelsData => _levelsData;
 
-        public int Money
+        public int Money { get; private set; }
+
+        public void IncreaseMoney(int value)
         {
-            get => _money;
-            set
-            {
-                if (value < 0)
-                    throw new Exception("Money cannot be less than zero.");
+            if (value < 0)
+                throw new Exception("The money increase value cannot be less than zero.");
 
-                _money = value;
-
-                MoneyQuantityChanged?.Invoke(_money);
-                SaveToCloud();
-            }
+            SetMoney(Money + value);
         }
 
-        public IEnumerator TryGetFromCloud(Action<bool> endCallback = null)
+        public void DecreaseMoney(int value)
+        {
+            if (value < 0)
+                throw new Exception("The money decrease value cannot be less than zero.");
+
+            SetMoney(Money - value);
+        }
+
+        public IEnumerator GetFromCloud(Action<bool> endCallback = null)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             endCallback?.Invoke(false);
@@ -124,7 +127,7 @@ namespace IJunior.ArrowBlocks.Main
             if (coinsForCompleting < 0)
                 throw new Exception("The number of coins for completing cannot be less than zero");
 
-            Money += coinsForCompleting;
+            IncreaseMoney(coinsForCompleting);
             LevelData levelData = _levelsData[number - 1];
             levelData.Pass(time);
 
@@ -151,9 +154,20 @@ namespace IJunior.ArrowBlocks.Main
             SaveToCloud();
         }
 
+        private void SetMoney(int value)
+        {
+            if (value < 0)
+                throw new Exception("Money cannot be less than zero.");
+
+            Money = value;
+
+            MoneyQuantityChanged?.Invoke(Money);
+            SaveToCloud();
+        }
+
         private void SetData(CleanPlayerData cleanPlayerData)
         {
-            _money = cleanPlayerData.Money;
+            SetMoney(cleanPlayerData.Money);
             _levelsData = cleanPlayerData.LevelsData.Select(levelData => new LevelData(levelData)).ToArray();
         }
 

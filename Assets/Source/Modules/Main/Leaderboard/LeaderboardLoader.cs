@@ -27,10 +27,10 @@ namespace IJunior.ArrowBlocks.Main
             _authorizationMenu = authorizationMenu;
         }
 
-        public void TrySwitch(Action<bool> endCallback = null) =>
-            TrySwitch(_leaderboard.MinLevelNumber, endCallback);
+        public void Switch(Action<bool> endCallback = null) =>
+            Switch(_leaderboard.MinLevelNumber, endCallback);
 
-        public void TrySwitch(int lastPlayedLevelNumber, Action<bool> endCallback = null)
+        public void Switch(int lastPlayedLevelNumber, Action<bool> endCallback = null)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             _authorizationMenu.Open();

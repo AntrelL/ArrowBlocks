@@ -43,7 +43,7 @@ namespace IJunior.ArrowBlocks.Main
             _playRewardVideoButton.onClick.RemoveListener(OnPlayRewardVideoButtonClick);
         }
 
-        public void TryShowAdAfterLevel(int levelNumber, Action<bool> onCloseCallback = null)
+        public void ShowAdAfterLevel(int levelNumber, Action<bool> onCloseCallback = null)
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
             onCloseCallback?.Invoke(false);
@@ -76,7 +76,7 @@ namespace IJunior.ArrowBlocks.Main
                 onCloseCallback: OnCloseAdCallback,
                 onRewardedCallback: () =>
                 {
-                    _playerData.Money += RewardForWatchingVideo;
+                    _playerData.IncreaseMoney(RewardForWatchingVideo);
                     _bombSeller.UpdateAvailableBombsCount();
                 });
         }
