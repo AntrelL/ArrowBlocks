@@ -68,12 +68,6 @@ namespace IJunior.ArrowBlocks
         private BlockConstructionProgressPresenter _blockConstructionProgressPresenter;
         private BackgroundMusicPlayer _backgroundMusicPlayer;
 
-        public void OnSceneLoaded(LevelSceneTransitionData levelSceneTransitionData)
-        {
-            _playerData = levelSceneTransitionData.PlayerData;
-            _backgroundMusicPlayer = levelSceneTransitionData.BackgroundMusicPlayer;
-        }
-
         private void Awake() => InitializeEarly();
 
         private void OnDisable() => UnsubscribeEvents();
@@ -87,6 +81,12 @@ namespace IJunior.ArrowBlocks
 
             _levelFlowControl.Run();
             _level.StartGame();
+        }
+
+        public void OnSceneLoaded(LevelSceneTransitionData levelSceneTransitionData)
+        {
+            _playerData = levelSceneTransitionData.PlayerData;
+            _backgroundMusicPlayer = levelSceneTransitionData.BackgroundMusicPlayer;
         }
 
         private void InitializeEarly()
